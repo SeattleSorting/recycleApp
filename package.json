@@ -1,17 +1,20 @@
 {
-  "name": "recycleApp",
+  "name": "recycleapp",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "code 301 final",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/recycleapp/recycleApp.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "awesomeness"
+  ],
+  "author": "kr-hi-jd-dh",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/recycleapp/recycleApp/issues"
@@ -20,6 +23,7 @@
   "dependencies": {
     "cors": "^2.8.4",
     "dotenv": "^6.1.0",
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
     "method-override": "^3.0.0",
     "pg": "^7.6.0",
