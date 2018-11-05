@@ -18,9 +18,9 @@ const app = express();
 
 
 // pg middleware setup
-const client = new pg.Client(process.env.DATABASE_URL);
-client.connect();
-client.on('err', err => console.log(err));
+// const client = new pg.Client(process.env.DATABASE_URL);
+// client.connect();
+// client.on('err', err => console.log(err));
 
 // Express setup
 app.use(cors());
