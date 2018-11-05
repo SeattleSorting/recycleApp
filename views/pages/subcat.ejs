@@ -7,15 +7,15 @@
     <h3> sub categories</h3>
 </header>
 
-    <form action='/disposal-instructions' method='POST'>
+    <form id="sub-cat-form" action='/disposal-instructions' method='POST'>
         <input type="hidden" name="name" value="item-type">
 
-        <select>
-            <!-- forEach loop to create an option tag for each item-type -->
-            <option name="sub-category" value="item-type" > </option>
-        </select>
-
-        <input type="submit">
+        
+            <input type="submit" name="sub-category" value="option1">
+            <input type="submit" name="sub-category" value="option2">
+            <input type="submit" name="sub-category" value="option3">
+            <input type="submit" name="sub-category" value="option4">
+    
     </form>
 
 </html>
