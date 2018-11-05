@@ -1,0 +1,56 @@
+
+@media screen and (max-width: 480px){
+    html, body{
+        height: 100%;
+    }
+
+    body{
+        background: rgb(80, 169, 62);
+        color: rgb(219, 222, 216);
+        font-family: nunito;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    header{
+        margin-top: 1em;
+        font-size: 4em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 1.2em;
+        margin-bottom: 1em;
+        max-width: 3em; 
+    }
+
+    a{
+        color: rgb(219, 222, 216); 
+    }
+
+
+    /* categories page */
+    h2{
+        font-size: .5em;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+
+}
+
+
+/* body{
+    background: gray;
+} */
+

@@ -42,6 +42,12 @@ app.use(methodoverride((req, res)=>{
 //middleware connections to front end
 app.get('/', helloWorld);
 
+app.post('/item-categories', renderCategories);
+
+function renderCategories(req, res){
+  res.render('./pages/categories.ejs');
+}
+
 // app.post('/search', fetchBooksAPI);
 
 
