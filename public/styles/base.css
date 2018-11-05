@@ -35,12 +35,13 @@
         color: rgb(219, 222, 216); 
     }
 
-
+    input{
+        display:block;
+    }
     /* categories page */
     h2{
         font-size: .5em;
     }
-
 
     ul{
         display: flex;
@@ -48,16 +49,37 @@
         flex-wrap: wrap;
     }
 
+    img{
+        height: 9em;
+        width: 9em;
+    }
+
     li {
         display: flex;
         flex-direction: row;
-
     }
 
     li section{
         justify-content: center;
-        justify-content: space-around;
+        margin: 1em;
+    }
 
+    /* sub categories page */
+    #sub-cat-form{
+        margin: 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    input{
+        height: 4em;
+        text-align: center;
+        background: rgb(219, 222, 216); 
+        color: rgb(38, 39, 38);
+        margin: .5em;
+        padding: .5em;
+        width: 15em;
     }
 
 

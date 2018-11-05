@@ -56,7 +56,7 @@ app.post('/disposal-instructions', getInstructions);
 function getInstructions(req, res){
   //update the sql table
   //make a superagent request with req.body data
-  
+
   res.render('./pages/result.ejs');
 }
 
@@ -75,7 +75,7 @@ function getLocation(req, res){
 
 
 // app.post('/view', viewBookDetail);
-// app.post('/update', updateBook) 
+// app.post('/update', updateBook)
 
 // app.post('/save', saveBook);
 
@@ -88,7 +88,33 @@ function helloWorld(req, res) {
 
 }
 
-
-
-
 app.listen(PORT, () => console.log(`App is up on port ${PORT}`));
+
+
+// var itemCategories = [
+
+//   {material: 'Plastic',
+//     items: ['bottle', 'utensil', 'wrapper', 'bag', 'straw', 'tuppaware'],
+//    img_src: '../images/pastic-bottle.jpg'},
+
+//   {material: 'Glass',
+//     items: ['bottle', 'window', 'container'],
+//     img_src: '../images/glass.jpeg'},
+
+//   {material: 'Paper',
+//     items: ['card board', 'cup', 'copy paper', 'napkins', 'news paper', 'straws', 'egg carton', 'Paper Bags', 'Carton'],
+//     img_src: '../images/paper.jpeg'},
+
+//   {material: 'Food Waste',
+//     items: ['Food Scraps', 'Greasy Pizza Boxes', 'Coffee Grounds', 'napkins'],
+//   img_src: },
+
+//   {material: 'Electronic',
+//     items: ['Light Bulbs', 'Batteries', 'Cords', 'Devices'],
+//   img_src: "../images/electric.jpeg"},
+
+//   {material: 'Metal',
+//     items: ['Aluminum Can', 'Tin Foil', 'Rusted Items', 'Cans']
+//   img_src: '../images/aluminum-can.jpg'}
+// ]
+

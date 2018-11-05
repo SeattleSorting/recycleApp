@@ -1,7 +1,17 @@
 DROP TABLE IF EXISTS recyles;
 
-CREATE TABLE recycles (
+CREATE TABLE materials (
     id SERIAL PRIMARY KEY,
-    image_url VARCHAR(255),
-    category VARCHAR(255)
+    material VARCHAR(255)
 );
+
+
+CREATE TABLE items {
+    id SERIAL PRIMARY KEY,
+    item VARCHAR(255),
+    result VARCHAR(255),
+    materials_id INTEGER NOT NULL REFERENCES materials(id)
+}
+
+
+

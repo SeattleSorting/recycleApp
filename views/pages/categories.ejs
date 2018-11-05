@@ -13,46 +13,58 @@
             <li>
                 <section>
                     <form action='/item-categories' method='POST'>
-                        <input type="hidden" name="name" value="plastic">
-                        <p>Plastic</p>
+                        <input type="hidden" name="name" value="Metal">
+                        <input type="submit" value ="<%= itemCategory[5].material %>" >
                         <img src="../images/aluminum-can.jpg"/>
-                        <input type="submit">
-                    </form>
-                        
-                      
+                    </form>        
                 </section>
                 
-                <section> 
-                    <p>Glass</p>
-                    <img src="../images/glass.jpeg"/>
-                </section>   
-            </li>
-
-
-            <li>
-                <section> 
-                    <p>Paper</p>
-                    <img src="../images/paper.jpeg"/>
-                </section>
-
                 <section>
-                    <p>Metal</p>
-                    <img src="../images/glass.jpeg"/>
-                </section>   
+                    <form action='/item-categories' method='POST'>
+                        <input type="hidden" name="name" value="glass">
+                        <input type="submit" value ="Glass">
+                        <img src="../images/glass.jpeg"/>
+                    </form>        
+                </section> 
             </li>
 
 
             <li>
                 <section>
-                     <p>Electric</p>
-                    <img src="../images/pastic-bottle.jpg"/>
+                    <form action='/item-categories' method='POST'>
+                        <input type="hidden" name="name" value="platic">
+                        <input type="submit" value ="Plastic">
+                        <img src="../images/pastic-bottle.jpg"/>
+                    </form>        
                 </section>
+
+                <section>
+                    <form action='/item-categories' method='POST'>
+                        <input type="hidden" name="name" value="Electric">
+                        <input type="submit" value ="Electronic">
+                        <img src="../images/electric.jpeg"/>
+                    </form>        
+                </section> 
+            </li>
+
+
+            <li>
+                <section>
+                    <form action='/item-categories' method='POST'>
+                        <input type="hidden" name="name" value="paper">
+                        <input type="submit" value ="Paper">
+                        <img src="../images/paper.jpeg"/>
+                    </form>        
+                </section> 
                
 
                 <section>
-                     <p>Auto</p>
-                    <img src="../images/food-waste.jpg"/>
-                </section>
+                    <form action='/item-categories' method='POST'>
+                        <input type="hidden" name="name" value="compost">
+                        <input type="submit" value ="Food Waste">
+                        <img src="../images/food-waste.jpg"/>
+                    </form>        
+                </section> 
               
             </li>
 
