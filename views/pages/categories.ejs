@@ -5,47 +5,58 @@
 <body>
 
     <header>
-        <h2>Material Categories</h2>
+        <h2>Material Categories</h>
     </header>
 
     <section>
         <ul>
-        <div>
             <li>
-                <p>Plastic</p>
-                <img src="../images/aluminum-can.jpg"/>
+                <section>
+                    <form action='/item-categories' method='POST'>
+                        <input type="hidden" name="name" value="plastic">
+                        <p>Plastic</p>
+                        <img src="../images/aluminum-can.jpg"/>
+                        <input type="submit">
+                    </form>
+                        
+                      
+                </section>
+                
+                <section> 
+                    <p>Glass</p>
+                    <img src="../images/glass.jpeg"/>
+                </section>   
             </li>
 
-            <li>
-                <p>Glass</p>
-                <img src="../images/glass.jpeg"/>
-            </li>
-        </div>
-
-        <div>
-            <li>
-                <p>Paper</p>
-                <img src="../images/paper.jpeg"/>
-            </li>
 
             <li>
-                <p>Metal</p>
-                <img src="../images/glass.jpeg"/>
-            </li>
-        </div>
+                <section> 
+                    <p>Paper</p>
+                    <img src="../images/paper.jpeg"/>
+                </section>
 
-        <div>
-            <li>
-                <p>Electric</p>
-                <img src="../images/pastic-bottle.jpg"/>
+                <section>
+                    <p>Metal</p>
+                    <img src="../images/glass.jpeg"/>
+                </section>   
             </li>
 
+
             <li>
-                <p>Auto</p>
-                <img src="../images/food-waste.jpg"/>
+                <section>
+                     <p>Electric</p>
+                    <img src="../images/pastic-bottle.jpg"/>
+                </section>
+               
+
+                <section>
+                     <p>Auto</p>
+                    <img src="../images/food-waste.jpg"/>
+                </section>
+              
             </li>
-        </div>
-        
+
+
         </ul>
 
 
