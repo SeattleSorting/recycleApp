@@ -42,9 +42,31 @@ app.use(methodoverride((req, res)=>{
 //middleware connections to front end
 app.get('/', helloWorld);
 
-app.post('/item-categories', renderCategories);
 
-function renderCategories(req, res){
+// Get user location then render the material category page
+app.post('/location', getLocation);
+
+//Get item material then render subcategory page
+app.post('/item-categories', getCategory);
+
+//query earth911 to get recycle instructions
+app.post('/disposal-instructions', getInstructions);
+
+
+function getInstructions(req, res){
+  //update the sql table
+  //make a superagent request with req.body data
+  
+  res.render('./pages/result.ejs');
+}
+
+function getCategory(req, res){
+  //console.log(req.body);
+  //using req.body, load object into res.render
+  res.render('./pages/subcat.ejs');
+}
+
+function getLocation(req, res){
   res.render('./pages/categories.ejs');
 }
 
