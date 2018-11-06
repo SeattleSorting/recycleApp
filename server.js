@@ -20,9 +20,9 @@ app.listen(PORT, () => console.log(`App is up on port ${PORT}`));
 
 
 // pg middleware setup
-// const client = new pg.Client(process.env.DATABASE_URL);
-// client.connect();
-// client.on('err', err => console.log(err));
+const client = new pg.Client(process.env.DATABASE_URL);
+client.connect();
+client.on('err', err => console.log(err));
 
 // Express setup
 app.use(cors());
@@ -80,29 +80,18 @@ function helloWorld(req, res) {
 }
 
 function checkDatabase(){
-  const SQL = `SELECT * FROM materials`;
+  const SQL = `SELECT * FROM recyclables`;
 
-  let values = ['plastic', 'glass', 'paper', 'electronics', 'food-waste', 'metal'];
+  let values = ['plastic', 'bottle', 'recycle'];
 
-  return client.query(SQL, values)
+  return client.query(SQL)
     .then(result => {
-      if(result.rows>0){
-        const SQLinsert =  `INSERT INTO materials (material) VALUES($1)`;
-        client.query(SQLinsert);
+      if(result.rows < 1){
+        const SQLinsert =  `INSERT INTO recyclables (material, item, result) VALUES($1,$2,$3)`;
+        client.query(SQLinsert, values);
       }
     }).catch(console.error('error'));
 }
-
-// function fillDatabase(){
-//   const SQL =  `INSERT INTO materials ('plastic', 'glass', 'paper', 'electronics', 'food-waste', 'metal')
-//   VALUES($1, $2, $3, $4, $5, $6)`;
-
-//   return client.query(SQL)
-//   .then(results=>{
-
-//   })
-// }
-
 
 
 
