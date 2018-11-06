@@ -16,6 +16,8 @@ require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+app.listen(PORT, () => console.log(`App is up on port ${PORT}`));
+
 
 // pg middleware setup
 const client = new pg.Client(process.env.DATABASE_URL);
@@ -42,12 +44,11 @@ app.use(methodoverride((req, res)=>{
 //middleware connections to front end
 app.get('/', helloWorld);
 
-
 // Get user location then render the material category page
 app.post('/location', getLocation);
 
 //Get item material then render subcategory page
-app.post('/item-categories', getCategory);
+app.post('/item-categories/:id', getCategory);
 
 //query earth911 to get recycle instructions
 app.post('/disposal-instructions', getInstructions);
@@ -70,25 +71,39 @@ function getLocation(req, res){
   res.render('./pages/categories.ejs');
 }
 
-// app.post('/search', fetchBooksAPI);
-
-
-
-// app.post('/view', viewBookDetail);
-// app.post('/update', updateBook)
-
-// app.post('/save', saveBook);
-
-// app.post('/delete', deleteBook);
 
 // This retrieves and returns data from the Google Books API.
 function helloWorld(req, res) {
-
   res.render('index.ejs');
+  checkDatabase();
 
 }
 
-app.listen(PORT, () => console.log(`App is up on port ${PORT}`));
+function checkDatabase(){
+  const SQL = `SELECT * FROM materials`;
+
+  let values = ['plastic', 'glass', 'paper', 'electronics', 'food-waste', 'metal'];
+
+  return client.query(SQL, values)
+    .then(result => {
+      if(result.rows>0){
+        const SQLinsert =  `INSERT INTO materials (material) VALUES($1)`;
+        client.query(SQLinsert);
+      }
+    }).catch(console.error('error'));
+}
+
+// function fillDatabase(){
+//   const SQL =  `INSERT INTO materials ('plastic', 'glass', 'paper', 'electronics', 'food-waste', 'metal')
+//   VALUES($1, $2, $3, $4, $5, $6)`;
+
+//   return client.query(SQL)
+//   .then(results=>{
+
+//   })
+// }
+
+
 
 
 // var itemCategories = [
