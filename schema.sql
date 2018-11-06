@@ -3,9 +3,14 @@ DROP TABLE IF EXISTS recyclables;
 
 CREATE TABLE recyclables (
     id SERIAL PRIMARY KEY,
-    material VARCHAR(255),
-    item VARCHAR(255),
-    result VARCHAR(255)
+    category VARCHAR(255),
+    item_name VARCHAR(255),
+    recycling VARCHAR(255),
+    donate VARCHAR(255),
+    yard VARCHAR(255),
+    garbage VARCHAR(255),
+    tips VARCHAR(255)
+
 );
 
 
