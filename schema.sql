@@ -1,19 +1,12 @@
-DROP TABLE IF EXISTS recyles;
+DROP TABLE IF EXISTS recyclables;
 
-CREATE TABLE materials (
+
+CREATE TABLE recyclables (
     id SERIAL PRIMARY KEY,
-    material VARCHAR(255)
-);
-
-
-
-
-CREATE TABLE items {
-    id SERIAL PRIMARY KEY,
+    material VARCHAR(255),
     item VARCHAR(255),
-    result VARCHAR(255),
-    materials_id INTEGER NOT NULL REFERENCES materials(id)
-}
+    result VARCHAR(255)
+);
 
 
 
