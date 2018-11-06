@@ -6,6 +6,8 @@ CREATE TABLE materials (
 );
 
 
+
+
 CREATE TABLE items {
     id SERIAL PRIMARY KEY,
     item VARCHAR(255),
