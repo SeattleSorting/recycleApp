@@ -94,6 +94,42 @@ function checkDatabase(){
 }
 
 
+function seedDatabase() {
+  const plasticData = require('./public/js/plastic.json');
+  // console.log('this is our parsed Data: ', plasticData);
+  plasticData.items.forEach( item => {
+    // console.log('this is our item from JSON: ', item);
+    let newItem = new Item(item);
+    console.log('this is our new item: ', newItem);
+    newItem.save();
+  })
+}
+
+
+
+Item.prototype.save = function(){
+  let SQL = `
+  INSERT INTO recyclables
+    (category,item_name,recycling,donate,yard,garbage,tips)
+    VALUES($1,$2,$3,$4,$5,$6,$7)`;
+
+  let values = Object.values(this);
+  return client.query(SQL, values);
+};
+
+
+function Item(item) {
+  this.category = item.category;
+  this.item_name = item.name;
+  this.recycling = item.destination.recycling;
+  this.donate = item.destination.donate;
+  this.yard = item.destination.yard;
+  this.garbage = item.destination.garbage;
+  this.tips = item.tips;
+}
+
+seedDatabase();
+
 
 // var itemCategories = [
 
