@@ -19,7 +19,7 @@ const app = express();
 app.listen(PORT, () => console.log(`App is up on port ${PORT}`));
 
 
-const vision = require('@google-cloud/vision');
+
 
 
 
@@ -31,6 +31,8 @@ client.on('err', err => console.log(err));
 
 // Express setup
 app.use(cors());
+
+const vision = require('@google-cloud/vision');
 
 app.set('view engine', 'ejs');
 
@@ -74,7 +76,7 @@ function getCategory(req, res){
   // console.log('this is our req.body delivered from categories page: ', req.body);
   const _getSubCatItems = `
   SELECT * FROM recyclables
-  WHERE category = ${req.body.category}`;
+  WHERE category = '${req.body.category}'`;
   client.query(_getSubCatItems)
     .then(subCatItems => {
       console.log('these are the rows that we quried according to category', subCatItems);

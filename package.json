@@ -27,6 +27,9 @@
     "express": "^4.16.4",
     "method-override": "^3.0.0",
     "pg": "^7.6.0",
-    "superagent": "^4.0.0-beta.5"
+    "superagent": "^4.0.0-beta.5",
+    "@google-cloud/datastore": "^2.0.0",
+    "@google-cloud/storage": "^2.3.0",
+    "@google-cloud/vision": "^0.22.1"
   }
 }
