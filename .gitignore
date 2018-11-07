@@ -225,7 +225,7 @@ $RECYCLE.BIN/
 *.lnk
 
 #Google Vision API Key
-fakeVision.json
+vision-api.json
 
 
 # End of https://www.gitignore.io/api/node,macos,linux,windows,webstorm,visualstudiocode
