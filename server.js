@@ -19,6 +19,11 @@ const app = express();
 app.listen(PORT, () => console.log(`App is up on port ${PORT}`));
 
 
+const vision = require('@google-cloud/vision');
+
+
+
+
 // pg middleware setup
 const client = new pg.Client(process.env.DATABASE_URL);
 client.connect();
@@ -40,6 +45,8 @@ app.use(methodoverride((req, res)=>{
   }
 }));
 
+//sets the path for vision when the server hears the /vision it will call the getGoogleVision function
+app.get('/vision', getGoogleVision);
 
 //middleware connections to front end
 app.get('/', helloWorld);
@@ -62,18 +69,17 @@ function getInstructions(req, res){
 }
 
 function getCategory(req, res){
-  //console.log(req.body);
-  //using req.body, load object into res.render
+  // console.log(req.body);
+  // using req.body, load object into res.render
   // console.log('this is our req.body delivered from categories page: ', req.body);
-  // const _getSubCatItems = `
-  // SELECT * FROM recyclables
-  // WHERE category = ${req.body.category}`;
-  // client.query(_getSubCatItems)
-  //   .then(subCatItems => {
-  //     console.log('these are the rows that we quried according to category', subCatItems);
-  // res.render('./pages/subcat.ejs', {Items:subCatItems});
-  res.render('./pages/subcat.ejs');
-  //   }).catch(console.error('error'))
+  const _getSubCatItems = `
+  SELECT * FROM recyclables
+  WHERE category = ${req.body.category}`;
+  client.query(_getSubCatItems)
+    .then(subCatItems => {
+      console.log('these are the rows that we quried according to category', subCatItems);
+      res.render('./pages/subcat.ejs', {Items:subCatItems});
+    }).catch(console.error('error'))
 }
 
 function getLocation(req, res){
@@ -129,30 +135,27 @@ function Item(item) {
   this.tips = item.tips;
 }
 
-// var itemCategories = [
 
-//   {material: 'Plastic',
-//     items: ['bottle', 'utensil', 'wrapper', 'bag', 'straw', 'tuppaware'],
-//    img_src: '../images/pastic-bottle.jpg'},
+// google vision api functions and variables
+const visionClient = new vision.ImageAnnotatorClient({
 
-//   {material: 'Glass',
-//     items: ['bottle', 'window', 'container'],
-//     img_src: '../images/glass.jpeg'},
+  //taken from the jason file
+  projectId: '1540239667572',
+  keyFilename: 'vision-api.json'
+})
 
-//   {material: 'Paper',
-//     items: ['card board', 'cup', 'copy paper', 'napkins', 'news paper', 'straws', 'egg carton', 'Paper Bags', 'Carton'],
-//     img_src: '../images/paper.jpeg'},
 
-//   {material: 'Food Waste',
-//     items: ['Food Scraps', 'Greasy Pizza Boxes', 'Coffee Grounds', 'napkins'],
-//   img_src: },
 
-//   {material: 'Electronic',
-//     items: ['Light Bulbs', 'Batteries', 'Cords', 'Devices'],
-//   img_src: "../images/electric.jpeg"},
-
-//   {material: 'Metal',
-//     items: ['Aluminum Can', 'Tin Foil', 'Rusted Items', 'Cans']
-//   img_src: '../images/aluminum-can.jpg'}
-// ]
+function getGoogleVision(req, res) {
+  //path for image
+  const img_url = 'data-set/glass-cup.jpg'; //path for image
+  //gets label info on image
+  visionClient.labelDetection(img_url)
+    .then(results => {
+      console.log(results[0]);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
 

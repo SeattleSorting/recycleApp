@@ -224,5 +224,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+#Google Vision API Key
+vision-api.json
+
 
 # End of https://www.gitignore.io/api/node,macos,linux,windows,webstorm,visualstudiocode
