@@ -48,7 +48,7 @@ app.get('/', helloWorld);
 app.post('/location', getLocation);
 
 //Get item material then render subcategory page
-app.post('/item-categories/:id', getCategory);
+app.post('/item-categories', getCategory);
 
 //query earth911 to get recycle instructions
 app.post('/disposal-instructions', getInstructions);
@@ -64,7 +64,16 @@ function getInstructions(req, res){
 function getCategory(req, res){
   //console.log(req.body);
   //using req.body, load object into res.render
+  // console.log('this is our req.body delivered from categories page: ', req.body);
+  // const _getSubCatItems = `
+  // SELECT * FROM recyclables
+  // WHERE category = ${req.body.category}`;
+  // client.query(_getSubCatItems)
+  //   .then(subCatItems => {
+  //     console.log('these are the rows that we quried according to category', subCatItems);
+  // res.render('./pages/subcat.ejs', {Items:subCatItems});
   res.render('./pages/subcat.ejs');
+  //   }).catch(console.error('error'))
 }
 
 function getLocation(req, res){
@@ -76,19 +85,14 @@ function getLocation(req, res){
 function helloWorld(req, res) {
   res.render('index.ejs');
   checkDatabase();
-
 }
 
 function checkDatabase(){
   const SQL = `SELECT * FROM recyclables`;
-
-  let values = ['plastic', 'bottle', 'recycle'];
-
   return client.query(SQL)
     .then(result => {
       if(result.rows < 1){
-        const SQLinsert =  `INSERT INTO recyclables (material, item, result) VALUES($1,$2,$3)`;
-        client.query(SQLinsert, values);
+        seedDatabase();
       }
     }).catch(console.error('error'));
 }
@@ -96,11 +100,8 @@ function checkDatabase(){
 
 function seedDatabase() {
   const plasticData = require('./public/js/plastic.json');
-  // console.log('this is our parsed Data: ', plasticData);
   plasticData.items.forEach( item => {
-    // console.log('this is our item from JSON: ', item);
     let newItem = new Item(item);
-    console.log('this is our new item: ', newItem);
     newItem.save();
   })
 }
@@ -127,9 +128,6 @@ function Item(item) {
   this.garbage = item.destination.garbage;
   this.tips = item.tips;
 }
-
-seedDatabase();
-
 
 // var itemCategories = [
 
