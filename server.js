@@ -19,11 +19,6 @@ const app = express();
 app.listen(PORT, () => console.log(`App is up on port ${PORT}`));
 
 
-
-
-
-
-
 // pg middleware setup
 const client = new pg.Client(process.env.DATABASE_URL);
 client.connect();
@@ -119,7 +114,7 @@ function seedDatabase() {
 Item.prototype.save = function(){
   let SQL = `
   INSERT INTO recyclables
-    (category,item_name,recycling,donate,yard,garbage,tips)
+    (itemName,category,subcategory,garbage,recycling,yard,reuse,hazard,transfer,binside)
     VALUES($1,$2,$3,$4,$5,$6,$7)`;
 
   let values = Object.values(this);
@@ -128,13 +123,16 @@ Item.prototype.save = function(){
 
 
 function Item(item) {
+  this.item_name = item.itemName;
   this.category = item.category;
-  this.item_name = item.name;
-  this.recycling = item.destination.recycling;
-  this.donate = item.destination.donate;
-  this.yard = item.destination.yard;
+  this.subcategory = item.subcategory;
   this.garbage = item.destination.garbage;
-  this.tips = item.tips;
+  this.recycling = item.destination.recycling;
+  this.yard = item.destination.yard;
+  this.reuse = item.destination.reuse;
+  this.hazard = item.destination.hazard;
+  this.transfer = item.destination.transfer;
+  this.binside = item.destination.binside;
 }
 
 
