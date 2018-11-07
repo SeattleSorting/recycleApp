@@ -7,10 +7,33 @@
     <h3>Results</h3>
 </header>
 
-    <form id="sub-cat-form" action='/result-action' method='POST'>
-        <input type="hidden" name="name" value="item-type">       
-            <input type="submit" name="sub-category" value="Result">
-    
-    </form>
+<body >
+        <div id="results-page">
+
+        <form id="result">
+                <h3 class="result-heading">
+                    Item:
+                </h3>
+            <section class="compost">
+                <input type="hidden" name="fake-data" value="hit" >
+                <input type="submit" name="zip" value="compost">
+            </section>
+
+            <section class="recycle">
+                <input type="hidden" name="fake-data" value="hit" >
+                <input type="submit" name="zip" value="recycle">
+            </section>
+            <section class="trash">
+                <input type="hidden" name="fake-data" value="hit" >
+                <input type="submit" name="zip" value="trash">
+            </section>
+
+            <section class="reuse">
+                <input type="hidden" name="fake-data" value="hit" >
+                <input type="submit" name="zip" value="reuse">
+            </section>
+        </form>
+        </div>
+    </body>
 
 </html>

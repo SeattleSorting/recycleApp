@@ -4,6 +4,10 @@
         height: 100%;
     }
 
+    *{
+        border-radius: 5px;
+    }
+
     body{
         background: rgb(80, 169, 62);
         color: rgb(219, 222, 216);
@@ -13,6 +17,7 @@
         width: 100%;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     header{
@@ -82,7 +87,60 @@
         width: 15em;
     }
 
+    /* styling for results page */
 
+    #results-page{
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/2f/Space_Needle002.jpg); 
+        width: 95%;
+        height: 95%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .result-heading{
+        color: rgb(2,2,2);
+        font-size: 3em;
+    }
+
+    #result{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #result>section, h3{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 1em;
+    }
+
+    #result section>input{
+        height: 3em;
+        font-size: 2em; 
+        color: rgb(219, 222, 216); 
+        width: 9em;
+    }
+
+   
+
+    section.compost>input{
+        background-color:  rgb(62, 121, 50);
+    }
+
+    section.recycle>input{
+        background-color: rgb(72, 72, 197);
+    }
+
+    section.trash>input{
+        background-color: rgb(90, 98, 92);
+    }
+
+    section.reuse>input{
+        background-color: rgb(214, 200, 0);
+    }
 
 
 }
