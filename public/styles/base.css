@@ -126,21 +126,23 @@
 
    
 
-    section.compost>input{
+    section.yard>input{
         background-color:  rgb(62, 121, 50);
     }
 
-    section.recycle>input{
+    section.recycling>input{
         background-color: rgb(72, 72, 197);
     }
 
-    section.trash>input{
+    section.garbage>input{
         background-color: rgb(90, 98, 92);
     }
 
     section.reuse>input{
         background-color: rgb(214, 200, 0);
     }
+
+    /* build out more options: hazard, transfer, binside */
 
 
 }
