@@ -11,7 +11,7 @@ const superagent = require('superagent');
 const pg = require('pg');
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
-
+const fileUpload = require('express-fileupload');
 const methodoverride = require('method-override');
 
 require('dotenv').config();
@@ -29,6 +29,7 @@ client.on('err', err => console.log(err));
 
 // Express setup
 app.use(cors());
+app.use(fileUpload());
 
 const vision = require('@google-cloud/vision');
 
@@ -46,10 +47,15 @@ app.use(methodoverride((req, res)=>{
 }));
 
 //sets the path for vision when the server hears the /vision it will call the getGoogleVision function
-app.get('/vision', getGoogleVision);
+app.post('/vision', getGoogleVision);
 
 //middleware connections to front end
 app.get('/', helloWorld);
+
+//path for imaage upload
+app.post('/upload', uploadPage);
+
+app.post('/imageCheck', verifyItem)
 
 // Get user location then render the material category page
 app.post('/location', getLocation);
@@ -163,15 +169,39 @@ const visionClient = new vision.ImageAnnotatorClient({
 
 
 function getGoogleVision(req, res) {
+//receives dom object from vision path
+
+
+  // let imagePath = req.body
+
+  // console.log('this is being called from getGoogleVision function ',req.files.file, req.body)
   //path for image
-  const img_url = 'data-set/glass-cup.jpg'; //path for image
+  const img_url = './public/data-set/'+req.files.file.name;
+  // console.log(img_url)
   //gets label info on image
+  let visionDescriptions = [];
   visionClient.labelDetection(img_url)
     .then(results => {
-      console.log(results[0]);
+      results[0].labelAnnotations.forEach(result => {
+        // console.log(result.description);
+        visionDescriptions.push(result.description);
+      });
+      console.log(visionDescriptions);
+      res.render('pages/varification.ejs', {file: req.files.file.name});
     })
     .catch(err => {
       console.log(err);
     });
 }
 
+function uploadPage(req, res) {
+  res.render('./pages/upload.ejs');
+
+
+}
+
+function verifyItem(req, res) {
+  res.render('./pages/verification.ejs');
+
+
+}

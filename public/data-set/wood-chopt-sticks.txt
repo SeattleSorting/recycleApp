@@ -1,0 +1,15 @@
+{
+  "responses": [
+    {
+      "labelAnnotations": [
+        {
+          "mid": "/m/083vt",
+          "description": "wood",
+          "score": 0.7431091,
+          "topicality": 0.7431091
+        }
+      ]
+    }
+  ]
+}
+

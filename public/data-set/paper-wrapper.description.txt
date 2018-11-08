@@ -1,0 +1,51 @@
+{
+  "responses": [
+    {
+      "labelAnnotations": [
+        {
+          "mid": "/m/09cx8",
+          "description": "finger",
+          "score": 0.7153303,
+          "topicality": 0.7153303
+        },
+        {
+          "mid": "/m/083vt",
+          "description": "wood",
+          "score": 0.70941406,
+          "topicality": 0.70941406
+        },
+        {
+          "mid": "/m/0641k",
+          "description": "paper",
+          "score": 0.6612278,
+          "topicality": 0.6612278
+        },
+        {
+          "mid": "/m/01l0y0",
+          "description": "material",
+          "score": 0.65201294,
+          "topicality": 0.65201294
+        },
+        {
+          "mid": "/m/03gq5hm",
+          "description": "font",
+          "score": 0.5761943,
+          "topicality": 0.5761943
+        },
+        {
+          "mid": "/m/0mwc",
+          "description": "angle",
+          "score": 0.54508144,
+          "topicality": 0.54508144
+        },
+        {
+          "mid": "/m/03q7pgh",
+          "description": "cardboard",
+          "score": 0.54095066,
+          "topicality": 0.54095066
+        }
+      ]
+    }
+  ]
+}
+

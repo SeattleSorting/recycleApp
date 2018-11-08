@@ -1,0 +1,15 @@
+{
+  "responses": [
+    {
+      "labelAnnotations": [
+        {
+          "mid": "/m/01jwgf",
+          "description": "product",
+          "score": 0.7219686,
+          "topicality": 0.7219686
+        }
+      ]
+    }
+  ]
+}
+
