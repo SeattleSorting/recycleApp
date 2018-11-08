@@ -1,0 +1,39 @@
+{
+  "responses": [
+    {
+      "labelAnnotations": [
+        {
+          "mid": "/m/084rsc",
+          "description": "aqua",
+          "score": 0.83483905,
+          "topicality": 0.83483905
+        },
+        {
+          "mid": "/m/02n3pb",
+          "description": "product",
+          "score": 0.7325257,
+          "topicality": 0.7325257
+        },
+        {
+          "mid": "/m/07c1v",
+          "description": "technology",
+          "score": 0.66719764,
+          "topicality": 0.66719764
+        },
+        {
+          "mid": "/m/01jwgf",
+          "description": "product",
+          "score": 0.6561833,
+          "topicality": 0.6561833
+        },
+        {
+          "mid": "/m/05z87",
+          "description": "plastic",
+          "score": 0.6238332,
+          "topicality": 0.6238332
+        }
+      ]
+    }
+  ]
+}
+

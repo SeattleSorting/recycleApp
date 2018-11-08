@@ -1,0 +1,39 @@
+{
+  "responses": [
+    {
+      "labelAnnotations": [
+        {
+          "mid": "/m/06fvc",
+          "description": "red",
+          "score": 0.95105696,
+          "topicality": 0.95105696
+        },
+        {
+          "mid": "/m/023j4r",
+          "description": "nail",
+          "score": 0.796329,
+          "topicality": 0.796329
+        },
+        {
+          "mid": "/m/09cx8",
+          "description": "finger",
+          "score": 0.76472926,
+          "topicality": 0.76472926
+        },
+        {
+          "mid": "/m/0k65p",
+          "description": "hand",
+          "score": 0.7461066,
+          "topicality": 0.7461066
+        },
+        {
+          "mid": "/m/01l0y0",
+          "description": "material",
+          "score": 0.58756185,
+          "topicality": 0.58756185
+        }
+      ]
+    }
+  ]
+}
+
