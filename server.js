@@ -77,11 +77,24 @@ function getInstructions(req, res){
   WHERE category = '${categoryStorage[0]}'
   AND item_name = '${req.body.item}'`;
   client.query(_getInstructions)
+
     .then( results => {
-      console.log('this is our result object w/ instructions', results);
+      // console.log('this is our result object w/ instructions', results);
+      let finalResult = results.rows[0];
+      console.log('this is our finalResult: ', finalResult);
+      let resultsArr = [];
+      let resultKeys = Object.keys(finalResult);
+      console.log('this is resultKeys: ', resultKeys);
+      resultKeys.forEach( (key, idx) => {
+        if(finalResult[key] && finalResult[key] === 'true'){
+          resultsArr.push(resultKeys[idx]);
+        }
+      });
+      console.log('this is our results array: ', resultsArr);
 
     }).catch(console.error('error'))
   
+    // TO DO: throw resultsArr into res.render below, populate via results data. 
 
   res.render('./pages/result.ejs');
 }
