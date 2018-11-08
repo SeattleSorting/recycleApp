@@ -761,7 +761,7 @@
       {
         "itemName": "Plastic Corks",
         "category": "PLASTIC",
-        "subcategory": "small",
+        "subcategory": "bottles/jars/jugs",
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -772,6 +772,21 @@
           "binside": null
         }
       },
+      {
+        "itemName": "Corks",
+        "category": "YARD",
+        "subcategory": null,
+        "destination": {
+          "garbage": null,
+          "recycling": null,
+          "yard": true,
+          "reuse": null,
+          "hazard": null,
+          "transfer": null,
+          "binside": null
+        }
+      },
+
       {
         "itemName": "Styrofoam Cups",
         "category": "OTHER",
