@@ -95,6 +95,10 @@ function getInstructions(req, res){
         }
       });
       console.log('this is our results array: ', resultsArr);
+    
+      // empty the category storage array
+      categoryStorage.pop();
+
       res.render('./pages/result.ejs', {destination: resultsArr});
     }).catch(console.error('error'));
   
@@ -202,7 +206,10 @@ function getGoogleVision(req, res) {
         // console.log(result.description);
         visionDescriptions.push(result.description);
       });
-      console.log(visionDescriptions);
+      // console.log(visionDescriptions);
+      // make function pass in vision description
+      queryWithVisionResults(visionDescriptions);
+
       res.render('pages/varification.ejs', {file: req.files.file.name});
     })
     .catch(err => {
@@ -217,5 +224,56 @@ function uploadPage(req, res) {
 function verifyItem(req, res) {
   res.render('./pages/verification.ejs');
 
+
+}
+
+// this takes in Google vision array results and queries database
+function queryWithVisionResults(visionArrray) {
+  // do a for loop or a forEach over visionArray
+  // for each item that we loop through, we query DB for exact match in item_name column
+  // if results.rows is empty, then we want to split each index of visionArray and loop through each individual word until we find a match
+  // if we find a match, present that to the user to then submit to our backend
+  // if nothing comes back, send them to categories page
+
+  let queryString;
+  let _exactMatchSQL;
+  let successfulQuery;
+
+  console.log('this is our vision array: ', visionArrray);
+  for(let i = 0; i < visionArrray.length; i++){
+    // if visionArray[i] if includes = ' ' is true, then visionArr[i] + 's'
+    // querySring = visionArr[i] +
+
+    // if array is a single word, add an 's' to it. Then query with s and without s
+    if(! visionArrray[i].includes(' ')){
+      console.log('if statement was true. here is vision Array[i]', visionArrray[i]);
+      queryString = visionArrray[i] + 's';
+      _exactMatchSQL = `SELECT * from recyclables WHERE item_name = '${queryString}'`
+      client.query(_exactMatchSQL)
+        .then( result => {
+          if(result.rows){
+            successfulQuery = result.rows[0];
+          } else {
+            _exactMatchSQL = `SELECT * from recyclables WHERE item_name = '${visionArrray[i]}'`;
+            client.query(_exactMatchSQL)
+              .then( result => {
+                successfulQuery = result.rows[0];
+            });
+          }
+
+        })
+
+        // if visionArr[i] is made up of multiple words, then query the whole thing. 
+    } else {
+      _exactMatchSQL = `SELECT * from recyclables WHERE item_name = '${visionArrray[i]}'`;
+      client.query(_exactMatchSQL)
+        .then( result => {
+          successfulQuery = result.rows[0];
+        })
+    }
+
+    if(successfulQuery)
+
+  }
 
 }
