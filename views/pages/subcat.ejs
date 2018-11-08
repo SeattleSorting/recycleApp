@@ -7,7 +7,7 @@
     <% items.forEach( specificItems => { %>
     <form id="sub-cat-form" action='/disposal-instructions' method='POST'> 
         <input type="hidden" name="item" value="<%=specificItems.item_name%>">
-        <button type="submit"><%=specificItems.item_name%></button>
+        <button type="submit" value="<%=specificItems.item_name%>" >  <%=specificItems.item_name%>  </button>
     </form> 
     <% }); %>
 </html>

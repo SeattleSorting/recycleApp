@@ -3,7 +3,7 @@
       {
         "itemName": "Styrofoam Blocks or Packing Sheets",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -17,7 +17,7 @@
       {
         "itemName": "Latex Paint",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -31,7 +31,7 @@
       {
         "itemName": "Aerosol Cans",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -45,7 +45,7 @@
       {
         "itemName": "Air Conditioners or Heat Pumps",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -59,7 +59,7 @@
       {
         "itemName": "Aluminum Foil",
         "category": "METAL",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": "dirty",
           "recycling": true,
@@ -73,7 +73,7 @@
       {
         "itemName": "Acoustic Ceiling Tile",
         "category": "METAL",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -87,7 +87,7 @@
       {
         "itemName": "Ammunition or Guns",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -101,7 +101,7 @@
       {
         "itemName": "Acetylene Oxygen Tanks",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -115,7 +115,7 @@
       {
         "itemName": "Antifreeze",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -129,7 +129,7 @@
       {
         "itemName": "Other Large Appliances",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -143,7 +143,7 @@
       {
         "itemName": "Asbestos",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -157,7 +157,7 @@
       {
         "itemName": "Fireplace or Briquette Ashes",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -171,7 +171,7 @@
       {
         "itemName": "AsphaltRoofing",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -185,7 +185,7 @@
       {
         "itemName": "Stereo or Audio Equipment",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -200,7 +200,7 @@
       {
         "itemName": "Paper Bags",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -214,7 +214,7 @@
       {
         "itemName": "Alkaline Batteries",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -228,7 +228,7 @@
       {
         "itemName": "Rechargeable Batteries",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -242,7 +242,7 @@
       {
         "itemName": "Bed Frames",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -256,7 +256,7 @@
       {
         "itemName": "Bedding or Linens",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -270,7 +270,7 @@
       {
         "itemName": "Beverage Cans",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -284,7 +284,7 @@
       {
         "itemName": "Bicycles or Bike Parts",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -298,7 +298,7 @@
       {
         "itemName": "Bicycles or Bike Parts",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -312,7 +312,7 @@
       {
         "itemName": "Bleach",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -326,7 +326,7 @@
       {
         "itemName": "Hardcover Books",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -340,7 +340,7 @@
       {
         "itemName": "Paperback Books",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -354,7 +354,7 @@
       {
         "itemName": "Brake or Transmission Fluid",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -368,7 +368,7 @@
       {
         "itemName": "Brick",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -382,7 +382,7 @@
       {
         "itemName": "Buckets",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -396,7 +396,7 @@
       {
         "itemName": "Butter Boxes",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -410,7 +410,7 @@
       {
         "itemName": "Butter Boxes",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -424,7 +424,7 @@
       {
         "itemName": "Can Lids",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -438,7 +438,7 @@
       {
         "itemName": "Aerosol Cans",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -452,7 +452,7 @@
       {
         "itemName": "Auto Glass",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -466,7 +466,7 @@
       {
         "itemName": "Vehicles",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -480,7 +480,7 @@
       {
         "itemName": "Cardboard Boxes",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -494,7 +494,7 @@
       {
         "itemName": "Corrugated Cardboard",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -508,7 +508,7 @@
       {
         "itemName": "Soiled or Greasy Cardboard",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -522,7 +522,7 @@
       {
         "itemName": "Carpet or Padding",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -536,7 +536,7 @@
       {
         "itemName": "CD or DVD Cases",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -550,7 +550,7 @@
       {
         "itemName": "CDs, DVDs, or Floppies",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -564,7 +564,7 @@
       {
         "itemName": "Cell Phones",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -578,7 +578,7 @@
       {
         "itemName": "Cell Phone Batteries",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -592,7 +592,7 @@
       {
         "itemName": "Child Car Seats",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -606,7 +606,7 @@
       {
         "itemName": "Chip Bags",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -620,7 +620,7 @@
       {
         "itemName": "Holiday Lights",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -634,7 +634,7 @@
       {
         "itemName": "Dirt or Soil",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -648,7 +648,7 @@
       {
         "itemName": "Cleaning Supplies",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -662,7 +662,7 @@
       {
         "itemName": "Clock Radios",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -676,7 +676,7 @@
       {
         "itemName": "Clothes or Shoes",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -690,7 +690,7 @@
       {
         "itemName": "Compostable Food Service Items",
         "category": "FOOD",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -704,7 +704,7 @@
       {
         "itemName": "Computers & Laptops",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -718,7 +718,7 @@
       {
         "itemName": "Computer Batteries",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -732,7 +732,7 @@
       {
         "itemName": "Computers Monitors",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -747,7 +747,7 @@
       {
         "itemName": "Copiers & Fax Machines",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -775,7 +775,7 @@
       {
         "itemName": "Styrofoam Cups",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -789,7 +789,7 @@
       {
         "itemName": "Dirt or Soil",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -803,7 +803,7 @@
       {
         "itemName": "Disposable Diapers",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -817,7 +817,7 @@
       {
         "itemName": "Drinking Glasses",
         "category": "GLASS",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -832,7 +832,7 @@
       {
         "itemName": "Foam Egg Cartons",
         "category": "STYROFOAM",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -846,7 +846,7 @@
       {
         "itemName": "Paper Egg Cartons",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -860,7 +860,7 @@
       {
         "itemName": "Engines,Motors or Car Parts",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -874,7 +874,7 @@
       {
         "itemName": "E-waste",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -889,7 +889,7 @@
       {
         "itemName": "Eyeglasses",
         "category": "METAL",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -903,7 +903,7 @@
       {
         "itemName": "Kleenex, Facial Tissue",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -917,7 +917,7 @@
       {
         "itemName": "Copiers & Fax Machines",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -932,7 +932,7 @@
       {
         "itemName": "Fluorescent Light Bulbs",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -946,7 +946,7 @@
       {
         "itemName": "Styrofoam Blocks or Packing Sheets",
         "category": "STYROFOAM",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -960,7 +960,7 @@
       {
         "itemName": "Foil Pie Pans",
         "category": "METAL",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": "dirty",
           "recycling": true,
@@ -974,7 +974,7 @@
       {
         "itemName": "Food Scraps",
         "category": "FOOD",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -988,7 +988,7 @@
       {
         "itemName": "Frozen Food Boxes",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -1003,7 +1003,7 @@
       {
         "itemName": "Glass Bottles or Jars",
         "category": "GLASS",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -1017,7 +1017,7 @@
       {
         "itemName": "Broken Glass",
         "category": "GLASS",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1031,7 +1031,7 @@
       {
         "itemName": "Glass or Ceramic Household Items",
         "category": "GLASS",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1045,7 +1045,7 @@
       {
         "itemName": "Gold, Silver, Etc.",
         "category": "METAL",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1060,7 +1060,7 @@
       {
         "itemName": "Grass Clippings or Sod",
         "category": "FOOD",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -1074,7 +1074,7 @@
       {
         "itemName": "Greeting Cards",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -1089,7 +1089,7 @@
       {
         "itemName": "Hot Cups or Coffee Cups",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1103,7 +1103,7 @@
       {
         "itemName": "House Plants",
         "category": "FOOD",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -1117,7 +1117,7 @@
       {
         "itemName": "Alkaline Batteries",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1131,7 +1131,7 @@
       {
         "itemName": "Ice Cream Cartons",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -1145,7 +1145,7 @@
       {
         "itemName": "Incandescent Light Bulbs",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1159,7 +1159,7 @@
       {
         "itemName": "Jewelry or Coins",
         "category": "METAL",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1173,7 +1173,7 @@
       {
         "itemName": "Keys",
         "category": "METAL",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1187,7 +1187,7 @@
       {
         "itemName": "Keys",
         "category": "METAL",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1201,7 +1201,7 @@
       {
         "itemName": "Computers & Laptops",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1215,7 +1215,7 @@
       {
         "itemName": "Laundry Detergent Boxes",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -1229,7 +1229,7 @@
       {
         "itemName": "Lawn Mowers or Power Equipment",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -1243,7 +1243,7 @@
       {
         "itemName": "Leaves or Non-Woody Yard Waste",
         "category": "FOOD",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -1257,7 +1257,7 @@
       {
         "itemName": "Fluorescent Light Bulbs",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1271,7 +1271,7 @@
       {
         "itemName": "Incandescent Light Bulbs",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1285,7 +1285,7 @@
       {
         "itemName": "LED Light Bulbs",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1299,7 +1299,7 @@
       {
         "itemName": "Holiday Lights",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1313,7 +1313,7 @@
       {
         "itemName": "Magazines",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -1328,7 +1328,7 @@
       {
         "itemName": "Microwaves",
         "category": "ELECTRONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1342,7 +1342,7 @@
       {
         "itemName": "Mirrors",
         "category": "GLASS",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1357,7 +1357,7 @@
       {
         "itemName": "Mugs, Plates or Bowls",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1371,7 +1371,7 @@
       {
         "itemName": "Paper Napkins",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1385,7 +1385,7 @@
       {
         "itemName": "Newspapers",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1400,7 +1400,7 @@
       {
         "itemName": "Office Paper",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -1415,7 +1415,7 @@
       {
         "itemName": "Paint Cans",
         "category": "METAL",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1430,7 +1430,7 @@
       {
         "itemName": "Paper Bags",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -1444,7 +1444,7 @@
       {
         "itemName": "Paper Punch Holes",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -1458,7 +1458,7 @@
       {
         "itemName": "Paper Towels",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1472,7 +1472,7 @@
       {
         "itemName": "Paper Towel Rolls",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -1486,7 +1486,7 @@
       {
         "itemName": "Pesticide Containers",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1500,7 +1500,7 @@
       {
         "itemName": "Pesticides",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1514,7 +1514,7 @@
       {
         "itemName": "Pet Food",
         "category": "FOOD",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -1529,7 +1529,7 @@
       {
         "itemName": "Phone Books",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1543,7 +1543,7 @@
       {
         "itemName": "Photographs",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1557,7 +1557,7 @@
       {
         "itemName": "Pizza Boxes",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -1571,7 +1571,7 @@
       {
         "itemName": "Plant or Tree Salvage",
         "category": "YARD",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -1585,7 +1585,7 @@
       {
         "itemName": "Peanut Butter or Mayonnaise Jars",
         "category": "GLASS",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1599,7 +1599,7 @@
       {
         "itemName": "Peanut Butter or Mayonnaise Jars",
         "category": "PLASTIC",
-        "subcategory": "bottles/jars",
+        "subcategory": "bottles/jars/jugs",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1614,7 +1614,7 @@
       {
         "itemName": "Printer Cartridges & Toner",
         "category": "ELECTONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1628,7 +1628,7 @@
       {
         "itemName": "Printers & Peripherals",
         "category": "ELECTONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1643,7 +1643,7 @@
       {
         "itemName": "Rechargeable Appliances",
         "category": "ELECTONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1657,7 +1657,7 @@
       {
         "itemName": "Rechargeable Batteries",
         "category": "ELECTONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1671,7 +1671,7 @@
       {
         "itemName": "Refrigerators or Freezers",
         "category": "ELECTONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -1686,7 +1686,7 @@
       {
         "itemName": "Rocks or Gravel",
         "category": "YARD",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1700,7 +1700,7 @@
       {
         "itemName": "Salvaged materials",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -1714,7 +1714,7 @@
       {
         "itemName": "Screws, Nails, Nuts or Bolts",
         "category": "METAL",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1728,7 +1728,7 @@
       {
         "itemName": "Wood Scraps, Shavings, or Sawdust",
         "category": "YARD",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1742,7 +1742,7 @@
       {
         "itemName": "Toasters",
         "category": "ELECTONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1758,7 +1758,7 @@
       {
         "itemName": "Steel / Tin Cans",
         "category": "METAL",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1772,7 +1772,7 @@
       {
         "itemName": "Steel or Tin Cans & Lids",
         "category": "METAL",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1786,7 +1786,7 @@
       {
         "itemName": "Stereo or Audio Equipment",
         "category": "ELECTONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1800,7 +1800,7 @@
       {
         "itemName": "Stoves",
         "category": "ELECTONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -1814,7 +1814,7 @@
       {
         "itemName": "Styrofoam Blocks",
         "category": "STYROFOAM",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1828,7 +1828,7 @@
       {
         "itemName": "Televisions",
         "category": "ELECTONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1842,7 +1842,7 @@
       {
         "itemName": "Receipts",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -1857,7 +1857,7 @@
       {
         "itemName": "Styrofoam Cups",
         "category": "STYROFOAM",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1871,7 +1871,7 @@
       {
         "itemName": "VCRs",
         "category": "ELECTONIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1885,7 +1885,7 @@
       {
         "itemName": "Vitamins",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1899,7 +1899,7 @@
       {
         "itemName": "Other Vehicle Fluids",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -1913,7 +1913,7 @@
       {
         "itemName": "Windows or Picture Glass",
         "category": "GLASS",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -1928,7 +1928,7 @@
       {
         "itemName": "Wire Clothes Hangers",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1956,7 +1956,7 @@
       {
         "itemName": "Envelopes",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -1985,7 +1985,7 @@
       {
         "itemName": "Cooking Oil",
         "category": "FOOD",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2014,7 +2014,7 @@
       {
         "itemName": "Fats, Oils, or Grease",
         "category": "FOOD",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -2042,7 +2042,7 @@
       {
         "itemName": "Coffee Filters",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -2056,7 +2056,7 @@
       {
         "itemName": "Waxed Cardboard",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -2084,7 +2084,7 @@
       {
         "itemName": "Meat or Food Trays",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "food service/storage",
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -2098,7 +2098,7 @@
       {
         "itemName": "Motor Oil",
         "category": "OTHER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -2112,7 +2112,7 @@
       {
         "itemName": "Gift Wrap",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2126,7 +2126,7 @@
       {
         "itemName": "Plastic Berry Trays",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "food service/storage",
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -2140,7 +2140,7 @@
       {
         "itemName": "Motor Oil Filters",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "household",
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -2154,7 +2154,7 @@
       {
         "itemName": "Juice Boxes & Cartons",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -2168,7 +2168,7 @@
       {
         "itemName": "Milk Cartons",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -2182,7 +2182,7 @@
       {
         "itemName": "Milk Jug",
         "category": "PLATIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -2196,7 +2196,7 @@
       {
         "itemName": "Clamshell Containers",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "food service/storage",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2210,7 +2210,7 @@
       {
         "itemName": "Pet Food Bags",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2224,7 +2224,7 @@
       {
         "itemName": "Trees or Brush",
         "category": "YARD",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -2238,7 +2238,7 @@
       {
         "itemName": "Spiral Bound Notebooks",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -2249,24 +2249,11 @@
           "binside": null
         }
       },
-      {
-        "itemName": "Barrels or Drums",
-        "category": "PLASTIC",
-        "subcategory": "s",
-        "destination": {
-          "garbage": "dirty",
-          "recycling": null,
-          "yard": null,
-          "reuse": null,
-          "hazard": true,
-          "transfer": true,
-          "binside": null
-        }
-      },
+
       {
         "itemName": "Medicine Bottles - Over the Counter",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bottles/jars/jugs",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2280,7 +2267,7 @@
       {
         "itemName": "Plastic Milk or Juice Jugs",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bottles/jars/jugs",
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -2294,7 +2281,7 @@
       {
         "itemName": "Junk Mail",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2308,7 +2295,7 @@
       {
         "itemName": "Plastic Plant Pots",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "household",
         "destination": {
           "garbage": "dirty",
           "recycling": true,
@@ -2322,7 +2309,7 @@
       {
         "itemName": "Gutters",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "household",
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -2336,7 +2323,7 @@
       {
         "itemName": "Plastic Outdoor Furniture",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "household",
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -2347,24 +2334,11 @@
           "binside": null
         }
       },
-      {
-        "itemName": "Contaminated Dirt or Soil",
-        "category": "PLASTIC",
-        "subcategory": "s",
-        "destination": {
-          "garbage": true,
-          "recycling": null,
-          "yard": null,
-          "reuse": null,
-          "hazard": true,
-          "transfer": true,
-          "binside": null
-        }
-      },
+ 
       {
         "itemName": "Plastic Food Tubs",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "food service/storage",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2378,7 +2352,7 @@
       {
         "itemName": "Hand Tools",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "household",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2392,10 +2366,10 @@
       {
         "itemName": "Bottle Caps or Jar Lids",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bottles/jars/jugs",
         "destination": {
           "garbage": true,
-          "recycling": true,
+          "recycling": null,
           "yard": null,
           "reuse": null,
           "hazard": null,
@@ -2406,7 +2380,7 @@
       {
         "itemName": "Plastic Lids",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bottles/jars/jugs",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2420,7 +2394,7 @@
       {
         "itemName": "Laundry Detergent Jugs",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bottles/jars/jugs",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2434,7 +2408,7 @@
       {
         "itemName": "Grocery or Shopping Bags",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bags",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2448,7 +2422,7 @@
       {
         "itemName": "Copper, Bronze or Brass",
         "category": "METAL",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2462,7 +2436,7 @@
       {
         "itemName": "Bubble Wrap",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "packaging",
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -2475,8 +2449,8 @@
       },
       {
         "itemName": "Cereal or Cracker Boxes",
-        "category": "PLASTIC",
-        "subcategory": "s",
+        "category": "PAPER",
+        "subcategory": "null",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2490,7 +2464,7 @@
       {
         "itemName": "Prescription Drug Bottles",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bottles/jars/jugs",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2504,7 +2478,7 @@
       {
         "itemName": "Milk Cartons",
         "category": "PAPER",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -2518,8 +2492,8 @@
 
       {
         "itemName": "Scrap Metal",
-        "category": "PLASTIC",
-        "subcategory": "s",
+        "category": "METAL",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2533,7 +2507,7 @@
       {
         "itemName": "Food Box Liners",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "food service/storage",
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -2547,7 +2521,7 @@
       {
         "itemName": "Shampoo or Lotion Bottles",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bottles/jars/jugs",
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -2560,8 +2534,8 @@
       },
       {
         "itemName": "Aluminum",
-        "category": "PLASTIC",
-        "subcategory": "s",
+        "category": "METAL",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2573,11 +2547,11 @@
         }
       },
       {
-        "itemName": "Sharps â Needles & Syringes",
+        "itemName": "Sharps Needles & Syringes",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
-          "garbage": true,
+          "garbage": null,
           "recycling": null,
           "yard": null,
           "reuse": null,
@@ -2588,8 +2562,8 @@
       },
       {
         "itemName": "Shredded Paper",
-        "category": "PLASTIC",
-        "subcategory": "s",
+        "category": "PAPER",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -2603,9 +2577,9 @@
       {
         "itemName": "Shrink Wrap",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "packaging",
         "destination": {
-          "garbage": "dirty",
+          "garbage": true,
           "recycling": true,
           "yard": null,
           "reuse": null,
@@ -2617,7 +2591,7 @@
       {
         "itemName": "Plastic Silverware",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "food service/storage",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2630,8 +2604,8 @@
       },
       {
         "itemName": "Metal Sinks, Tubs or Fixtures",
-        "category": "PLASTIC",
-        "subcategory": "s",
+        "category": "METAL",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -2642,24 +2616,11 @@
           "binside": null
         }
       },
-      {
-        "itemName": "Sharps, Needles & Syringes",
-        "category": "PLASTIC",
-        "subcategory": "s",
-        "destination": {
-          "garbage": true,
-          "recycling": null,
-          "yard": null,
-          "reuse": null,
-          "hazard": true,
-          "transfer": true,
-          "binside": null
-        }
-      },
+    
       {
         "itemName": "Newspaper Bags",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bags",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2673,7 +2634,7 @@
       {
         "itemName": "Dry Cleaner Bags",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bags",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2686,8 +2647,8 @@
       },
       {
         "itemName": "Soup Boxes",
-        "category": "PLASTIC",
-        "subcategory": "s",
+        "category": "PAPER",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -2701,7 +2662,7 @@
       {
         "itemName": "Iron or Steel",
         "category": "METAL",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2715,7 +2676,7 @@
       {
         "itemName": "Stainless Steel",
         "category": "METAL",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2727,9 +2688,9 @@
         }
       },
       {
-        "itemName": "Plastic Bottles",
+        "itemName": "Plastic Bottle",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bottles/jars/jugs",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2743,7 +2704,7 @@
       {
         "itemName": "Plastic Cups & Utensils",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "food service/storage",
         "destination": {
           "garbage": "dirty",
           "recycling": true,
@@ -2754,24 +2715,11 @@
           "binside": null
         }
       },
+
       {
-        "itemName": "Motor Oil Filters",
+        "itemName": "Plastic Milk Jug",
         "category": "PLASTIC",
-        "subcategory": "s",
-        "destination": {
-          "garbage": true,
-          "recycling": null,
-          "yard": null,
-          "reuse": null,
-          "hazard": true,
-          "transfer": null,
-          "binside": null
-        }
-      },
-      {
-        "itemName": "Plastic Milk or Juice Jugs",
-        "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bottles/jars/jugs",
         "destination": {
           "garbage": null,
           "recycling": true,
@@ -2783,13 +2731,13 @@
         }
       },
       {
-        "itemName": "Plastic without Recycle Symbol",
+        "itemName": "Juice Jug",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bottles/jars/jugs",
         "destination": {
-          "garbage": true,
+          "garbage": null,
           "recycling": true,
-          "yard": true,
+          "yard": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2799,7 +2747,7 @@
       {
         "itemName": "Take-Out Containers",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "food service/storage",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2812,8 +2760,8 @@
       },
       {
         "itemName": "Cast Iron",
-        "category": "PLASTIC",
-        "subcategory": "s",
+        "category": "METAL",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2824,24 +2772,11 @@
           "binside": null
         }
       },
-      {
-        "itemName": "Aseptic or Tetra Pak",
-        "category": "PLASTIC",
-        "subcategory": "s",
-        "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
-          "reuse": null,
-          "hazard": null,
-          "transfer": null,
-          "binside": null
-        }
-      },
+ 
       {
         "itemName": "Packing Peanuts",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "packaging",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2855,7 +2790,7 @@
       {
         "itemName": "Produce or Bulk Food Bags",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bags",
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -2869,7 +2804,7 @@
       {
         "itemName": "Toys or Sporting Goods",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "household",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2882,8 +2817,8 @@
       },
       {
         "itemName": "Trees or Brush",
-        "category": "PLASTIC",
-        "subcategory": "s",
+        "category": "YARD",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -2897,7 +2832,7 @@
       {
         "itemName": "Plastic Food Tubs",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "food service/storage",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2910,8 +2845,8 @@
       },
       {
         "itemName": "Pots or Pans",
-        "category": "PLASTIC",
-        "subcategory": "s",
+        "category": "METAL",
+        "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2922,38 +2857,11 @@
           "binside": null
         }
       },
-      {
-        "itemName": "Bottle Caps or Jar Lids",
-        "category": "PLASTIC",
-        "subcategory": "s",
-        "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
-          "reuse": null,
-          "hazard": null,
-          "transfer": null,
-          "binside": null
-        }
-      },
-      {
-        "itemName": "Barrels or Drums",
-        "category": "PLASTIC",
-        "subcategory": "s",
-        "destination": {
-          "garbage": "dirty",
-          "recycling": null,
-          "yard": null,
-          "reuse": null,
-          "hazard": true,
-          "transfer": true,
-          "binside": null
-        }
-      },
+    
       {
         "itemName": "Produce or Bulk Food Bags",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bags",
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -2967,7 +2875,7 @@
       {
         "itemName": "Ziploc Bags",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bags",
         "destination": {
           "garbage": true,
           "recycling": true,
@@ -2980,10 +2888,10 @@
       },
       {
         "itemName": "Pallets",
-        "category": "PLASTIC",
-        "subcategory": "s",
+        "category": "OTHER",
+        "subcategory": null,
         "destination": {
-          "garbage": true,
+          "garbage": null,
           "recycling": null,
           "yard": true,
           "reuse": null,
@@ -2994,8 +2902,8 @@
       },
       {
         "itemName": "Composite Wood Paneling",
-        "category": "STYROFOAM",
-        "subcategory": "s",
+        "category": "PLASTIC",
+        "subcategory": "household",
         "destination": {
           "garbage": true,
           "recycling": null,
@@ -3009,7 +2917,7 @@
       {
         "itemName": "Clean Wood Waste",
         "category": "YARD",
-        "subcategory": "s",
+        "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
@@ -3023,7 +2931,7 @@
       {
         "itemName": "Ziploc Bags",
         "category": "PLASTIC",
-        "subcategory": "s",
+        "subcategory": "bags",
         "destination": {
           "garbage": true,
           "recycling": true,
