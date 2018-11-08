@@ -12,27 +12,16 @@
 
         <form id="result">
                 <h3 class="result-heading">
-                    <!-- Item: insert name from object w/ EJS  -->
-                    Item:
+                    <%= destination[0] %>
                 </h3>
-            <section class="compost">
-                <input type="hidden" name="fake-data" value="hit" >
-                <input type="submit" name="zip" value="compost">
-            </section>
+            <% for(let i = 2; i < destination.length; i++){ %>
+                <section class="<%= destination[i] %>">
+                    <input type="hidden" name="fake-data" value="hit" >
+                    <input type="submit" name="zip" value="<%= destination[i] %>">
+                </section>
+            <% } %>
+          
 
-            <section class="recycle">
-                <input type="hidden" name="fake-data" value="hit" >
-                <input type="submit" name="zip" value="recycle">
-            </section>
-            <section class="trash">
-                <input type="hidden" name="fake-data" value="hit" >
-                <input type="submit" name="zip" value="trash">
-            </section>
-
-            <section class="reuse">
-                <input type="hidden" name="fake-data" value="hit" >
-                <input type="submit" name="zip" value="reuse">
-            </section>
         </form>
         </div>
     </body>

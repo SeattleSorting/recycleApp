@@ -1,0 +1,69 @@
+{
+  "responses": [
+    {
+      "labelAnnotations": [
+        {
+          "mid": "/m/0838f",
+          "description": "water",
+          "score": 0.9736661,
+          "topicality": 0.9736661
+        },
+        {
+          "mid": "/m/0118n_9r",
+          "description": "water bottle",
+          "score": 0.9400677,
+          "topicality": 0.9400677
+        },
+        {
+          "mid": "/m/04dr76w",
+          "description": "bottle",
+          "score": 0.93690556,
+          "topicality": 0.93690556
+        },
+        {
+          "mid": "/m/02n3pb",
+          "description": "product",
+          "score": 0.89891917,
+          "topicality": 0.89891917
+        },
+        {
+          "mid": "/m/02rlncx",
+          "description": "plastic bottle",
+          "score": 0.873285,
+          "topicality": 0.873285
+        },
+        {
+          "mid": "/m/0qlx1",
+          "description": "distilled water",
+          "score": 0.83589613,
+          "topicality": 0.83589613
+        },
+        {
+          "mid": "/m/024247",
+          "description": "bottled water",
+          "score": 0.76619154,
+          "topicality": 0.76619154
+        },
+        {
+          "mid": "/m/01jwgf",
+          "description": "product",
+          "score": 0.7597343,
+          "topicality": 0.7597343
+        },
+        {
+          "mid": "/m/04k94",
+          "description": "liquid",
+          "score": 0.7589825,
+          "topicality": 0.7589825
+        },
+        {
+          "mid": "/m/089mxq",
+          "description": "glass bottle",
+          "score": 0.7382516,
+          "topicality": 0.7382516
+        }
+      ]
+    }
+  ]
+}
+

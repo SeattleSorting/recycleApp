@@ -1,0 +1,33 @@
+{
+  "responses": [
+    {
+      "labelAnnotations": [
+        {
+          "mid": "/m/04bcr3",
+          "description": "table",
+          "score": 0.63548803,
+          "topicality": 0.63548803
+        },
+        {
+          "mid": "/m/083vt",
+          "description": "wood",
+          "score": 0.60810286,
+          "topicality": 0.60810286
+        },
+        {
+          "mid": "/m/01jwgf",
+          "description": "product",
+          "score": 0.56889486,
+          "topicality": 0.56889486
+        },
+        {
+          "mid": "/m/0mwc",
+          "description": "angle",
+          "score": 0.54719794,
+          "topicality": 0.54719794
+        }
+      ]
+    }
+  ]
+}
+
