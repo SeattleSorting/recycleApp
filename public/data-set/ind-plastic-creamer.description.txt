@@ -1,0 +1,39 @@
+{
+  "responses": [
+    {
+      "labelAnnotations": [
+        {
+          "mid": "/m/09cx8",
+          "description": "finger",
+          "score": 0.76106846,
+          "topicality": 0.76106846
+        },
+        {
+          "mid": "/m/023j4r",
+          "description": "nail",
+          "score": 0.7396711,
+          "topicality": 0.7396711
+        },
+        {
+          "mid": "/m/0k65p",
+          "description": "hand",
+          "score": 0.7107057,
+          "topicality": 0.7107057
+        },
+        {
+          "mid": "/m/0641k",
+          "description": "paper",
+          "score": 0.5645214,
+          "topicality": 0.5645214
+        },
+        {
+          "mid": "/m/09l0j_",
+          "description": "ring",
+          "score": 0.5324541,
+          "topicality": 0.5324541
+        }
+      ]
+    }
+  ]
+}
+

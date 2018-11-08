@@ -1,0 +1,15 @@
+{
+  "responses": [
+    {
+      "labelAnnotations": [
+        {
+          "mid": "/m/01c34b",
+          "description": "flooring",
+          "score": 0.5124728,
+          "topicality": 0.5124728
+        }
+      ]
+    }
+  ]
+}
+

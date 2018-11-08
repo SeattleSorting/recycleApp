@@ -1,5 +1,8 @@
 'use strict';
 
+// global category variable
+const categoryStorage = [];
+
 
 //brings in modules
 const express = require('express');
@@ -8,7 +11,7 @@ const superagent = require('superagent');
 const pg = require('pg');
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
-
+const fileUpload = require('express-fileupload');
 const methodoverride = require('method-override');
 
 require('dotenv').config();
@@ -26,6 +29,7 @@ client.on('err', err => console.log(err));
 
 // Express setup
 app.use(cors());
+app.use(fileUpload());
 
 const vision = require('@google-cloud/vision');
 
@@ -43,10 +47,15 @@ app.use(methodoverride((req, res)=>{
 }));
 
 //sets the path for vision when the server hears the /vision it will call the getGoogleVision function
-app.get('/vision', getGoogleVision);
+app.post('/vision', getGoogleVision);
 
 //middleware connections to front end
 app.get('/', helloWorld);
+
+//path for imaage upload
+app.post('/upload', uploadPage);
+
+app.post('/imageCheck', verifyItem)
 
 // Get user location then render the material category page
 app.post('/location', getLocation);
@@ -61,21 +70,47 @@ app.post('/disposal-instructions', getInstructions);
 function getInstructions(req, res){
   //update the sql table
   //make a superagent request with req.body data
+  console.log('this is our req.body from subcat', req.body);
+  console.log('this is our categoryStorage at idx 0: ', categoryStorage[0]);
+  const _getInstructions = `
+  SELECT * FROM recyclables
+  WHERE category = '${categoryStorage[0]}'
+  AND item_name = '${req.body.item}'`;
+  client.query(_getInstructions)
+
+    .then( results => {
+      // console.log('this is our result object w/ instructions', results);
+      let finalResult = results.rows[0];
+      console.log('this is our finalResult: ', finalResult);
+      let resultsArr = [];
+      let resultKeys = Object.keys(finalResult);
+      console.log('this is resultKeys: ', resultKeys);
+      resultKeys.forEach( (key, idx) => {
+        if(finalResult[key] && finalResult[key] === 'true'){
+          resultsArr.push(resultKeys[idx]);
+        }
+      });
+      console.log('this is our results array: ', resultsArr);
+
+    }).catch(console.error('error'))
+  
+    // TO DO: throw resultsArr into res.render below, populate via results data. 
 
   res.render('./pages/result.ejs');
 }
 
 function getCategory(req, res){
-  // console.log(req.body);
   // using req.body, load object into res.render
-  // console.log('this is our req.body delivered from categories page: ', req.body);
+  let categoryName = req.body.category;
+  categoryStorage.push(categoryName);
   const _getSubCatItems = `
   SELECT * FROM recyclables
-  WHERE category = '${req.body.category}'`;
+  WHERE category = '${categoryName}'`;
+
   client.query(_getSubCatItems)
     .then(subCatItems => {
-      console.log('these are the rows that we quried according to category', subCatItems);
-      res.render('./pages/subcat.ejs', {Items:subCatItems});
+      const specificItems = subCatItems.rows;
+      res.render('./pages/subcat.ejs', {items:specificItems});
     }).catch(console.error('error'))
 }
 
@@ -102,8 +137,8 @@ function checkDatabase(){
 
 
 function seedDatabase() {
-  const plasticData = require('./public/js/plastic.json');
-  plasticData.items.forEach( item => {
+  const plasticData = require('./public/js/items.json');
+  plasticData.allItems.forEach( item => {
     let newItem = new Item(item);
     newItem.save();
   })
@@ -114,8 +149,8 @@ function seedDatabase() {
 Item.prototype.save = function(){
   let SQL = `
   INSERT INTO recyclables
-    (itemName,category,subcategory,garbage,recycling,yard,reuse,hazard,transfer,binside)
-    VALUES($1,$2,$3,$4,$5,$6,$7)`;
+    (item_name,category,subcategory,garbage,recycling,yard,reuse,hazard,waste_transfer,binside)
+    VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)`;
 
   let values = Object.values(this);
   return client.query(SQL, values);
@@ -147,15 +182,39 @@ const visionClient = new vision.ImageAnnotatorClient({
 
 
 function getGoogleVision(req, res) {
+//receives dom object from vision path
+
+
+  // let imagePath = req.body
+
+  // console.log('this is being called from getGoogleVision function ',req.files.file, req.body)
   //path for image
-  const img_url = 'data-set/glass-cup.jpg'; //path for image
+  const img_url = './public/data-set/'+req.files.file.name;
+  // console.log(img_url)
   //gets label info on image
+  let visionDescriptions = [];
   visionClient.labelDetection(img_url)
     .then(results => {
-      console.log(results[0]);
+      results[0].labelAnnotations.forEach(result => {
+        // console.log(result.description);
+        visionDescriptions.push(result.description);
+      });
+      console.log(visionDescriptions);
+      res.render('pages/varification.ejs', {file: req.files.file.name});
     })
     .catch(err => {
       console.log(err);
     });
 }
 
+function uploadPage(req, res) {
+  res.render('./pages/upload.ejs');
+
+
+}
+
+function verifyItem(req, res) {
+  res.render('./pages/verification.ejs');
+
+
+}

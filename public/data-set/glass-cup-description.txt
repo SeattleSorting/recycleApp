@@ -1,0 +1,45 @@
+{
+  "responses": [
+    {
+      "labelAnnotations": [
+        {
+          "mid": "/m/039jq",
+          "description": "glass",
+          "score": 0.910144,
+          "topicality": 0.910144
+        },
+        {
+          "mid": "/m/0271t",
+          "description": "drink",
+          "score": 0.82945496,
+          "topicality": 0.82945496
+        },
+        {
+          "mid": "/m/050h0q",
+          "description": "stemware",
+          "score": 0.796857,
+          "topicality": 0.796857
+        },
+        {
+          "mid": "/m/09tvcd",
+          "description": "wine glass",
+          "score": 0.7735795,
+          "topicality": 0.7735795
+        },
+        {
+          "mid": "/m/04brg2",
+          "description": "tableware",
+          "score": 0.7562405,
+          "topicality": 0.7562405
+        },
+        {
+          "mid": "/m/050h26",
+          "description": "drinkware",
+          "score": 0.722601,
+          "topicality": 0.722601
+        }
+      ]
+    }
+  ]
+}
+
