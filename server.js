@@ -1,5 +1,8 @@
 'use strict';
 
+// global category variable
+const categoryStorage = [];
+
 
 //brings in modules
 const express = require('express');
@@ -61,21 +64,34 @@ app.post('/disposal-instructions', getInstructions);
 function getInstructions(req, res){
   //update the sql table
   //make a superagent request with req.body data
+  console.log('this is our req.body from subcat', req.body);
+  console.log('this is our categoryStorage at idx 0: ', categoryStorage[0]);
+  const _getInstructions = `
+  SELECT * FROM recyclables
+  WHERE category = '${categoryStorage[0]}'
+  AND item_name = '${req.body.item}'`;
+  client.query(_getInstructions)
+    .then( results => {
+      console.log('this is our result object w/ instructions', results);
+
+    }).catch(console.error('error'))
+  
 
   res.render('./pages/result.ejs');
 }
 
 function getCategory(req, res){
-  // console.log(req.body);
   // using req.body, load object into res.render
-  // console.log('this is our req.body delivered from categories page: ', req.body);
+  let categoryName = req.body.category;
+  categoryStorage.push(categoryName);
   const _getSubCatItems = `
   SELECT * FROM recyclables
-  WHERE category = '${req.body.category}'`;
+  WHERE category = '${categoryName}'`;
+
   client.query(_getSubCatItems)
     .then(subCatItems => {
-      console.log('these are the rows that we quried according to category', subCatItems);
-      res.render('./pages/subcat.ejs', {Items:subCatItems});
+      const specificItems = subCatItems.rows;
+      res.render('./pages/subcat.ejs', {items:specificItems});
     }).catch(console.error('error'))
 }
 
@@ -102,8 +118,8 @@ function checkDatabase(){
 
 
 function seedDatabase() {
-  const plasticData = require('./public/js/plastic.json');
-  plasticData.items.forEach( item => {
+  const plasticData = require('./public/js/items.json');
+  plasticData.allItems.forEach( item => {
     let newItem = new Item(item);
     newItem.save();
   })
@@ -114,8 +130,8 @@ function seedDatabase() {
 Item.prototype.save = function(){
   let SQL = `
   INSERT INTO recyclables
-    (itemName,category,subcategory,garbage,recycling,yard,reuse,hazard,transfer,binside)
-    VALUES($1,$2,$3,$4,$5,$6,$7)`;
+    (item_name,category,subcategory,garbage,recycling,yard,reuse,hazard,waste_transfer,binside)
+    VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)`;
 
   let values = Object.values(this);
   return client.query(SQL, values);
