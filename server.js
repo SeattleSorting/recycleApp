@@ -1,7 +1,7 @@
 'use strict';
 
 // global category variable
-const categoryStorage = [];
+const categoryStorage = []; //this needs to be reset/reassigned otherwise new searches don't work
 
 
 //brings in modules
@@ -85,18 +85,21 @@ function getInstructions(req, res){
       let resultsArr = [];
       let resultKeys = Object.keys(finalResult);
       console.log('this is resultKeys: ', resultKeys);
+      resultsArr.push(finalResult.item_name);
+      resultsArr.push(finalResult.category);
+      console.log('results arry before loop : ', resultsArr);
+
       resultKeys.forEach( (key, idx) => {
         if(finalResult[key] && finalResult[key] === 'true'){
           resultsArr.push(resultKeys[idx]);
         }
       });
       console.log('this is our results array: ', resultsArr);
-
-    }).catch(console.error('error'))
+      res.render('./pages/result.ejs', {destination: resultsArr});
+    }).catch(console.error('error'));
   
     // TO DO: throw resultsArr into res.render below, populate via results data. 
 
-  res.render('./pages/result.ejs');
 }
 
 function getCategory(req, res){
@@ -138,7 +141,7 @@ function checkDatabase(){
 
 function seedDatabase() {
   const plasticData = require('./public/js/items.json');
-  plasticData.allItems.forEach( item => {
+  plasticData.allItemObjects.forEach( item => {
     let newItem = new Item(item);
     newItem.save();
   })
@@ -209,8 +212,6 @@ function getGoogleVision(req, res) {
 
 function uploadPage(req, res) {
   res.render('./pages/upload.ejs');
-
-
 }
 
 function verifyItem(req, res) {

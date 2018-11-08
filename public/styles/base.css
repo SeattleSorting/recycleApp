@@ -66,7 +66,7 @@
 
     li section{
         justify-content: center;
-        margin: 1em;
+        margin: 0px;
     }
 
     /* sub categories page */
@@ -85,6 +85,10 @@
         margin: .5em;
         padding: .5em;
         width: 15em;
+    }
+
+    .material-categories input{
+        width: 90%;
     }
 
     /* styling for results page */
@@ -140,6 +144,10 @@
 
     section.reuse>input{
         background-color: rgb(214, 200, 0);
+    }
+
+    section.waste_transfer>input{
+        background-color: rgb(3, 63, 62);
     }
 
     /* build out more options: hazard, transfer, binside */
