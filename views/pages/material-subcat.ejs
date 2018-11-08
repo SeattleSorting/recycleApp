@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<%- include ../partials/head %>
+<html>
+    <header>
+        <h3> Sub-categories</h3>
+    </header>
+    <% matSubCat.forEach( subCat => { %>
+    <form id="mat-sub-cat-form" action='/choose-sub-cat' method='POST'> 
+        <input type="hidden" name="item" value="<%=subCat.subcategory%>">
+        <button type="submit" value="<%=subCat.subcategory%>" >  <%=subCat.subcategory%>  </button>
+    </form> 
+    <% }); %>
+</html>
