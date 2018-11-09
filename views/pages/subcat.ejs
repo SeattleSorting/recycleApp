@@ -2,12 +2,17 @@
 <%- include ../partials/head %>
 <html>
     <header>
-        <h3> <%= items[0].category %></h3>
+        <h2 class="sub-cat"> <%= items[0].category %></h2>
     </header>
-    <% items.forEach( specificItems => { %>
-    <form id="sub-cat-form" action='/disposal-instructions' method='POST'> 
-        <input type="hidden" name="item" value="<%=specificItems.item_name%>">
-        <button type="submit" value="<%=specificItems.item_name%>" >  <%=specificItems.item_name%>  </button>
-    </form> 
+    
+    <% items.forEach( (specificItems, idx) => { %>
+        <% if (idx < 8) { %>
+            <form class="sub-cat-form" action='/disposal-instructions' method='POST' class="subcat"> 
+                <input type="hidden" name="item" value="<%=specificItems.item_name%>">
+                <button  type="submit" value="<%=specificItems.item_name%>" >  <%=specificItems.item_name%>  </button>
+            </form> 
+
+        <% } %>
+  
     <% }); %>
 </html>

@@ -2,28 +2,37 @@
 <%- include ../partials/head %>
 <html>
 
-<header>
-
-    <h3>Results</h3>
-</header>
+    <header>
+    </header>
 
 <body >
-        <div id="results-page">
+    <div class="results-page">
+    <div id="title">
+        <h3 id="h3"> HOW TO DISPOSE: </h3>
+        <h4 id="h4"> <%= destination[0] %> </h4>
+    </div>
+       
 
-        <form id="result">
-                <h3 class="result-heading">
-                    <%= destination[0] %>
-                </h3>
+
+        <form class="result">
+               
             <% for(let i = 2; i < destination.length; i++){ %>
-                <section class="<%= destination[i] %>">
+
+                <section class="<%= destination[i] %>"> 
+                    <p><%= destination[i].toUpperCase() %></p>
                     <input type="hidden" name="fake-data" value="hit" >
-                    <input type="submit" name="zip" value="<%= destination[i] %>">
+                    <% if (details.length > 0) { %>
+                        <input type="submit" name="zip" value="<%= details[i-2] %>">
+
+                    <% } else {%>
+                        <input type="submit" name="zip" value="<%= destination[i] %>">
+
+                    <% } %>
                 </section>
             <% } %>
           
-
-        </form>
         </div>
+        </form>
     </body>
 
 </html>

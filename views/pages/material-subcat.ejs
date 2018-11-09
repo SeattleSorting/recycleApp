@@ -2,10 +2,11 @@
 <%- include ../partials/head %>
 <html>
     <header>
-        <h3> Sub-categories</h3>
+        <h2 > Select Category:</h2>
     </header>
+
     <% subCatArr.forEach( subCat => { %>
-    <form id="mat-sub-cat-form" action='/choose-sub-cat' method='POST'> 
+    <form class="sub-cat-form" id="mat-sub-cat-form" action='/choose-sub-cat' method='POST'> 
         <input type="hidden" name="item" value="<%=subCat%>">
         <button type="submit" value="<%=subCat%>" >  <%=subCat%>  </button>
     </form> 

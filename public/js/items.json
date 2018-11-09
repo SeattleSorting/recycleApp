@@ -7,7 +7,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -21,7 +21,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -35,7 +35,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -49,7 +49,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": true,
@@ -63,7 +63,7 @@
         "destination": {
           "garbage": "dirty",
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -77,7 +77,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": true,
@@ -91,7 +91,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -105,7 +105,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -119,7 +119,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -133,7 +133,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": true,
@@ -147,7 +147,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -161,7 +161,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -175,7 +175,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": true,
@@ -189,7 +189,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": null,
@@ -204,7 +204,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -218,7 +218,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": true,
@@ -232,7 +232,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": true,
@@ -246,7 +246,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": true,
@@ -260,7 +260,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -274,7 +274,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -288,7 +288,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -302,7 +302,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -316,7 +316,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -330,7 +330,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -344,7 +344,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -358,7 +358,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -372,7 +372,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -386,7 +386,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -400,7 +400,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -414,7 +414,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -428,7 +428,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -442,7 +442,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -456,7 +456,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -470,7 +470,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -484,7 +484,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -498,7 +498,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -512,7 +512,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -526,7 +526,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -540,7 +540,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -554,7 +554,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": null,
@@ -568,7 +568,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": null,
@@ -582,7 +582,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -596,7 +596,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": null,
@@ -610,7 +610,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -624,7 +624,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -638,7 +638,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -652,7 +652,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -666,7 +666,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": null,
@@ -680,7 +680,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -694,7 +694,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -708,7 +708,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -722,7 +722,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -736,7 +736,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -751,7 +751,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": null,
@@ -765,7 +765,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -774,12 +774,12 @@
       },
       {
         "itemName": "Corks",
-        "category": "YARD",
+        "category": "yard waste / compost",
         "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -794,7 +794,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -808,7 +808,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -822,7 +822,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -836,7 +836,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -851,7 +851,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": null,
@@ -865,7 +865,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": true,
           "hazard": null,
           "transfer": null,
@@ -879,7 +879,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -893,7 +893,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -908,7 +908,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -922,7 +922,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -936,7 +936,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": null,
@@ -951,7 +951,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -965,7 +965,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -979,7 +979,7 @@
         "destination": {
           "garbage": "dirty",
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -993,7 +993,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1007,7 +1007,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1022,7 +1022,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1036,7 +1036,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1050,7 +1050,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": null,
@@ -1064,7 +1064,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1079,7 +1079,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -1093,7 +1093,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1108,7 +1108,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1122,7 +1122,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1136,7 +1136,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": true,
@@ -1150,7 +1150,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1164,7 +1164,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1178,7 +1178,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1192,21 +1192,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
-          "reuse": null,
-          "hazard": null,
-          "transfer": null,
-          "binside": null
-        }
-      },
-      {
-        "itemName": "Keys",
-        "category": "METAL",
-        "subcategory": null,
-        "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1220,7 +1206,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1234,7 +1220,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1248,7 +1234,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": true,
@@ -1256,13 +1242,13 @@
         }
       },
       {
-        "itemName": "Leaves or Non-Woody Yard Waste",
+        "itemName": "Leaves or Non-Woody yard waste / compost Waste",
         "category": "FOOD",
         "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -1276,7 +1262,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -1290,7 +1276,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1304,7 +1290,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1318,7 +1304,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1332,7 +1318,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1347,7 +1333,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": true,
@@ -1361,7 +1347,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": null,
@@ -1376,7 +1362,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1390,7 +1376,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1404,7 +1390,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1419,7 +1405,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1434,7 +1420,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1449,7 +1435,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1463,7 +1449,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1477,7 +1463,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1491,7 +1477,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1505,7 +1491,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -1519,7 +1505,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -1528,12 +1514,12 @@
       },
       {
         "itemName": "Pet Food",
-        "category": "FOOD",
+        "category": "YARD WASTE / COMPOSTABLE",
         "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1548,7 +1534,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1562,7 +1548,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1576,7 +1562,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1585,12 +1571,12 @@
       },
       {
         "itemName": "Plant or Tree Salvage",
-        "category": "YARD",
+        "category": "yard waste / compost",
         "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1604,7 +1590,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1616,9 +1602,9 @@
         "category": "PLASTIC",
         "subcategory": "bottles/jars/jugs",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1633,7 +1619,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1647,7 +1633,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1662,7 +1648,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": true,
           "transfer": null,
@@ -1676,7 +1662,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": true,
@@ -1690,7 +1676,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": true,
@@ -1700,12 +1686,12 @@
  
       {
         "itemName": "Rocks or Gravel",
-        "category": "YARD",
+        "category": "yard waste / compost",
         "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -1719,7 +1705,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": true,
@@ -1733,7 +1719,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1742,12 +1728,12 @@
       },
       {
         "itemName": "Wood Scraps, Shavings, or Sawdust",
-        "category": "YARD",
+        "category": "yard waste / compost",
         "subcategory": null,
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1761,7 +1747,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": true,
@@ -1777,7 +1763,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1791,7 +1777,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1805,7 +1791,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": null,
@@ -1819,7 +1805,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": true,
@@ -1833,7 +1819,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1847,7 +1833,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1861,7 +1847,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1876,7 +1862,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1890,7 +1876,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1904,7 +1890,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1918,7 +1904,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -1932,7 +1918,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -1947,7 +1933,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": null,
@@ -1957,11 +1943,11 @@
       {
         "itemName": "Paper Plates or Cups",
         "category": "PAPER",
-        "subcategory": "",
+        "subcategory": null,
         "destination": {
           "garbage": "dirty",
           "recycling": true,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1975,7 +1961,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -1988,9 +1974,9 @@
         "category": "PLASTIC",
         "subcategory": "bags",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": true,
+          "garbage": "WET OR DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2004,7 +1990,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2018,7 +2004,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -2033,7 +2019,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2045,9 +2031,9 @@
         "category": "PLASTIC",
         "subcategory": "bags",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "garbage": "WET OR DIRTY",
+          "recycling": "CLEARN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2061,7 +2047,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2075,7 +2061,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2089,7 +2075,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2103,7 +2089,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2117,7 +2103,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": true,
@@ -2131,7 +2117,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2144,8 +2130,8 @@
         "subcategory": "food service/storage",
         "destination": {
           "garbage": null,
-          "recycling": true,
-          "yard": null,
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2159,7 +2145,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": null,
@@ -2173,7 +2159,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2187,7 +2173,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2201,7 +2187,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2213,9 +2199,9 @@
         "category": "PLASTIC",
         "subcategory": "food service/storage",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": true,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2229,7 +2215,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2238,12 +2224,12 @@
       },
       {
         "itemName": "Trees or Brush",
-        "category": "YARD",
+        "category": "yard waste / compost",
         "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -2257,7 +2243,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2270,9 +2256,9 @@
         "category": "PLASTIC",
         "subcategory": "bottles/jars/jugs",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "garbage": "CLEAN",
+          "recycling": "DIRTY",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2284,9 +2270,9 @@
         "category": "PLASTIC",
         "subcategory": "bottles/jars/jugs",
         "destination": {
-          "garbage": null,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2300,7 +2286,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2312,9 +2298,9 @@
         "category": "PLASTIC",
         "subcategory": "household",
         "destination": {
-          "garbage": "dirty",
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": null,
@@ -2328,7 +2314,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -2342,8 +2328,8 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
-          "reuse": null,
+          "yard waste / compost": null,
+          "reuse": "DONATE",
           "hazard": null,
           "transfer": null,
           "binside": null
@@ -2355,9 +2341,9 @@
         "category": "PLASTIC",
         "subcategory": "food service/storage",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2369,12 +2355,12 @@
         "category": "PLASTIC",
         "subcategory": "household",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
-          "transfer": null,
+          "transfer": "DONATE",
           "binside": null
         }
       },
@@ -2383,9 +2369,9 @@
         "category": "PLASTIC",
         "subcategory": "bottles/jars/jugs",
         "destination": {
-          "garbage": true,
-          "recycling": null,
-          "yard": null,
+          "garbage": "DIRTY, LESS THAN 3in",
+          "recycling": "CLEAN, WIDER THAN 3in",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2397,9 +2383,9 @@
         "category": "PLASTIC",
         "subcategory": "bottles/jars/jugs",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY, LESS THAN 3in",
+          "recycling": "CLEAN, WIDER THAN 3in",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2411,9 +2397,9 @@
         "category": "PLASTIC",
         "subcategory": "bottles/jars/jugs",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2425,9 +2411,9 @@
         "category": "PLASTIC",
         "subcategory": "bags",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": true,
+          "garbage": "DIRTY, WET",
+          "recycling": "CLEAN",
+          "yard waste / compost": "SAYS COMPOSTABLE",
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2441,7 +2427,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -2453,9 +2439,9 @@
         "category": "PLASTIC",
         "subcategory": "packaging",
         "destination": {
-          "garbage": null,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2469,7 +2455,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2481,9 +2467,9 @@
         "category": "PLASTIC",
         "subcategory": "bottles/jars/jugs",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2497,7 +2483,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2512,7 +2498,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -2526,7 +2512,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2538,9 +2524,9 @@
         "category": "PLASTIC",
         "subcategory": "bottles/jars/jugs",
         "destination": {
-          "garbage": null,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2554,7 +2540,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -2568,7 +2554,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": true,
           "transfer": true,
@@ -2582,7 +2568,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2594,9 +2580,9 @@
         "category": "PLASTIC",
         "subcategory": "packaging",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2608,9 +2594,9 @@
         "category": "PLASTIC",
         "subcategory": "food service/storage",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": "SAYS COMPOSTABLE",
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2624,7 +2610,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": true,
           "hazard": null,
           "transfer": true,
@@ -2637,9 +2623,9 @@
         "category": "PLASTIC",
         "subcategory": "bags",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2651,9 +2637,9 @@
         "category": "PLASTIC",
         "subcategory": "bags",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2667,7 +2653,7 @@
         "destination": {
           "garbage": null,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2681,7 +2667,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -2695,7 +2681,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -2707,9 +2693,9 @@
         "category": "PLASTIC",
         "subcategory": "bottles/jars/jugs",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": true,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2721,9 +2707,9 @@
         "category": "PLASTIC",
         "subcategory": "food service/storage",
         "destination": {
-          "garbage": "dirty",
-          "recycling": true,
-          "yard": true,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": "SAYS COMPOSTABLE",
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2736,9 +2722,9 @@
         "category": "PLASTIC",
         "subcategory": "bottles/jars/jugs",
         "destination": {
-          "garbage": null,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2750,9 +2736,9 @@
         "category": "PLASTIC",
         "subcategory": "bottles/jars/jugs",
         "destination": {
-          "garbage": null,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2764,9 +2750,9 @@
         "category": "PLASTIC",
         "subcategory": "food service/storage",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": true,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2780,7 +2766,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -2793,9 +2779,9 @@
         "category": "PLASTIC",
         "subcategory": "packaging",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2809,7 +2795,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2821,10 +2807,10 @@
         "category": "PLASTIC",
         "subcategory": "household",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
-          "reuse": true,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN AND BROKEN",
+          "yard waste / compost": null,
+          "reuse": "DONATE",
           "hazard": null,
           "transfer": true,
           "binside": null
@@ -2832,12 +2818,12 @@
       },
       {
         "itemName": "Trees or Brush",
-        "category": "YARD",
+        "category": "yard waste / compost",
         "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -2849,9 +2835,9 @@
         "category": "PLASTIC",
         "subcategory": "food service/storage",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2865,7 +2851,7 @@
         "destination": {
           "garbage": true,
           "recycling": true,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2878,9 +2864,9 @@
         "category": "PLASTIC",
         "subcategory": "bags",
         "destination": {
-          "garbage": true,
+          "garbage": "DIRTY OR CLEAN",
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2892,9 +2878,9 @@
         "category": "PLASTIC",
         "subcategory": "bags",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,
@@ -2908,7 +2894,7 @@
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -2922,7 +2908,7 @@
         "destination": {
           "garbage": true,
           "recycling": null,
-          "yard": null,
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -2931,12 +2917,12 @@
       },
       {
         "itemName": "Clean Wood Waste",
-        "category": "YARD",
+        "category": "yard waste / compost",
         "subcategory": null,
         "destination": {
           "garbage": null,
           "recycling": null,
-          "yard": true,
+          "yard waste / compost": true,
           "reuse": null,
           "hazard": null,
           "transfer": true,
@@ -2948,9 +2934,9 @@
         "category": "PLASTIC",
         "subcategory": "bags",
         "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
+          "garbage": "DIRTY",
+          "recycling": "CLEAN",
+          "yard waste / compost": null,
           "reuse": null,
           "hazard": null,
           "transfer": null,

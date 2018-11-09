@@ -1,7 +1,7 @@
 'use strict';
 let subCatBool = false;
 // global category variable
-const categoryStorage = []; //this needs to be reset/reassigned otherwise new searches don't work
+var categoryStorage = []; //this needs to be reset/reassigned otherwise new searches don't work
 
 // create global variable with correct categories
 const categories = ['PLASTIC', 'PAPER', 'GLASS', 'METAL', 'ELECTRONIC', 'FOOD'];
@@ -48,8 +48,13 @@ app.use(methodoverride((req, res)=>{
   }
 }));
 
-//sets the path for vision when the server hears the /vision it will call the 
+
+app.post('/search-item', getSearchItem);
+
+//sets the path for vision when the server hears the /vision it will call the getGoogleVision function
+
 // Vision function
+
 app.post('/vision', getGoogleVision);
 
 //middleware connections to front end
@@ -69,14 +74,12 @@ app.post('/item-categories', getCategory);
 //query earth911 to get recycle instructions
 app.post('/disposal-instructions', getInstructions);
 
-//listen for user to select sub-category, then call 
+//listen for user to select sub-category, then call
 app.post('/choose-sub-cat', subCategory);
 
 function subCategory(req, res){
   subCatBool = true;
   let subCat= req.body.item;
-  // console.log('in subCategory: ', subCatBool, ' ', req.body)
-  // getInstructions(req.body, res, subCatBool, subCatName);
   let _subSQL = `
     SELECT * FROM recyclables
     WHERE subcategory = '${subCat}'`;
@@ -90,7 +93,7 @@ function subCategory(req, res){
       for( let i = 0; i< subResults.rows.length; i++){
         specificItems.push(subResults.rows[i]);
       }
-      console.log(specificItems);
+      // console.log(specificItems);
       // console.log('this is our results array: ', resultsArr);
       res.render('./pages/subcat.ejs', {items: specificItems});
     }).catch(console.error('error'));
@@ -103,8 +106,8 @@ function getInstructions(req, res){
     SELECT * FROM recyclables
     WHERE category = '${categoryStorage[0]}'
     AND item_name = '${req.body.item}'`;
-  
-  // console.log('this is our req.body from subcat', req.body);
+
+  console.log('this is our req.body from subcat', req.body);
   // console.log('this is our categoryStorage at idx 0: ', categoryStorage[0]);
 
   client.query(_getSQL)
@@ -113,6 +116,7 @@ function getInstructions(req, res){
       let finalResult = results.rows[0];
       // console.log('this is our finalResult: ', finalResult);
       let resultsArr = [];
+      let detailArr=[];
       let resultKeys = Object.keys(finalResult);
       // console.log('this is resultKeys: ', resultKeys);
       resultsArr.push(finalResult.item_name);
@@ -120,17 +124,22 @@ function getInstructions(req, res){
       // console.log('results arry before loop : ', resultsArr);
 
       resultKeys.forEach( (key, idx) => {
-        if(finalResult[key] && finalResult[key] === 'true'){
-          resultsArr.push(resultKeys[idx]);
+        // && finalResult[key] === 'true'
+        if(idx>3){
+          if(finalResult[key]){
+            resultsArr.push(resultKeys[idx]);
+            if(typeof(finalResult[key])==='string'){
+              detailArr.push(finalResult[key]);
+            }
+          }
         }
+
       });
 
-      console.log('this is our results array: ', resultsArr);
-
-      // empty the category storage array
-      categoryStorage.pop();
-    
-      res.render('./pages/result.ejs', {destination: resultsArr});
+      console.log('this is our results array: ', resultsArr, detailArr);
+      categoryStorage = [];
+      res.render('./pages/result.ejs', {destination: resultsArr, details: detailArr});
+      
     }).catch(console.error('error'));
 
   // TO DO: throw resultsArr into res.render below, populate via results data.
@@ -156,16 +165,16 @@ function getCategory(req, res){
       if(subCatItems.rows[0].subcategory){
         let subCategoryArr = [];
         subCatItems.rows.forEach((item)=>{
-          if(!subCategoryArr.includes(item.subcategory)){
+          if(!subCategoryArr.includes(item.subcategory) && item.subcategory !== null){
             subCategoryArr.push(item.subcategory);
           }
         });
-        console.log(subCategoryArr);
+        console.log('the array of subcategories', subCategoryArr);
         res.render('./pages/material-subcat.ejs', {subCatArr: subCategoryArr, matSubCat: subCatItems.rows})
       }
       else{
         const specificItems = subCatItems.rows;
-        console.log('trying to get the item name: ', subCatItems.rows)
+        // console.log('trying to get the item name: ', subCatItems.rows)
         res.render('./pages/subcat.ejs', {items:specificItems});
       }
 
@@ -267,6 +276,50 @@ function getGoogleVision(req, res) {
 function uploadPage(req, res) {
   res.render('./pages/upload.ejs');
 }
+
+
+function getSearchItem(req, res){
+
+  console.log('item searched: ', req.body);
+  let SQL = `SELECT * FROM recyclables 
+              WHERE item_name='${req.body.search}'`;
+
+  return client.query(SQL)
+    .then( results => {
+    // console.log('this is our result object w/ instructions', results);
+      let finalResult = results.rows[0];
+      // console.log('this is our finalResult: ', finalResult);
+      let resultsArr = [];
+      let detailArr=[];
+      let resultKeys = Object.keys(finalResult);
+      // console.log('this is resultKeys: ', resultKeys);
+      resultsArr.push(finalResult.item_name);
+      resultsArr.push(finalResult.category);
+      // console.log('results arry before loop : ', resultsArr);
+
+      resultKeys.forEach( (key, idx) => {
+      // && finalResult[key] === 'true'
+        if(idx>3){
+          if(finalResult[key]){
+            resultsArr.push(resultKeys[idx]);
+            if(typeof(finalResult[key])==='string'){
+              detailArr.push(finalResult[key]);
+            }
+          }
+        }
+
+      });
+      console.log('this is our results array: ', resultsArr, detailArr);
+      res.render('./pages/result.ejs', {destination: resultsArr, details: detailArr});
+    }).catch(console.error('error'));
+
+
+  // .then(searchResult=>{
+  //   let mySearch = {item: searchResult.rows[0].item_name};
+
+  //   console.log('result rows: ', searchResult.rows);
+  //   getInstructions(mySearch, res);
+  // }).catch(console.error('error'));
 
 // this takes in Google vision array results and queries database
 function queryWithVisionResults(visionArr, fileName, res) {

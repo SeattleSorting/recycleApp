@@ -1,27 +1,49 @@
+html, body{
+    height: 100%;
+}
+
+*{
+    border-radius: 5px;
+}
+
+/* index styling */
+body{
+    background: rgba(75, 161, 57, .9);
+    color: rgb(219, 222, 216);
+    font-family: nunito;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 @media screen and (max-width: 480px){
-    html, body{
-        height: 100%;
+
+
+    /* index styling */
+
+    .index input{
+        height: 2.5em;
+        text-align: center;
+        background: rgb(219, 222, 216);
+        color: rgb(38, 39, 38);
+        margin: .5em;
+        padding: 0em;
+        width: 10em;
+        font-size: 1.5em;
+        box-shadow: .1em .1em rgb(123, 124, 121);
     }
 
-    *{
-        border-radius: 5px;
-    }
-
-    body{
-        background: rgb(80, 169, 62);
-        color: rgb(219, 222, 216);
-        font-family: nunito;
-        display: flex;
-        height: 100%;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .index input:hover{
+        background: rgb(166, 173, 159);
     }
 
     header{
-        margin-top: 1em;
+        /* margin-top: 1em; */
         font-size: 4em;
         width: 100%;
         display: flex;
@@ -30,6 +52,7 @@
     }
 
     h1{
+        margin-top: 1em;
         text-align: center;
         font-size: 1.2em;
         margin-bottom: 1em;
@@ -40,12 +63,35 @@
         color: rgb(219, 222, 216); 
     }
 
-    input{
+    /* input{
         display:block;
+    } */
+
+    /* upload image page */
+    .upload{
+        display: flex;
+        flex-direction: column;
+        width: 18em;
     }
+
+    .inputfile{
+        font-size: 1em;
+        color: rgb(38, 39, 38);
+        background-color:rgb(219, 222, 216);
+        display: inline-block;
+        margin: 1em;
+        padding: .5em;
+
+    }
+    
     /* categories page */
+    header.material-categories{
+        margin-top: 1px;
+    }
+
     h2{
-        font-size: .5em;
+        font-size: .7em;
+        margin: .5em;
     }
 
     ul{
@@ -55,8 +101,8 @@
     }
 
     img{
-        height: 9em;
-        width: 9em;
+        width: 100%;
+        border-radius: 0px 0px 3px 3px;
     }
 
     li {
@@ -64,98 +110,199 @@
         flex-direction: row;
     }
 
+    /* verify image page */
+    section.user-image{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .user-image img{
+        width: 60%;
+    }
+
+    h3.user-image{
+        font-size: .9em;
+        margin-bottom: .5em;
+        width: 50%;
+        text-align: center;
+    }
+
+    section.user-image input[type="submit"]{
+        font-size: 1em;
+        color: rgb(38, 39, 38);
+        background-color:rgb(219, 222, 216);
+        display: inline-block;
+        margin: 1em;
+        padding: .5em; 
+        width: 15em;
+ 
+    }
+  
+   
+
+    .material-categories input{
+        height: 2em;
+        text-align: center;
+        background: rgb(219, 222, 216);
+        color: rgb(38, 39, 38);
+        padding: .5em;
+        width: 100%;
+        border: none;
+        border-radius: 3px 3px 0px 0px;
+
+    }
+
+    .material-categories form{
+        margin-bottom: -.16em;
+    }
+
+    section.material-categories{
+        margin-left: 10%;
+    }
+
+    .material-categories ul {
+        width: 90%;
+        height: 80%;
+    }
+
     li section{
+        width: 100%;
         justify-content: center;
-        margin: 0px;
+        align-content: center;
+        /* border: 1px solid black; */
+        font-size: 1.5em;
+        box-shadow: .1em .1em rgb(123, 124, 121);
+        margin: 5%;
+        border-radius: 3px;
     }
 
     /* sub categories page */
-    #sub-cat-form{
+
+    .sub-cat {
+        font-size: 1.1em;
+    }
+
+    .sub-cat-form{
         margin: 1em;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
     }
 
-    #sub-cat-form button{
+    .sub-cat-form button{
         align-content: center;
-        line-height: 0em;
-        padding: 1em 1em 1em 1em;
+        line-height: 3em;
+        height: 3em;
+        /* padding: 1em 1em 1em 1em; */
         width: 15em;
-    }
+        font-size: 1.em;
+        white-space:normal !important;
+        line-height:normal !important;
+        padding: 2%;
     }
 
-    input{
-        height: 4em;
-        text-align: center;
-        background: rgb(219, 222, 216); 
-        color: rgb(38, 39, 38);
-        margin: .5em;
-        padding: .5em;
-        width: 15em;
-    }
+    /* material-subcat styling */
 
-    .material-categories input{
-        width: 90%;
-    }
+
+
+
+
 
     /* styling for results page */
 
-    #results-page{
-        background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/2f/Space_Needle002.jpg); 
-        width: 95%;
-        height: 95%;
+   
+
+    .results-page{
+        /* background-color: rgb(219, 222, 216); */
+        background-image: url(../images/Space_Needle.jpeg); 
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: auto;
+        height: 100%;
+        width: 100%;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
     }
 
-    .result-heading{
-        color: rgb(2,2,2);
-        font-size: 3em;
+    #title{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin-bottom: 3em;
     }
 
-    #result{
+    #h3, #h4{
+        color: rgb(38, 39, 38);
+        font-size: 2em;
+        text-align: center;
+    }
+    #h4{
+        text-align: center;
+    }
+
+    #h3{
+        font-weight: bold;
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+
+    .result{
         display: flex;
         justify-content: space-around;
         flex-direction: column;
         align-items: center;
     }
 
-    #result>section, h3{
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 1em;
-    }
+  
 
-    #result section>input{
-        height: 3em;
-        font-size: 2em; 
+    .result section>input{
+        height: 4em;
+        font-size: 1.5em; 
         color: rgb(219, 222, 216); 
-        width: 9em;
+        width: 12em;
+        margin-bottom: .4em;
+        border-radius: 0px 0px 3px 3px;
     }
 
+   p{
+       background-color: rgb(219, 222, 216); 
+       color: rgb(38, 39, 38);
+       text-align: center;
+       padding-top: 4px;
+       border-radius: 3px 3px 0px 0px;
+   }
    
 
     section.yard>input{
-        background-color:  rgb(62, 121, 50);
+        background-color:  rgba(62, 121, 50, .7);
     }
 
     section.recycling>input{
-        background-color: rgb(72, 72, 197);
+        background-color: rgba(72, 72, 197, .7);
     }
 
     section.garbage>input{
-        background-color: rgb(90, 98, 92);
+        background-color: rgba(90, 98, 92, .7);
     }
 
     section.reuse>input{
-        background-color: rgb(214, 200, 0);
+        background-color: rgba(214, 200, 0, .7);
     }
 
     section.waste_transfer>input{
-        background-color: rgb(3, 63, 62);
+        background-color: rgba(3, 63, 62, .7);
+    }
+
+    section.hazard>input{
+        background-color: rgba(107, 11, 24, 0.7);
+    }
+
+    section.transfer>input{
+        background-color: rgba(20, 21, 22, 0.7);
+
     }
 
     /* build out more options: hazard, transfer, binside */
@@ -163,8 +310,4 @@
 
 }
 
-
-/* body{
-    background: gray;
-} */
 

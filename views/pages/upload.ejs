@@ -5,7 +5,7 @@
 <body>
 
             <header>
-                <h1>Where does <br>it go?</h1>
+                <h1>Upload Image </h1>
             </header>
             <!--this is the form for submit  -->
             <!-- <form action="/vision" method="GET">
@@ -13,14 +13,10 @@
                 <input type="submit" name="image" value="submit">
                  -->
                  
-                 <form action="/vision" method="POST" enctype="multipart/form-data">
-                    <div>
-                      <label for="file">Choose file to upload</label>
-                      <input type="file" id="file" name="file">
-                    </div>
-                    <div>
-                      <button>Submit</button>
-                    </div>
+                 <form class="upload" action="/vision" method="POST" enctype="multipart/form-data">
+                      <!-- <label for="choose image">Choose a file</label> -->
+                      <input class="inputfile" type="file" id="file" name="file">
+                      <button class="inputfile">Submit</button>
                    </form>
 
 <!-- 

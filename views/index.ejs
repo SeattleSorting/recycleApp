@@ -8,17 +8,20 @@
                 <h1>Where does <br>it go?</h1>
             </header>
             <!--this is the form for submit  -->           
-            <form action="/upload" method="POST">
+            <form action="/upload" method="POST" class="index">
                 <input type="hidden" name="fake-data" value="hit" >
-                <input type="submit" name="zip" value="Upload">
+                <input type="submit" name="zip" value="Upload Image">
                 
             </form>
 
-            <form action="/location" method="POST">
+            <form action="/location" method="POST" class="index">
                 <input type="hidden" name="fake-data" value="hit" >
-                <input type="submit" name="zip">
+                <input type="submit" name="zip" value="View Categories">
             </form>
        
+            <form action="/search-item" method="POST" class="index">
+                <input type="text" name="search" value="Search">
+            </form>
        
 
     </body>
