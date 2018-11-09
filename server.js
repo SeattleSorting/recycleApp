@@ -1,5 +1,5 @@
 'use strict';
-
+let subCatBool = false;
 // global category variable
 const categoryStorage = []; //this needs to be reset/reassigned otherwise new searches don't work
 
@@ -69,39 +69,67 @@ app.post('/item-categories', getCategory);
 //query earth911 to get recycle instructions
 app.post('/disposal-instructions', getInstructions);
 
+//listen for user to select sub-category, then call 
+app.post('/choose-sub-cat', subCategory);
 
+function subCategory(req, res){
+  subCatBool = true;
+  let subCat= req.body.item;
+  // console.log('in subCategory: ', subCatBool, ' ', req.body)
+  // getInstructions(req.body, res, subCatBool, subCatName);
+  let _subSQL = `
+    SELECT * FROM recyclables
+    WHERE subcategory = '${subCat}'`;
+
+  console.log('the sub category is: ', subCat);
+
+
+  client.query(_subSQL)
+    .then( subResults => {
+      let specificItems = [];
+      for( let i = 0; i< subResults.rows.length; i++){
+        specificItems.push(subResults.rows[i]);
+      }
+      console.log(specificItems);
+      // console.log('this is our results array: ', resultsArr);
+      res.render('./pages/subcat.ejs', {items: specificItems});
+    }).catch(console.error('error'));
+
+}
+
+//render all the specific items in the selected category or subcategory
 function getInstructions(req, res){
-  //update the sql table
-  //make a superagent request with req.body data
-  console.log('this is our req.body from subcat', req.body);
-  console.log('this is our categoryStorage at idx 0: ', categoryStorage[0]);
-  const _getInstructions = `
-  SELECT * FROM recyclables
-  WHERE category = '${categoryStorage[0]}'
-  AND item_name = '${req.body.item}'`;
-  client.query(_getInstructions)
+  let _getSQL = `
+    SELECT * FROM recyclables
+    WHERE category = '${categoryStorage[0]}'
+    AND item_name = '${req.body.item}'`;
+  
+  // console.log('this is our req.body from subcat', req.body);
+  // console.log('this is our categoryStorage at idx 0: ', categoryStorage[0]);
 
+  client.query(_getSQL)
     .then( results => {
       // console.log('this is our result object w/ instructions', results);
       let finalResult = results.rows[0];
-      console.log('this is our finalResult: ', finalResult);
+      // console.log('this is our finalResult: ', finalResult);
       let resultsArr = [];
       let resultKeys = Object.keys(finalResult);
-      console.log('this is resultKeys: ', resultKeys);
+      // console.log('this is resultKeys: ', resultKeys);
       resultsArr.push(finalResult.item_name);
       resultsArr.push(finalResult.category);
-      console.log('results arry before loop : ', resultsArr);
+      // console.log('results arry before loop : ', resultsArr);
 
       resultKeys.forEach( (key, idx) => {
         if(finalResult[key] && finalResult[key] === 'true'){
           resultsArr.push(resultKeys[idx]);
         }
       });
+
       console.log('this is our results array: ', resultsArr);
 
       // empty the category storage array
       categoryStorage.pop();
-
+    
       res.render('./pages/result.ejs', {destination: resultsArr});
     }).catch(console.error('error'));
 
@@ -109,6 +137,11 @@ function getInstructions(req, res){
 
 }
 
+
+
+
+//if there is something in subcategories for item, render material-subcat page
+//else, go directly to subcat.ejs page
 function getCategory(req, res){
   // using req.body, load object into res.render
   let categoryName = req.body.category;
@@ -119,8 +152,23 @@ function getCategory(req, res){
 
   client.query(_getSubCatItems)
     .then(subCatItems => {
-      const specificItems = subCatItems.rows;
-      res.render('./pages/subcat.ejs', {items:specificItems});
+      console.log('getCategory client returns: ', subCatItems.rows[0].subcategory);
+      if(subCatItems.rows[0].subcategory){
+        let subCategoryArr = [];
+        subCatItems.rows.forEach((item)=>{
+          if(!subCategoryArr.includes(item.subcategory)){
+            subCategoryArr.push(item.subcategory);
+          }
+        });
+        console.log(subCategoryArr);
+        res.render('./pages/material-subcat.ejs', {subCatArr: subCategoryArr, matSubCat: subCatItems.rows})
+      }
+      else{
+        const specificItems = subCatItems.rows;
+        console.log('trying to get the item name: ', subCatItems.rows)
+        res.render('./pages/subcat.ejs', {items:specificItems});
+      }
+
     }).catch(console.error('error'))
 }
 
@@ -365,4 +413,6 @@ function appendQueryString(str) {
 
 //   // }
 
+
 // }
+

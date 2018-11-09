@@ -71,10 +71,18 @@
 
     /* sub categories page */
     #sub-cat-form{
-        margin: 3em;
+        margin: 1em;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+    }
+
+    #sub-cat-form button{
+        align-content: center;
+        line-height: 0em;
+        padding: 1em 1em 1em 1em;
+        width: 15em;
+    }
     }
 
     input{
