@@ -3,6 +3,8 @@
 // global category variable
 const categoryStorage = []; //this needs to be reset/reassigned otherwise new searches don't work
 
+// create global variable with correct categories
+const categories = ['PLASTIC', 'PAPER', 'GLASS', 'METAL', 'ELECTRONIC', 'FOOD'];
 
 //brings in modules
 const express = require('express');
@@ -95,14 +97,14 @@ function getInstructions(req, res){
         }
       });
       console.log('this is our results array: ', resultsArr);
-    
+
       // empty the category storage array
       categoryStorage.pop();
 
       res.render('./pages/result.ejs', {destination: resultsArr});
     }).catch(console.error('error'));
-  
-    // TO DO: throw resultsArr into res.render below, populate via results data. 
+
+  // TO DO: throw resultsArr into res.render below, populate via results data.
 
 }
 
@@ -228,7 +230,7 @@ function verifyItem(req, res) {
 }
 
 // this takes in Google vision array results and queries database
-function queryWithVisionResults(visionArrray) {
+function queryWithVisionResults(visionArr) {
   // do a for loop or a forEach over visionArray
   // for each item that we loop through, we query DB for exact match in item_name column
   // if results.rows is empty, then we want to split each index of visionArray and loop through each individual word until we find a match
@@ -237,43 +239,82 @@ function queryWithVisionResults(visionArrray) {
 
   let queryString;
   let _exactMatchSQL;
-  let successfulQuery;
+  let successfulQuery = '';
+  let successSQL;
 
-  console.log('this is our vision array: ', visionArrray);
-  for(let i = 0; i < visionArrray.length; i++){
-    // if visionArray[i] if includes = ' ' is true, then visionArr[i] + 's'
-    // querySring = visionArr[i] +
 
-    // if array is a single word, add an 's' to it. Then query with s and without s
-    if(! visionArrray[i].includes(' ')){
-      console.log('if statement was true. here is vision Array[i]', visionArrray[i]);
-      queryString = visionArrray[i] + 's';
-      _exactMatchSQL = `SELECT * from recyclables WHERE item_name = '${queryString}'`
-      client.query(_exactMatchSQL)
-        .then( result => {
-          if(result.rows){
-            successfulQuery = result.rows[0];
-          } else {
-            _exactMatchSQL = `SELECT * from recyclables WHERE item_name = '${visionArrray[i]}'`;
-            client.query(_exactMatchSQL)
-              .then( result => {
+  console.log('this is our visionArr', visionArr)
+  for(let i = 0; i < visionArr.length; i++){
+    // if(! visionArr[i].includes(' ')){
+
+    //   queryString = visionArr[i] + 's';
+    //   _exactMatchSQL = `SELECT * FROM recyclables WHERE LOWER(item_name) = '${queryString}'`;
+
+    //   client.query(_exactMatchSQL)
+    //     .then( result => {
+    //       if(result.rows[0]){
+
+
+    //         successfulQuery = result.rows[0].item_name;
+
+    //       } else {
+    //         _exactMatchSQL = `SELECT * from recyclables WHERE LOWER(item_name) = '${visionArr[i]}'`;
+    //         client.query(_exactMatchSQL)
+    //           .then( result => {
+    //             if(result.rows[0]){
+
+    //               successfulQuery = result.rows[0].item_name;
+    //             }
+    //           }).catch(console.error('error'));
+    //       }
+
+    //     }).catch(console.error('error'));
+
+    // } else {
+    _exactMatchSQL = `SELECT * from recyclables WHERE LOWER(item_name) = '${visionArr[i]}'`;
+    client.query(_exactMatchSQL)
+      .then( result => {
+
+        if(result.rows[0]){
+          successfulQuery = result.rows[0].item_name;
+        } else {
+          queryString = appendQueryString(visionArr[i]);
+          _exactMatchSQL = `SELECT * from recyclables WHERE LOWER(item_name) = '${queryString}'`;
+          // console.log('this is our exact Match: ', _exactMatchSQL);
+          client.query(_exactMatchSQL)
+            .then( result => {
+              console.log('Were looking for something... ', result.rows[0])
+              if(result.rows[0] !== undefined){
+                successSQL = _exactMatchSQL;
                 successfulQuery = result.rows[0];
-            });
-          }
+                console.log('we finally got it: ', successfulQuery);
+                console.log('we finally got it: ', successSQL);
+              }
+            })
+        }
+      }).catch(console.error('error'));
+    // }
 
-        })
+    // if(successfulQuery){
 
-        // if visionArr[i] is made up of multiple words, then query the whole thing. 
-    } else {
-      _exactMatchSQL = `SELECT * from recyclables WHERE item_name = '${visionArrray[i]}'`;
-      client.query(_exactMatchSQL)
-        .then( result => {
-          successfulQuery = result.rows[0];
-        })
-    }
-
-    if(successfulQuery)
+    // }
 
   }
 
 }
+
+function appendQueryString(str) {
+  let queryString;
+  queryString = str + 's';
+  return queryString;
+}
+
+
+////////////////////////////// Test Code:
+// _exactMatchSQL = `SELECT * FROM recyclables WHERE LOWER(item_name) = 'plastic bottles'`;
+
+// client.query(_exactMatchSQL)
+//   .then( result => {
+//     successfulQuery = result.rows[0].item_name;
+//     console.log('this is our result: ', successfulQuery);
+//   })
