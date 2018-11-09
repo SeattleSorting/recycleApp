@@ -18,6 +18,16 @@ const methodoverride = require('method-override');
 
 require('dotenv').config();
 
+const vision = require('@google-cloud/vision');
+const fs = require('fs');
+fs.writeFileSync('vision-api.json', process.env.GOOGLE_VISION_API_OBJECT);
+const visionClient = new vision.ImageAnnotatorClient({
+
+ //taken from the jason file
+ projectId: '1540239667572',
+ keyFilename: 'vision-api.json'
+})
+
 const PORT = process.env.PORT || 5000;
 const app = express();
 
@@ -32,9 +42,6 @@ client.on('err', err => console.log(err));
 // Express setup
 app.use(cors());
 app.use(fileUpload());
-
-const vision = require('@google-cloud/vision');
-
 app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: true }));
@@ -232,16 +239,6 @@ function Item(item) {
   this.transfer = item.destination.transfer;
   this.binside = item.destination.binside;
 }
-
-
-// google vision api functions and variables
-const visionClient = new vision.ImageAnnotatorClient({
-
-  //taken from the jason file
-  projectId: '1540239667572',
-  keyFilename: 'vision-api.json'
-})
-
 
 
 function getGoogleVision(req, res) {
