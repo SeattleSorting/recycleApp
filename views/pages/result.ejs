@@ -2,6 +2,8 @@
 <%- include ../partials/head %>
 <html>
 
+<%- include ../partials/navigation %>
+
     <header>
     </header>
 
@@ -14,7 +16,7 @@
        
 
 
-        <form class="result">
+        <form action="/thank-you" method="POST" class="result">
                
             <% for(let i = 2; i < destination.length; i++){ %>
 

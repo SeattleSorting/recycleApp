@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<%- include ../partials/head %>
+<html>
+    <header>
+        <h2 class="error"> No Item Found </h2>
+    </header>
+    <section class="error"> 
+
+        <form class="error" action='/location' method='POST' class="subcat"> 
+            <p>We could not find that item in our database, but would like to help you find the closest match:</p> 
+
+            <input type="hidden" name="item" value="no-match">
+            <input  class="error" type="submit" value="View-Materials" >
+        </form> 
+
+    </section>
+        
+
+</html>

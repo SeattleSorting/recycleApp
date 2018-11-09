@@ -8,15 +8,26 @@
                 <h3 class="user-image">Your Results:</h3>
             </header>
 
+            <%- include ../partials/navigation %>
+            
             <!--this is the form for submit  -->
             <section class="user-image"> 
                 <img  src="../data-set/<%=file%>" >
-                <form action="/vision" method="POST">
-                    <!-- <img src=""> -->
-                    
-                    <input type="hidden" name="fake-data" value="hit">
-                    <input type="submit" name="zip" value="item: ">
-                </form>
+            
+                <% if(itemMatches ==='No Match'){ %>
+                    <form action="/location" method="POST">                        
+                        <input type="hidden" name="search" value="<%=itemMatches%>">
+                        <input type="submit" name="search" value="Item: <%=itemMatches%>">
+                    </form>
+                <% } else{ %>
+                    <form action="/search-item" method="POST">                        
+                        <input type="hidden" name="search" value="<%=itemMatches%>">
+                        <input type="submit" name="search" value="Item: <%=itemMatches%>">
+                    </form>
+
+                <% } %>                 
+
+               
 
 
                 <form action="/location" method="POST">
