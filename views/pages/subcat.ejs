@@ -5,7 +5,7 @@
         <h3> <%= items[0].category %></h3>
     </header>
     <% items.forEach( specificItems => { %>
-    <form id="sub-cat-form" action='/disposal-instructions' method='POST'> 
+    <form id="sub-cat-form" action='/disposal-instructions' method='POST' class="subcat"> 
         <input type="hidden" name="item" value="<%=specificItems.item_name%>">
         <button type="submit" value="<%=specificItems.item_name%>" >  <%=specificItems.item_name%>  </button>
     </form> 

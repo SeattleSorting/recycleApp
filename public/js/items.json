@@ -1200,20 +1200,6 @@
         }
       },
       {
-        "itemName": "Keys",
-        "category": "METAL",
-        "subcategory": null,
-        "destination": {
-          "garbage": true,
-          "recycling": true,
-          "yard": null,
-          "reuse": null,
-          "hazard": null,
-          "transfer": null,
-          "binside": null
-        }
-      },
-      {
         "itemName": "Computers & Laptops",
         "category": "ELECTRONIC",
         "subcategory": null,
@@ -1957,7 +1943,7 @@
       {
         "itemName": "Paper Plates or Cups",
         "category": "PAPER",
-        "subcategory": "",
+        "subcategory": null,
         "destination": {
           "garbage": "dirty",
           "recycling": true,
@@ -2225,7 +2211,7 @@
       {
         "itemName": "Pet Food Bags",
         "category": "PLASTIC",
-        "subcategory": null,
+        "subcategory": "food service/storage",
         "destination": {
           "garbage": true,
           "recycling": true,

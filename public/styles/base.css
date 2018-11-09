@@ -1,27 +1,49 @@
+html, body{
+    height: 100%;
+}
+
+*{
+    border-radius: 5px;
+}
+
+/* index styling */
+body{
+    background: rgb(80, 169, 62);
+    color: rgb(219, 222, 216);
+    font-family: nunito;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 @media screen and (max-width: 480px){
-    html, body{
-        height: 100%;
+
+
+    /* index styling */
+
+    .index input{
+        height: 2.5em;
+        text-align: center;
+        background: rgb(219, 222, 216);
+        color: rgb(38, 39, 38);
+        margin: .5em;
+        padding: 0em;
+        width: 10em;
+        font-size: 1.5em;
+        box-shadow: .1em .1em rgb(123, 124, 121);
     }
 
-    *{
-        border-radius: 5px;
-    }
-
-    body{
-        background: rgb(80, 169, 62);
-        color: rgb(219, 222, 216);
-        font-family: nunito;
-        display: flex;
-        height: 100%;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .index input:hover{
+        background: rgb(166, 173, 159);
     }
 
     header{
-        margin-top: 1em;
+        /* margin-top: 1em; */
         font-size: 4em;
         width: 100%;
         display: flex;
@@ -30,6 +52,7 @@
     }
 
     h1{
+        margin-top: 1em;
         text-align: center;
         font-size: 1.2em;
         margin-bottom: 1em;
@@ -40,12 +63,16 @@
         color: rgb(219, 222, 216); 
     }
 
-    input{
+    /* input{
         display:block;
-    }
+    } */
     /* categories page */
+    header.material-categories{
+        margin-top: 1px;
+    }
     h2{
-        font-size: .5em;
+        font-size: .7em;
+        margin: .5em;
     }
 
     ul{
@@ -55,8 +82,8 @@
     }
 
     img{
-        height: 9em;
-        width: 9em;
+        width: 100%;
+        border-radius: 0px 0px 3px 3px;
     }
 
     li {
@@ -64,9 +91,44 @@
         flex-direction: row;
     }
 
+    /* .material-categories input[type=submit]{
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/2f/Space_Needle002.jpg);
+    } */
+
+    .material-categories input{
+        height: 2em;
+        text-align: center;
+        background: rgb(219, 222, 216);
+        color: rgb(38, 39, 38);
+        padding: .5em;
+        width: 100%;
+        border: none;
+        border-radius: 3px 3px 0px 0px;
+
+    }
+
+    .material-categories form{
+        margin-bottom: -.16em;
+    }
+
+    section.material-categories{
+        margin-left: 10%;
+    }
+
+    .material-categories ul {
+        width: 90%;
+        height: 80%;
+    }
+
     li section{
+        width: 100%;
         justify-content: center;
-        margin: 0px;
+        align-content: center;
+        /* border: 1px solid black; */
+        font-size: 1.5em;
+        box-shadow: .1em .1em rgb(123, 124, 121);
+        margin: 5%;
+        border-radius: 3px;
     }
 
     /* sub categories page */
@@ -83,9 +145,9 @@
         padding: 1em 1em 1em 1em;
         width: 15em;
     }
-    }
+    
 
-    input{
+    /* input{
         height: 4em;
         text-align: center;
         background: rgb(219, 222, 216); 
@@ -93,11 +155,7 @@
         margin: .5em;
         padding: .5em;
         width: 15em;
-    }
-
-    .material-categories input{
-        width: 90%;
-    }
+    } */
 
     /* styling for results page */
 

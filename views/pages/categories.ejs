@@ -3,23 +3,14 @@
 <%- include ../partials/head %>
     
 <body>
-
-    <header>
-        <h2>Material Categories</h>
+    <header class="material-categories">
+        <h2 class="material-categories">Select Material:</h2>
     </header>
+    
 
-    <section class="material-categories">
+    <section class="material-categories" >
         <ul>
             <li>
-                <section>
-                
-                    <form action='/item-categories/<%   %>' method='POST'>
-                        <input type="hidden" name="category" value="METAL">
-                        <input type="submit" value ="Metal" >
-                        
-                        <img src="../images/aluminum-can.jpg"/>
-                    </form>        
-                </section>
                 
                 <section>
                     <form action='/item-categories' method='POST'>
@@ -28,6 +19,14 @@
                         <img src="../images/glass.jpeg"/>
                     </form>        
                 </section> 
+
+                <section>          
+                    <form action='/item-categories' method='POST'>
+                        <input type="hidden" name="category" value="METAL">
+                        <input type="submit" value ="Metal" >
+                        <img src="../images/aluminum-can.jpg"/>
+                    </form>        
+                </section>
             </li>
 
 

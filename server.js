@@ -72,8 +72,6 @@ app.post('/choose-sub-cat', subCategory);
 function subCategory(req, res){
   subCatBool = true;
   let subCat= req.body.item;
-  // console.log('in subCategory: ', subCatBool, ' ', req.body)
-  // getInstructions(req.body, res, subCatBool, subCatName);
   let _subSQL = `
     SELECT * FROM recyclables
     WHERE subcategory = '${subCat}'`;
@@ -148,11 +146,11 @@ function getCategory(req, res){
       if(subCatItems.rows[0].subcategory){
         let subCategoryArr = [];
         subCatItems.rows.forEach((item)=>{
-          if(!subCategoryArr.includes(item.subcategory)){
+          if(!subCategoryArr.includes(item.subcategory) && item.subcategory !== null){
             subCategoryArr.push(item.subcategory);
           }
         });
-        console.log(subCategoryArr);
+        console.log("the array of subcategories", subCategoryArr);
         res.render('./pages/material-subcat.ejs', {subCatArr: subCategoryArr, matSubCat: subCatItems.rows})
       }
       else{
