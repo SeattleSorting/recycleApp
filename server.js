@@ -3,6 +3,8 @@ let subCatBool = false;
 // global category variable
 const categoryStorage = []; //this needs to be reset/reassigned otherwise new searches don't work
 
+// create global variable with correct categories
+const categories = ['PLASTIC', 'PAPER', 'GLASS', 'METAL', 'ELECTRONIC', 'FOOD'];
 
 //brings in modules
 const express = require('express');
@@ -46,7 +48,8 @@ app.use(methodoverride((req, res)=>{
   }
 }));
 
-//sets the path for vision when the server hears the /vision it will call the getGoogleVision function
+//sets the path for vision when the server hears the /vision it will call the 
+// Vision function
 app.post('/vision', getGoogleVision);
 
 //middleware connections to front end
@@ -55,7 +58,7 @@ app.get('/', helloWorld);
 //path for imaage upload
 app.post('/upload', uploadPage);
 
-app.post('/imageCheck', verifyItem)
+// app.post('/imageCheck', verifyItem)
 
 // Get user location then render the material category page
 app.post('/location', getLocation);
@@ -121,7 +124,12 @@ function getInstructions(req, res){
           resultsArr.push(resultKeys[idx]);
         }
       });
-      // console.log('this is our results array: ', resultsArr);
+
+      console.log('this is our results array: ', resultsArr);
+
+      // empty the category storage array
+      categoryStorage.pop();
+    
       res.render('./pages/result.ejs', {destination: resultsArr});
     }).catch(console.error('error'));
 
@@ -249,20 +257,162 @@ function getGoogleVision(req, res) {
         // console.log(result.description);
         visionDescriptions.push(result.description);
       });
-      console.log(visionDescriptions);
-      res.render('pages/varification.ejs', {file: req.files.file.name});
-    })
-    .catch(err => {
-      console.log(err);
-    });
+      // console.log(visionDescriptions);
+      // make function pass in vision description
+      queryWithVisionResults(visionDescriptions, req.files.file.name, res)
+    }).catch(err => {
+      console.log(err)});
 }
 
 function uploadPage(req, res) {
   res.render('./pages/upload.ejs');
 }
 
-function verifyItem(req, res) {
-  res.render('./pages/verification.ejs');
+// this takes in Google vision array results and queries database
+function queryWithVisionResults(visionArr, fileName, res) {
 
+  let concatStrWithS = '';
+  for(let i = 0; i < visionArr.length-1; i++){
+    concatStrWithS += `'${visionArr[i]}s', `
+  }
+  concatStrWithS += `'${visionArr[visionArr.length-1]}s'`;
 
+  let concatStr = '';
+  for(let i = 0; i < visionArr.length-1; i++){
+    concatStr += `'${visionArr[i]}', `
+  }
+  concatStr += `'${visionArr[visionArr.length-1]}'`;
+
+  // console.log('this is our concatenatedStr: ', concatStr);
+  // console.log('this is our concatenatedStrWithS: ', concatStrWithS);
+  let _exactMatchSQL = `SELECT * FROM recyclables WHERE LOWER(item_name) IN (${concatStrWithS})`;
+  client.query(_exactMatchSQL)
+    .then( result => {
+        if (result.rows[0]){
+          console.log('inside if statement... legooo');
+          console.log('file name data: ', fileName)
+          console.log('result.rows data inside if statement ', result.rows[0])
+          res.render('./pages/varification.ejs', {file: fileName, verifiedItem: result.rows[0]} );
+        }
+      }).catch(err => {
+        console.log(err)});
 }
+
+function appendQueryString(str) {
+  let queryString;
+  queryString = str + 's';
+  return queryString;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////// Test Code:
+//{file: fileName}, {verifiedItem: result.rows[0]} 
+
+// files live here
+//{file: req.files.file.name},
+
+
+
+// _exactMatchSQL = `SELECT * FROM recyclables WHERE LOWER(item_name) = 'plastic bottles'`;
+
+// client.query(_exactMatchSQL)
+//   .then( result => {
+//     successfulQuery = result.rows[0].item_name;
+//     console.log('this is our result: ', successfulQuery);
+//   })
+
+
+
+// do a for loop or a forEach over visionArray
+// for each item that we loop through, we query DB for exact match in item_name column
+// if results.rows is empty, then we want to split each index of visionArray and loop through each individual word until we find a match
+// if we find a match, present that to the user to then submit to our backend
+// if nothing comes back, send them to categories page
+
+// let queryString;
+// let _exactMatchSQL;
+// let successfulQuery = '';
+// let successSQL;
+
+
+// console.log('this is our visionArr', visionArr)
+// for(let i = 0; i < visionArr.length; i++){
+//   // if(! visionArr[i].includes(' ')){
+
+//   //   queryString = visionArr[i] + 's';
+//   //   _exactMatchSQL = `SELECT * FROM recyclables WHERE LOWER(item_name) = '${queryString}'`;
+
+//   //   client.query(_exactMatchSQL)
+//   //     .then( result => {
+//   //       if(result.rows[0]){
+
+
+//   //         successfulQuery = result.rows[0].item_name;
+
+//   //       } else {
+//   //         _exactMatchSQL = `SELECT * from recyclables WHERE LOWER(item_name) = '${visionArr[i]}'`;
+//   //         client.query(_exactMatchSQL)
+//   //           .then( result => {
+//   //             if(result.rows[0]){
+
+//   //               successfulQuery = result.rows[0].item_name;
+//   //             }
+//   //           }).catch(console.error('error'));
+//   //       }
+
+//   //     }).catch(console.error('error'));
+
+//   // } else {
+//   _exactMatchSQL = `SELECT * from recyclables WHERE LOWER(item_name) = '${visionArr[i]}'`;
+//   client.query(_exactMatchSQL)
+//     .then( result => {
+
+//       if(result.rows[0]){
+//         successfulQuery = result.rows[0].item_name;
+//       } else {
+//         queryString = appendQueryString(visionArr[i]);
+//         _exactMatchSQL = `SELECT * from recyclables WHERE LOWER(item_name) = '${queryString}'`;
+//         // console.log('this is our exact Match: ', _exactMatchSQL);
+//         client.query(_exactMatchSQL)
+//           .then( result => {
+//             console.log('Were looking for something... ', result.rows[0])
+//             if(result.rows[0] !== undefined){
+//               successSQL = _exactMatchSQL;
+//               successfulQuery = result.rows[0];
+//               console.log('we finally got it: ', successfulQuery);
+//               console.log('we finally got it: ', successSQL);
+
+//               `val${i}`
+//             }
+//           })
+//       }
+//     }).catch(console.error('error'));
+//   // }
+
+//   // if(successfulQuery){
+
+//   // }
+
+
+// }
+
