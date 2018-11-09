@@ -18,7 +18,7 @@ const methodoverride = require('method-override');
 
 require('dotenv').config();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.listen(PORT, () => console.log(`App is up on port ${PORT}`));
@@ -52,9 +52,7 @@ app.use(methodoverride((req, res)=>{
 app.post('/search-item', getSearchItem);
 
 //sets the path for vision when the server hears the /vision it will call the getGoogleVision function
-
 // Vision function
-
 app.post('/vision', getGoogleVision);
 
 //middleware connections to front end
@@ -62,8 +60,6 @@ app.get('/', helloWorld);
 
 //path for imaage upload
 app.post('/upload', uploadPage);
-
-// app.post('/imageCheck', verifyItem)
 
 // Get user location then render the material category page
 app.post('/location', getLocation);
@@ -76,6 +72,8 @@ app.post('/disposal-instructions', getInstructions);
 
 //listen for user to select sub-category, then call
 app.post('/choose-sub-cat', subCategory);
+
+app.post('/thank-you', getThankYou);
 
 function subCategory(req, res){
   subCatBool = true;
@@ -145,8 +143,6 @@ function getInstructions(req, res){
   // TO DO: throw resultsArr into res.render below, populate via results data.
 
 }
-
-
 
 
 //if there is something in subcategories for item, render material-subcat page
@@ -250,10 +246,7 @@ const visionClient = new vision.ImageAnnotatorClient({
 
 function getGoogleVision(req, res) {
 //receives dom object from vision path
-
-
   // let imagePath = req.body
-
   // console.log('this is being called from getGoogleVision function ',req.files.file, req.body)
   //path for image
   const img_url = './public/data-set/'+req.files.file.name;
@@ -263,12 +256,30 @@ function getGoogleVision(req, res) {
   visionClient.labelDetection(img_url)
     .then(results => {
       results[0].labelAnnotations.forEach(result => {
-        // console.log(result.description);
         visionDescriptions.push(result.description);
       });
-      // console.log(visionDescriptions);
+      console.log('vision array: ', visionDescriptions );
+
+      if (visionDescriptions.length > 0){
+        let SQL = `SELECT * FROM recyclables`;
+
+        client.query(SQL)
+          .then(results=>{
+            console.log(results.rows[0]);
+            // make an array with every item in database
+            results.rows.forEach(item=>{
+              if(visionDescriptions.includes(item.item_name.toLowerCase())){
+                console.log('inside if vertiication');
+                res.render('./pages/varification.ejs', {file: req.files.file.name, itemMatches: item.item_name});
+              }
+            })
+            console.log('inside of else verfication')
+            res.render('./pages/varification.ejs', {file: req.files.file.name, itemMatches: 'No Match'});
+          })
+      }
       // make function pass in vision description
-      queryWithVisionResults(visionDescriptions, req.files.file.name, res);
+      // res.render('./pages/varification.ejs', {file: req.files.file.name, itemMatches: matchArr} );
+      // queryWithVisionResults(visionDescriptions, req.files.file.name, res);
     }).catch(err => {
       console.log(err)});
 }
@@ -279,26 +290,33 @@ function uploadPage(req, res) {
 
 
 function getSearchItem(req, res){
+  let SQL = '';
+  if (req.body.search.length > 0) {
+    console.log('item searched: ', req.body);
+    SQL = `SELECT * FROM recyclables 
+                WHERE item_name='${req.body.search[0]}'`;
+  }
+  else{
+    console.log('item searched: ', req.body);
+    SQL = `SELECT * FROM recyclables 
+                WHERE item_name='${req.body.search}'`;
+  }
 
-  console.log('item searched: ', req.body);
-  let SQL = `SELECT * FROM recyclables 
-              WHERE item_name='${req.body.search}'`;
 
   return client.query(SQL)
     .then( results => {
-    // console.log('this is our result object w/ instructions', results);
+      if(results.rows < 1){
+        res.render('./pages/error');
+      }
       let finalResult = results.rows[0];
-      // console.log('this is our finalResult: ', finalResult);
       let resultsArr = [];
       let detailArr=[];
       let resultKeys = Object.keys(finalResult);
-      // console.log('this is resultKeys: ', resultKeys);
+
       resultsArr.push(finalResult.item_name);
       resultsArr.push(finalResult.category);
-      // console.log('results arry before loop : ', resultsArr);
 
       resultKeys.forEach( (key, idx) => {
-      // && finalResult[key] === 'true'
         if(idx>3){
           if(finalResult[key]){
             resultsArr.push(resultKeys[idx]);
@@ -314,6 +332,11 @@ function getSearchItem(req, res){
     }).catch(console.error('error'));
 }
 
+
+function getThankYou(req, res){
+  res.render('./pages/thanks.ejs');
+}
+
 // .then(searchResult=>{
 //   let mySearch = {item: searchResult.rows[0].item_name};
 
@@ -322,31 +345,31 @@ function getSearchItem(req, res){
 // }).catch(console.error('error'));
 
 // this takes in Google vision array results and queries database
-function queryWithVisionResults(visionArr, fileName, res) {
+// function queryWithVisionResults(visionArr, fileName, res) {
 
-  let concatStrWithS = '';
-  for(let i = 0; i < visionArr.length-1; i++){
-    concatStrWithS += `'${visionArr[i]}s', `
-  }
-  concatStrWithS += `'${visionArr[visionArr.length-1]}s'`;
+//   let concatStrWithS = '';
+//   for(let i = 0; i < visionArr.length-1; i++){
+//     concatStrWithS += `'${visionArr[i]}s', `
+//   }
+//   concatStrWithS += `'${visionArr[visionArr.length-1]}s'`;
 
-  let concatStr = '';
-  for(let i = 0; i < visionArr.length-1; i++){
-    concatStr += `'${visionArr[i]}', `
-  }
-  concatStr += `'${visionArr[visionArr.length-1]}'`;
+//   let concatStr = '';
+//   for(let i = 0; i < visionArr.length-1; i++){
+//     concatStr += `'${visionArr[i]}', `
+//   }
+//   concatStr += `'${visionArr[visionArr.length-1]}'`;
 
-  // console.log('this is our concatenatedStr: ', concatStr);
-  // console.log('this is our concatenatedStrWithS: ', concatStrWithS);
-  let _exactMatchSQL = `SELECT * FROM recyclables WHERE LOWER(item_name) IN (${concatStrWithS})`;
-  client.query(_exactMatchSQL)
-    .then( result => {
-      if (result.rows[0]){
-        console.log('inside if statement... legooo');
-        console.log('file name data: ', fileName)
-        console.log('result.rows data inside if statement ', result.rows[0])
-        res.render('./pages/varification.ejs', {file: fileName, verifiedItem: result.rows[0]} );
-      }
-    }).catch(err => {
-      console.log(err)});
-}
+//   // console.log('this is our concatenatedStr: ', concatStr);
+//   // console.log('this is our concatenatedStrWithS: ', concatStrWithS);
+//   let _exactMatchSQL = `SELECT * FROM recyclables WHERE LOWER(item_name) IN (${concatStrWithS})`;
+//   client.query(_exactMatchSQL)
+//     .then( result => {
+//       if (result.rows[0]){
+//         console.log('inside if statement... legooo');
+//         console.log('file name data: ', fileName)
+//         console.log('result.rows data inside if statement ', result.rows[0])
+//         res.render('./pages/varification.ejs', {file: fileName, verifiedItem: result.rows[0]} );
+//       }
+//     }).catch(err => {
+//       console.log(err)});
+// }

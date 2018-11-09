@@ -8,7 +8,7 @@ html, body{
 
 /* index styling */
 body{
-    background: rgba(75, 161, 57, .9);
+    background: rgba(60, 138, 45, 0.9);
     color: rgb(219, 222, 216);
     font-family: nunito;
     display: flex;
@@ -19,7 +19,12 @@ body{
     justify-content: center;
 }
 
-
+nav img{
+    position: fixed;
+    width: 9%;
+    left: 8px;
+    top: 8px;
+}
 
 @media screen and (max-width: 480px){
 
@@ -43,19 +48,19 @@ body{
     }
 
     header{
-        /* margin-top: 1em; */
         font-size: 4em;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     h1{
         margin-top: 1em;
+        margin-bottom: 1em;
         text-align: center;
         font-size: 1.2em;
-        margin-bottom: 1em;
         max-width: 3em; 
     }
 
@@ -63,9 +68,32 @@ body{
         color: rgb(219, 222, 216); 
     }
 
-    /* input{
-        display:block;
-    } */
+    form.error{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .error p{
+        background-color: rgba(50, 51, 49, .9);
+        color: rgb(219, 222, 216);
+        font-size: 1.6em;
+        padding: .8em;  
+        width: 60%;
+        margin-bottom: 1em; 
+    }
+
+    input.error{
+        height: 4em;
+        width: 70%;
+        text-align: center;
+        background: rgb(219, 222, 216);
+        font-size: 1.5em;
+    }
+
+    
 
     /* upload image page */
     .upload{
@@ -81,7 +109,6 @@ body{
         display: inline-block;
         margin: 1em;
         padding: .5em;
-
     }
     
     /* categories page */
@@ -91,7 +118,7 @@ body{
 
     h2{
         font-size: .7em;
-        margin: .5em;
+        margin: .6em 0em 0em .2em;
     }
 
     ul{
@@ -103,6 +130,7 @@ body{
     img{
         width: 100%;
         border-radius: 0px 0px 3px 3px;
+        opacity: .9;
     }
 
     li {
@@ -150,7 +178,6 @@ body{
         width: 100%;
         border: none;
         border-radius: 3px 3px 0px 0px;
-
     }
 
     .material-categories form{
@@ -159,6 +186,10 @@ body{
 
     section.material-categories{
         margin-left: 10%;
+    }
+
+    .material-categories input{
+        font-weight: bold;
     }
 
     .material-categories ul {
@@ -170,9 +201,8 @@ body{
         width: 100%;
         justify-content: center;
         align-content: center;
-        /* border: 1px solid black; */
         font-size: 1.5em;
-        box-shadow: .1em .1em rgb(123, 124, 121);
+        box-shadow: .15em .15em rgba(20, 49, 14, 0.9);
         margin: 5%;
         border-radius: 3px;
     }
@@ -305,7 +335,31 @@ body{
 
     }
 
-    /* build out more options: hazard, transfer, binside */
+    /* thank-you page */
+
+
+    p.thank-you{
+        padding: 10px;
+        font-size: 1.7em; 
+        color: rgb(219, 222, 216); 
+        width: 10em;
+        margin-bottom: .4em;
+        border-radius: 0px 0px 3px 3px;
+        background-color: rgba(41, 97, 56, 0.4);
+
+    }
+
+    input.thank-you{
+        height: 4em;
+        font-size: 1.5em; 
+        color: rgb(234, 235, 233); 
+        width: 12em;
+        margin-bottom: .4em;
+        border-radius: 0px 0px 3px 3px;
+        background-color: rgba(61, 68, 58, 0.5);
+
+    }
+    
 
 
 }
