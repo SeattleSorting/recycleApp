@@ -3,6 +3,8 @@ let subCatBool = false;
 // global category variable
 var categoryStorage = []; //this needs to be reset/reassigned otherwise new searches don't work
 
+// create global variable with correct categories
+const categories = ['PLASTIC', 'PAPER', 'GLASS', 'METAL', 'ELECTRONIC', 'FOOD'];
 
 //brings in modules
 const express = require('express');
@@ -46,9 +48,13 @@ app.use(methodoverride((req, res)=>{
   }
 }));
 
+
 app.post('/search-item', getSearchItem);
 
 //sets the path for vision when the server hears the /vision it will call the getGoogleVision function
+
+// Vision function
+
 app.post('/vision', getGoogleVision);
 
 //middleware connections to front end
@@ -57,7 +63,7 @@ app.get('/', helloWorld);
 //path for imaage upload
 app.post('/upload', uploadPage);
 
-app.post('/imageCheck', verifyItem)
+// app.post('/imageCheck', verifyItem)
 
 // Get user location then render the material category page
 app.post('/location', getLocation);
@@ -129,6 +135,7 @@ function getInstructions(req, res){
         }
 
       });
+
       console.log('this is our results array: ', resultsArr, detailArr);
       categoryStorage = [];
       res.render('./pages/result.ejs', {destination: resultsArr, details: detailArr});
@@ -259,20 +266,15 @@ function getGoogleVision(req, res) {
         // console.log(result.description);
         visionDescriptions.push(result.description);
       });
-      console.log(visionDescriptions);
-      res.render('pages/varification.ejs', {file: req.files.file.name});
-    })
-    .catch(err => {
-      console.log(err);
-    });
+      // console.log(visionDescriptions);
+      // make function pass in vision description
+      queryWithVisionResults(visionDescriptions, req.files.file.name, res)
+    }).catch(err => {
+      console.log(err)});
 }
 
 function uploadPage(req, res) {
   res.render('./pages/upload.ejs');
-}
-
-function verifyItem(req, res) {
-  res.render('./pages/verification.ejs');
 }
 
 
@@ -318,4 +320,33 @@ function getSearchItem(req, res){
   //   console.log('result rows: ', searchResult.rows);
   //   getInstructions(mySearch, res);
   // }).catch(console.error('error'));
+
+// this takes in Google vision array results and queries database
+function queryWithVisionResults(visionArr, fileName, res) {
+
+  let concatStrWithS = '';
+  for(let i = 0; i < visionArr.length-1; i++){
+    concatStrWithS += `'${visionArr[i]}s', `
+  }
+  concatStrWithS += `'${visionArr[visionArr.length-1]}s'`;
+
+  let concatStr = '';
+  for(let i = 0; i < visionArr.length-1; i++){
+    concatStr += `'${visionArr[i]}', `
+  }
+  concatStr += `'${visionArr[visionArr.length-1]}'`;
+
+  // console.log('this is our concatenatedStr: ', concatStr);
+  // console.log('this is our concatenatedStrWithS: ', concatStrWithS);
+  let _exactMatchSQL = `SELECT * FROM recyclables WHERE LOWER(item_name) IN (${concatStrWithS})`;
+  client.query(_exactMatchSQL)
+    .then( result => {
+        if (result.rows[0]){
+          console.log('inside if statement... legooo');
+          console.log('file name data: ', fileName)
+          console.log('result.rows data inside if statement ', result.rows[0])
+          res.render('./pages/varification.ejs', {file: fileName, verifiedItem: result.rows[0]} );
+        }
+      }).catch(err => {
+        console.log(err)});
 }
