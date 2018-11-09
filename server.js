@@ -139,7 +139,7 @@ function getInstructions(req, res){
       console.log('this is our results array: ', resultsArr, detailArr);
       categoryStorage = [];
       res.render('./pages/result.ejs', {destination: resultsArr, details: detailArr});
-      
+
     }).catch(console.error('error'));
 
   // TO DO: throw resultsArr into res.render below, populate via results data.
@@ -268,7 +268,7 @@ function getGoogleVision(req, res) {
       });
       // console.log(visionDescriptions);
       // make function pass in vision description
-      queryWithVisionResults(visionDescriptions, req.files.file.name, res)
+      queryWithVisionResults(visionDescriptions, req.files.file.name, res);
     }).catch(err => {
       console.log(err)});
 }
@@ -321,26 +321,26 @@ function getSearchItem(req, res){
   //   getInstructions(mySearch, res);
   // }).catch(console.error('error'));
 
-// this takes in Google vision array results and queries database
-function queryWithVisionResults(visionArr, fileName, res) {
+  // this takes in Google vision array results and queries database
+  function queryWithVisionResults(visionArr, fileName, res) {
 
-  let concatStrWithS = '';
-  for(let i = 0; i < visionArr.length-1; i++){
-    concatStrWithS += `'${visionArr[i]}s', `
-  }
-  concatStrWithS += `'${visionArr[visionArr.length-1]}s'`;
+    let concatStrWithS = '';
+    for(let i = 0; i < visionArr.length-1; i++){
+      concatStrWithS += `'${visionArr[i]}s', `
+    }
+    concatStrWithS += `'${visionArr[visionArr.length-1]}s'`;
 
-  let concatStr = '';
-  for(let i = 0; i < visionArr.length-1; i++){
-    concatStr += `'${visionArr[i]}', `
-  }
-  concatStr += `'${visionArr[visionArr.length-1]}'`;
+    let concatStr = '';
+    for(let i = 0; i < visionArr.length-1; i++){
+      concatStr += `'${visionArr[i]}', `
+    }
+    concatStr += `'${visionArr[visionArr.length-1]}'`;
 
-  // console.log('this is our concatenatedStr: ', concatStr);
-  // console.log('this is our concatenatedStrWithS: ', concatStrWithS);
-  let _exactMatchSQL = `SELECT * FROM recyclables WHERE LOWER(item_name) IN (${concatStrWithS})`;
-  client.query(_exactMatchSQL)
-    .then( result => {
+    // console.log('this is our concatenatedStr: ', concatStr);
+    // console.log('this is our concatenatedStrWithS: ', concatStrWithS);
+    let _exactMatchSQL = `SELECT * FROM recyclables WHERE LOWER(item_name) IN (${concatStrWithS})`;
+    client.query(_exactMatchSQL)
+      .then( result => {
         if (result.rows[0]){
           console.log('inside if statement... legooo');
           console.log('file name data: ', fileName)
@@ -349,4 +349,5 @@ function queryWithVisionResults(visionArr, fileName, res) {
         }
       }).catch(err => {
         console.log(err)});
+  }
 }
