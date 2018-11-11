@@ -1,27 +1,27 @@
 # recycleApp
 
 
-##Development Team
+## Development Team
 
 Kevin Rosales, Darrin Howell, Jonathan DiQuattro and Hanna Ingham.
 
-##Description
+## Description
 
 recycleApp is a web application that utilizes RESTful API's to allow users the ability to upload an image of any item they wish to recycle and provides amplifying information about how to dispose of that item. This is accomplished through the google vision ML API. which can recognize millions of items.
 
 
-##Utility of recycleApp
+## Utility of recycleApp
 
 There are a lot of rules for recycling and often times people who wish to recycle find the rules complicating and hard to interpret. That is why team Velma set out to make a web application that takes the guessing out of recycling.
 
 
-##Current version:
+## Current version:
 
 V1.0.0 allows users to upload images and query the google vision API.
 V1.0.1 coming soon!
 
 
-##Libraries, dependencies, and packets:
+## Libraries, dependencies, and packets:
 
 @google-cloud/datastore: 2.0.0
 @google-cloud/storage: 2.3.0
@@ -36,12 +36,12 @@ pg: 7.6.0
 superagent: 4.0.0-beta.5
 
 
-##Access and use the recycleApp
+## Access and use the recycleApp
 
 To use recycleApp, simply visit: https://anti-trash.herokuapp.com/ on your mobile device!
 
 
-##API Requests and responses
+## API Requests and responses
 
 The data required from google vision is a label with the name of the item in the image and should look like this:
 {
@@ -61,7 +61,7 @@ The data required from google vision is a label with the name of the item in the
 our application then uses the description label to identify what is in the image.
 
 
-##Database Schema for V1.0.0
+## Database Schema for V1.0.0
 
 CREATE TABLE recyclables (
     id SERIAL PRIMARY KEY,
