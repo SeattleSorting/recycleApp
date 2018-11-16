@@ -1,0 +1,2895 @@
+{
+  "allItemObjects": [
+    {
+      "itemName": "Styrofoam Blocks or Packing Sheets",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Latex Paint",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Aerosol Cans",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Air Conditioners or Heat Pumps",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Aluminum Foil",
+      "category": "METAL",
+      "subcategory": "aluminum",
+      "destination": {
+        "garbage": "dirty",
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Acoustic Ceiling Tile",
+      "category": "METAL",
+      "subcategory": "other materials",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Ammunition or Guns",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Acetylene Oxygen Tanks",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Antifreeze",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Other Large Appliances",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Asbestos",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Fireplace or Briquette Ashes",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "AsphaltRoofing",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Stereo or Audio Equipment",
+      "category": "ELECTRONIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Paper Bags",
+      "category": "PAPER",
+      "subcategory": "bags",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Alkaline Batteries",
+      "category": "ELECTRONIC",
+      "subcategory": "batteries",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Rechargeable Batteries",
+      "category": "ELECTRONIC",
+      "subcategory": "batteries",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Bed Frames",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Bedding or Linens",
+      "category": "OTHER",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Beverage Cans",
+      "category": "METAL",
+      "subcategory": "aluminum",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Bicycles or Bike Parts",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Bleach",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Hardcover Books",
+      "category": "PAPER",
+      "subcategory": "office supplies",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Paperback Books",
+      "category": "OTHER",
+      "subcategory": "office supplies",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Brake or Transmission Fluid",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Brick",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Buckets",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Butter Boxes",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Butter Boxes",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Can Lids",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Aerosol Cans",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Auto Glass",
+      "category": "OTHER",
+      "subcategory": "auto",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Vehicles",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Cardboard Boxes",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Corrugated Cardboard",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Soiled or Greasy Cardboard",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Carpet or Padding",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "CD or DVD Cases",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "CDs, DVDs, or Floppies",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Cell Phones",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Cell Phone Batteries",
+      "category": "ELECTRONIC",
+      "subcategory": "batteries",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Child Car Seats",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Chip Bags",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Holiday Lights",
+      "category": "ELECTRONIC",
+      "subcategory": "light bulbs",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Dirt or Soil",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Cleaning Supplies",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Clock Radios",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Clothes or Shoes",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Plastic Compostable Food Service Items",
+      "category": "PLASTIC",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Paper Compostable Food Service Items",
+      "category": "PAPER",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Computers & Laptops",
+      "category": "ELECTRONIC",
+      "subcategory": "computer",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Computer Batteries",
+      "category": "ELECTRONIC",
+      "subcategory": "batteries",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Computers Monitors",
+      "category": "ELECTRONIC",
+      "subcategory": "computer",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Copiers & Fax Machines",
+      "category": "ELECTRONIC",
+      "subcategory": "office supplies",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Plastic Corks",
+      "category": "PLASTIC",
+      "subcategory": "bottles/jars/jugs",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Corks",
+      "category": "yard_compost",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Styrofoam Cups",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Dirt or Soil",
+      "category": "FOOD-YARD",
+      "subcategory": "yard",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Disposable Diapers",
+      "category": "PAPER",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Drinking Glasses",
+      "category": "GLASS",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Foam Egg Cartons",
+      "category": "STYROFOAM",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Paper Egg Cartons",
+      "category": "PAPER",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": true,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Engines,Motors or Car Parts",
+      "category": "ELECTRONIC",
+      "subcategory": "auto",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "E-waste",
+      "category": "ELECTRONIC",
+      "subcategory": "computer",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Eyeglasses",
+      "category": "METAL",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Kleenex, Facial Tissue",
+      "category": "PAPER",
+      "subcategory": "hygiene",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Copiers & Fax Machines",
+      "category": "ELECTRONIC",
+      "subcategory": "office supplies",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Fluorescent Light Bulbs",
+      "category": "ELECTRONIC",
+      "subcategory": "light bulbs",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Styrofoam Blocks or Packing Sheets",
+      "category": "STYROFOAM",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Foil Pie Pans",
+      "category": "METAL",
+      "subcategory": "aluminum",
+      "destination": {
+        "garbage": "dirty",
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Food Scraps",
+      "category": "FOOD-YARD",
+      "subcategory": "food",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Frozen Food Boxes",
+      "category": "PAPER",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Glass Bottles or Jars",
+      "category": "GLASS",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Broken Glass",
+      "category": "GLASS",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Glass or Ceramic Household Items",
+      "category": "GLASS",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Gold, Silver, Etc.",
+      "category": "METAL",
+      "subcategory": "precious metals",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Grass Clippings or Sod",
+      "category": "FOOD-YARD",
+      "subcategory": "yard",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Greeting Cards",
+      "category": "PAPER",
+      "subcategory": "household",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Hot Cups or Coffee Cups",
+      "category": "PAPER",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "House Plants",
+      "category": "FOOD-YARD",
+      "subcategory": "household",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Ice Cream Cartons",
+      "category": "PAPER",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Incandescent Light Bulbs",
+      "category": "ELECTRONIC",
+      "subcategory": "light bulbs",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Jewelry or Coins",
+      "category": "METAL",
+      "subcategory": "precious metals",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Keys",
+      "category": "METAL",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Computers & Laptops",
+      "category": "ELECTRONIC",
+      "subcategory": "computer",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Laundry Detergent Boxes",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Lawn Mowers or Power Equipment",
+      "category": "ELECTRONIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Leaves or Non-Woody yard_compost Waste",
+      "category": "FOOD-YARD",
+      "subcategory": "yard",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "LED Light Bulbs",
+      "category": "ELECTRONIC",
+      "subcategory": "light bulbs",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Holiday Lights",
+      "category": "ELECTRONIC",
+      "subcategory": "light bulbs",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Magazines",
+      "category": "PAPER",
+      "subcategory": "office supplies",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Microwaves",
+      "category": "ELECTRONIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Mirrors",
+      "category": "GLASS",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Mugs, Plates or Bowls",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Paper Napkins",
+      "category": "PAPER",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Newspapers",
+      "category": "PAPER",
+      "subcategory": "office supplies",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Office Paper",
+      "category": "PAPER",
+      "subcategory": "office supplies",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Paint Cans",
+      "category": "METAL",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+ 
+    {
+      "itemName": "Paper Bags",
+      "category": "PAPER",
+      "subcategory": "bags",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Paper Punch Holes",
+      "category": "PAPER",
+      "subcategory": "office supplies",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Paper Towels",
+      "category": "PAPER",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Paper Towel Rolls",
+      "category": "PAPER",
+      "subcategory": "household",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Pesticide Containers",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Pesticides",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Pet Food",
+      "category": "yard_compostABLE",
+      "subcategory": "household",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+ 
+    {
+      "itemName": "Phone Books",
+      "category": "PAPER",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Photographs",
+      "category": "PAPER",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Pizza Boxes",
+      "category": "PAPER",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Plant or Tree Salvage",
+      "category": "yard_compost",
+      "subcategory": "yard",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Peanut Butter or Mayonnaise Jars",
+      "category": "GLASS",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Peanut Butter or Mayonnaise Jars",
+      "category": "PLASTIC",
+      "subcategory": "bottles/jars/jugs",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Printer Cartridges & Toner",
+      "category": "ELECTONIC",
+      "subcategory": "office supplies",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Printers & Peripherals",
+      "category": "ELECTONIC",
+      "subcategory": "office supplies",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Rechargeable Appliances",
+      "category": "ELECTONIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Rechargeable Batteries",
+      "category": "ELECTONIC",
+      "subcategory": "batteries",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Refrigerators or Freezers",
+      "category": "ELECTONIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Rocks or Gravel",
+      "category": "yard_compost",
+      "subcategory": "yard",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Salvaged materials",
+      "category": "OTHER",
+      "subcategory": "other materials",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Screws, Nails, Nuts or Bolts",
+      "category": "METAL",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Wood Scraps, Shavings, or Sawdust",
+      "category": "yard_compost",
+      "subcategory": "other materials",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Toasters",
+      "category": "ELECTONIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+
+
+    {
+      "itemName": "Steel / Tin Cans",
+      "category": "METAL",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Steel / Tin Can Lids",
+      "category": "METAL",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Stereo or Audio Equipment",
+      "category": "ELECTONIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Stoves",
+      "category": "ELECTONIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Styrofoam Blocks",
+      "category": "STYROFOAM",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Televisions",
+      "category": "ELECTONIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Receipts",
+      "category": "PAPER",
+      "subcategory": "household",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Styrofoam Cups",
+      "category": "STYROFOAM",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "VCRs",
+      "category": "ELECTONIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Vitamins",
+      "category": "OTHER",
+      "subcategory": null,
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Other Vehicle Fluids",
+      "category": "OTHER",
+      "subcategory": "auto",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Windows or Picture Glass",
+      "category": "GLASS",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+  
+    {
+      "itemName": "Wire Clothes Hangers",
+      "category": "METAL",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Paper Plates or Cups",
+      "category": "PAPER",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": "dirty",
+        "recycling": true,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Envelopes",
+      "category": "PAPER",
+      "subcategory": "office supplies",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Grocery or Shopping Bags",
+      "category": "PLASTIC",
+      "subcategory": "bags",
+      "destination": {
+        "garbage": "WET OR DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Cooking Oil",
+      "category": "FOOD-YARD",
+      "subcategory": "food",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Fake Christmas Trees",
+      "category": "PLASTIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+   
+    {
+      "itemName": "Fats, Oils, or Grease",
+      "category": "FOOD-YARD",
+      "subcategory": "food",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Bread Bags",
+      "category": "PLASTIC",
+      "subcategory": "bags",
+      "destination": {
+        "garbage": "WET OR DIRTY",
+        "recycling": "CLEARN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Coffee Filters",
+      "category": "PAPER",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Waxed Cardboard",
+      "category": "PAPER",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Blister Packages",
+      "category": "PLASTIC",
+      "subcategory": "packaging",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Meat or Food Trays",
+      "category": "PLASTIC",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Motor Oil",
+      "category": "OTHER",
+      "subcategory": "auto",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Gift Wrap",
+      "category": "PAPER",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Plastic Berry Trays",
+      "category": "PLASTIC",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": null,
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Motor Oil Filters",
+      "category": "PLASTIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Juice Boxes & Cartons",
+      "category": "PAPER",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Milk Cartons",
+      "category": "PAPER",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Milk Jug",
+      "category": "PLATIC",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Clamshell Containers",
+      "category": "PLASTIC",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Pet Food Bags",
+      "category": "PLASTIC",
+      "subcategory":"food service / storage",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Trees or Brush",
+      "category": "yard_compost",
+      "subcategory": "yard",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Spiral Bound Notebooks",
+      "category": "PAPER",
+      "subcategory": "office supplies",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Medicine Bottles - Over the Counter",
+      "category": "PLASTIC",
+      "subcategory": "bottles/jars/jugs",
+      "destination": {
+        "garbage": "CLEAN",
+        "recycling": "DIRTY",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Plastic Milk or Juice Jugs",
+      "category": "PLASTIC",
+      "subcategory": "bottles/jars/jugs",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Junk Mail",
+      "category": "PAPER",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Plastic Plant Pots",
+      "category": "PLASTIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Gutters",
+      "category": "PLASTIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Plastic Outdoor Furniture",
+      "category": "PLASTIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": "DONATE",
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Plastic Food Tubs",
+      "category": "PLASTIC",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Hand Tools",
+      "category": "PLASTIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": "DONATE",
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Bottle Caps or Jar Lids",
+      "category": "PLASTIC",
+      "subcategory": "bottles/jars/jugs",
+      "destination": {
+        "garbage": "DIRTY, LESS THAN 3in",
+        "recycling": "CLEAN, WIDER THAN 3in",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Plastic Lids",
+      "category": "PLASTIC",
+      "subcategory": "bottles/jars/jugs",
+      "destination": {
+        "garbage": "DIRTY, LESS THAN 3in",
+        "recycling": "CLEAN, WIDER THAN 3in",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Laundry Detergent Jugs",
+      "category": "PLASTIC",
+      "subcategory": "bottles/jars/jugs",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Grocery or Shopping Bags",
+      "category": "PLASTIC",
+      "subcategory": "bags",
+      "destination": {
+        "garbage": "DIRTY, WET",
+        "recycling": "CLEAN",
+        "yard_compost": "SAYS COMPOSTABLE",
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Copper, Bronze or Brass",
+      "category": "METAL",
+      "subcategory": "other materials",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Bubble Wrap",
+      "category": "PLASTIC",
+      "subcategory": "packaging",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Cereal or Cracker Boxes",
+      "category": "PAPER",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Prescription Drug Bottles",
+      "category": "PLASTIC",
+      "subcategory": "bottles/jars/jugs",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+
+    {
+      "itemName": "Scrap Metal",
+      "category": "METAL",
+      "subcategory": "other materials",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Food Box Liners",
+      "category": "PLASTIC",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Shampoo or Lotion Bottles",
+      "category": "PLASTIC",
+      "subcategory": "bottles/jars/jugs",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Aluminum",
+      "category": "METAL",
+      "subcategory": "aluminum",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Sharps Needles & Syringes",
+      "category": "PLASTIC",
+      "subcategory": "medical",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": true,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Shredded Paper",
+      "category": "PAPER",
+      "subcategory": "office",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Shrink Wrap",
+      "category": "PLASTIC",
+      "subcategory": "packaging",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Plastic Silverware",
+      "category": "PLASTIC",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": "SAYS COMPOSTABLE",
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Metal Sinks, Tubs or Fixtures",
+      "category": "METAL",
+      "subcategory": "household",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+  
+    {
+      "itemName": "Newspaper Bags",
+      "category": "PLASTIC",
+      "subcategory": "bags",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Dry Cleaner Bags",
+      "category": "PLASTIC",
+      "subcategory": "bags",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Soup Boxes",
+      "category": "PAPER",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": null,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Iron or Steel",
+      "category": "METAL",
+      "subcategory": "other materials",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Stainless Steel",
+      "category": "METAL",
+      "subcategory": "other materials",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Plastic Bottle",
+      "category": "PLASTIC",
+      "subcategory": "bottles/jars/jugs",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Plastic Cups & Utensils",
+      "category": "PLASTIC",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": "SAYS COMPOSTABLE",
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Plastic Milk Jug",
+      "category": "PLASTIC",
+      "subcategory": "bottles/jars/jugs",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Juice Jug",
+      "category": "PLASTIC",
+      "subcategory": "bottles/jars/jugs",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Take-Out Containers",
+      "category": "PLASTIC",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Cast Iron",
+      "category": "METAL",
+      "subcategory": "other materials",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+
+    {
+      "itemName": "Packing Peanuts",
+      "category": "PLASTIC",
+      "subcategory": "packaging",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Produce or Bulk Food Bags",
+      "category": "PLASTIC",
+      "subcategory": "bags",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Toys or Sporting Goods",
+      "category": "PLASTIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN AND BROKEN",
+        "yard_compost": null,
+        "reuse": "DONATE",
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Trees or Brush",
+      "category": "yard_compost",
+      "subcategory": "yard",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Plastic Food Tubs",
+      "category": "PLASTIC",
+      "subcategory": "food service / storage",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Pots or Pans",
+      "category": "METAL",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": true,
+        "yard_compost": null,
+        "reuse": true,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+  
+    {
+      "itemName": "Produce or Bulk Food Bags",
+      "category": "PLASTIC",
+      "subcategory": "bags",
+      "destination": {
+        "garbage": "DIRTY OR CLEAN",
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Ziploc Bags",
+      "category": "PLASTIC",
+      "subcategory": "bags",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Pallets",
+      "category": "OTHER",
+      "subcategory": "other materials",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Composite Wood Paneling",
+      "category": "PLASTIC",
+      "subcategory": "household",
+      "destination": {
+        "garbage": true,
+        "recycling": null,
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Clean Wood Waste",
+      "category": "OTHER",
+      "subcategory": "other materials",
+      "destination": {
+        "garbage": null,
+        "recycling": null,
+        "yard_compost": true,
+        "reuse": null,
+        "hazard": null,
+        "transfer": true,
+        "binside": null
+      }
+    },
+    {
+      "itemName": "Ziploc Bags",
+      "category": "PLASTIC",
+      "subcategory": "bags",
+      "destination": {
+        "garbage": "DIRTY",
+        "recycling": "CLEAN",
+        "yard_compost": null,
+        "reuse": null,
+        "hazard": null,
+        "transfer": null,
+        "binside": null
+      }
+    }
+  ]
+}
