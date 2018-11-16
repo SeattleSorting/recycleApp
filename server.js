@@ -15,10 +15,10 @@ const superagent = require('superagent');
 const pg = require('pg');
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
-const fileUpload = require('express-fileupload');
+// const fileUpload = require('express-fileupload');
 const methodoverride = require('method-override');
 const multer = require('multer');
-//const multerUpload = multer({dest: 'uploads/'});
+let upload = multer({dest: 'public/uploads/'});
 
 require('dotenv').config();
 
@@ -26,26 +26,18 @@ const vision = require('@google-cloud/vision');
 
 const visionClient = new vision.ImageAnnotatorClient({
 
-    //taken from the jason file
-    projectId: 'seattle-sort',
-    keyFilename: 'g-vision-api.json'
-  })
+  //taken from the jason file
+  projectId: 'seattle-sort',
+  keyFilename: 'g-vision-api.json'
+})
 
 //The fs is something to process the json file... not quite sure
 //const fs = require('fs');
 //fs.writeFileSync('g-vision-api.json', process.env.GOOGLE_VISION_API_OBJECT);
 //if you want to use your own project file
 
-var storage = multer.disStorage({ 
-  destination: (req, file, cb) => {
-    cb(null, './public/images')
-  },
-  filename: (req, file, cb) =>{
-    cb(null, file.fieldname + '-' + Date.now())
-  }
-});
 
-var upload = multer({storage: storage});
+//var upload = multer({storage: storage});
 
 
 const PORT = process.env.PORT || 5000;
@@ -61,41 +53,29 @@ client.on('err', err => console.log(err));
 
 // Express setup
 app.use(cors());
-app.use(fileUpload());
+// app.use(fileUpload());
 
 app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-app.use(methodoverride((req, res)=>{
-  if(typeof (req.body)==='object' && '_method' in req.body ){
-    let method = req.body._method;
-    delete req.body._method;
-    return method;
-  }
-}));
 
 
 app.post('/search-item', getSearchItem);
 
 //sets the path for vision when the server hears the /vision it will call the getGoogleVision function
-// Vision function
-app.post('/vision', getGoogleVision);
+
+//app.post('/vision', upload.single('img-file'), getGoogleVision);
+
+app.post('/vision', upload.single('img-file'), getGoogleVision);
 
 //middleware connections to front end
 app.get('/', helloWorld);
 
 //path for image upload
-//app.post('/upload', uploadPage);
-app.post('/upload', upload.single('image'), (req, res, next)=>{
-  MongoClient.connect(url, (err, db)=>{
-    MSFIDOCredentialAssertion.equal(null, err);
-    insertDocuments(db, './public/images'+ db.close();
-    res.json({'message': 'File uploaded successfully'});
-  });
-});
-})
+app.post('/upload', uploadPage);
+
 
 // Get user location then render the material category page
 app.post('/location', getLocation);
@@ -118,17 +98,12 @@ function subCategory(req, res){
     SELECT * FROM recyclables
     WHERE subcategory = '${subCat}'`;
 
-  console.log('the sub category is: ', subCat);
-
-
   client.query(_subSQL)
     .then( subResults => {
       let specificItems = [];
       for( let i = 0; i< subResults.rows.length; i++){
         specificItems.push(subResults.rows[i]);
       }
-      // console.log(specificItems);
-      // console.log('this is our results array: ', resultsArr);
       res.render('./pages/subcat.ejs', {items: specificItems});
     }).catch(console.error('error'));
 
@@ -142,20 +117,15 @@ function getInstructions(req, res){
     AND item_name = '${req.body.item}'`;
 
   console.log('this is our req.body from subcat', req.body);
-  // console.log('this is our categoryStorage at idx 0: ', categoryStorage[0]);
 
   client.query(_getSQL)
     .then( results => {
-      // console.log('this is our result object w/ instructions', results);
       let finalResult = results.rows[0];
-      // console.log('this is our finalResult: ', finalResult);
       let resultsArr = [];
       let detailArr=[];
       let resultKeys = Object.keys(finalResult);
-      // console.log('this is resultKeys: ', resultKeys);
       resultsArr.push(finalResult.item_name);
       resultsArr.push(finalResult.category);
-      // console.log('results arry before loop : ', resultsArr);
 
       resultKeys.forEach( (key, idx) => {
         // && finalResult[key] === 'true'
@@ -184,7 +154,6 @@ function getInstructions(req, res){
 //if there is something in subcategories for item, render material-subcat page
 //else, go directly to subcat.ejs page
 function getCategory(req, res){
-  // using req.body, load object into res.render
   let categoryName = req.body.category;
   categoryStorage.push(categoryName);
 
@@ -207,7 +176,6 @@ function getCategory(req, res){
       }
       else{
         const specificItems = items.rows;
-        // console.log('trying to get the item name: ', subCatItems.rows)
         res.render('./pages/subcat.ejs', {items:specificItems});
       }
 
@@ -272,22 +240,21 @@ function Item(item) {
 
 
 function getGoogleVision(req, res) {
+  console.log(req.file, req.file.path);
 //receives dom object from vision path
-  // let imagePath = req.body
-  // console.log('this is being called from getGoogleVision function ',req.files.file, req.body)
+  //let imagePath = req.body
   //path for image
   //let imgNum = 0;
+  const img = req.file.path
 
-  
-  //const img_url = './public/data-set/'+req.files.file.name;
+  //const img = req.file.path.slice(7, req.file.path.length);
 
-  const img = multerUpload.single('item-image');
-  console.log('image: ' + img);
+  // const img = multerUpload.single('img-file');
+  // console.log('image: ' + img);
 
-  // console.log(img_url)
-  //gets label info on image
+
   let visionDescriptions = [];
-  visionClient.labelDetection(img_url)
+  visionClient.labelDetection(img)
     .then(results => {
       results[0].labelAnnotations.forEach(result => {
         visionDescriptions.push(result.description);
@@ -300,20 +267,16 @@ function getGoogleVision(req, res) {
         client.query(SQL)
           .then(results=>{
             console.log(results.rows[0]);
-            // make an array with every item in database
             results.rows.forEach(item=>{
               if(visionDescriptions.includes(item.item_name.toLowerCase())){
                 console.log('inside if vertiication');
-                res.render('./pages/varification.ejs', {file: req.files.file.name, itemMatches: item.item_name});
+                res.render('./pages/verification.ejs', {file: img.slice(6, img.length), itemMatches: item.item_name});
               }
             })
             console.log('inside of else verfication')
-            res.render('./pages/varification.ejs', {file: req.files.file.name, itemMatches: 'No Match'});
+            res.render('./pages/verification.ejs', {file: img.slice(6, img.length), itemMatches: 'No Match'});
           })
       }
-      // make function pass in vision description
-      // res.render('./pages/varification.ejs', {file: req.files.file.name, itemMatches: matchArr} );
-      // queryWithVisionResults(visionDescriptions, req.files.file.name, res);
     }).catch(err => {
       console.log(err)});
 }

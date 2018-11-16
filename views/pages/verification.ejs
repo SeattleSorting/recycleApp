@@ -10,9 +10,8 @@
 
             <%- include ../partials/navigation %>
             
-            <!--this is the form for submit  -->
             <section class="user-image"> 
-                <img  src="../data-set/<%=file%>" >
+                <img src="<%=file%>" >
             
                 <% if(itemMatches ==='No Match'){ %>
                     <form action="/location" method="POST">                        
