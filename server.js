@@ -10,12 +10,12 @@ const categories = ['PLASTIC', 'PAPER', 'GLASS', 'METAL', 'ELECTRONIC', 'FOOD'];
 
 //brings in modules
 const express = require('express');
+const fs = require('fs');
 const cors = require('cors');
 const superagent = require('superagent');
 const pg = require('pg');
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
-// const fileUpload = require('express-fileupload');
 const methodoverride = require('method-override');
 const multer = require('multer');
 let upload = multer({dest: 'public/uploads/'});
@@ -24,20 +24,16 @@ require('dotenv').config();
 
 const vision = require('@google-cloud/vision');
 
+fs.writeFileSync('new-vision-api.json', process.env.GOOGLE_CONFIG);
+
 const visionClient = new vision.ImageAnnotatorClient({
 
   //taken from the jason file
   projectId: 'seattle-sort',
-  keyFilename: 'g-vision-api.json'
+  keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS
 })
 
-//The fs is something to process the json file... not quite sure
-//const fs = require('fs');
-//fs.writeFileSync('g-vision-api.json', process.env.GOOGLE_VISION_API_OBJECT);
-//if you want to use your own project file
 
-
-//var upload = multer({storage: storage});
 
 
 const PORT = process.env.PORT || 5000;
@@ -252,7 +248,6 @@ function getGoogleVision(req, res) {
   // const img = multerUpload.single('img-file');
   // console.log('image: ' + img);
 
-
   let visionDescriptions = [];
   visionClient.labelDetection(img)
     .then(results => {
@@ -274,7 +269,7 @@ function getGoogleVision(req, res) {
               }
             })
             console.log('inside of else verfication')
-            res.render('./pages/verification.ejs', {file: img.slice(6, img.length), itemMatches: 'No Match'});
+            res.render('./pages/verification.ejs', {file: img.slice(6,img.length), itemMatches: 'No Match'});
           })
       }
     }).catch(err => {
@@ -333,40 +328,3 @@ function getSearchItem(req, res){
 function getThankYou(req, res){
   res.render('./pages/thanks.ejs');
 }
-
-// .then(searchResult=>{
-//   let mySearch = {item: searchResult.rows[0].item_name};
-
-//   console.log('result rows: ', searchResult.rows);
-//   getInstructions(mySearch, res);
-// }).catch(console.error('error'));
-
-// this takes in Google vision array results and queries database
-// function queryWithVisionResults(visionArr, fileName, res) {
-
-//   let concatStrWithS = '';
-//   for(let i = 0; i < visionArr.length-1; i++){
-//     concatStrWithS += `'${visionArr[i]}s', `
-//   }
-//   concatStrWithS += `'${visionArr[visionArr.length-1]}s'`;
-
-//   let concatStr = '';
-//   for(let i = 0; i < visionArr.length-1; i++){
-//     concatStr += `'${visionArr[i]}', `
-//   }
-//   concatStr += `'${visionArr[visionArr.length-1]}'`;
-
-//   // console.log('this is our concatenatedStr: ', concatStr);
-//   // console.log('this is our concatenatedStrWithS: ', concatStrWithS);
-//   let _exactMatchSQL = `SELECT * FROM recyclables WHERE LOWER(item_name) IN (${concatStrWithS})`;
-//   client.query(_exactMatchSQL)
-//     .then( result => {
-//       if (result.rows[0]){
-//         console.log('inside if statement... legooo');
-//         console.log('file name data: ', fileName)
-//         console.log('result.rows data inside if statement ', result.rows[0])
-//         res.render('./pages/varification.ejs', {file: fileName, verifiedItem: result.rows[0]} );
-//       }
-//     }).catch(err => {
-//       console.log(err)});
-// }
