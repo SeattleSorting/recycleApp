@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<%- include ../partials/head %>
+<html>
+
+<%- include ../partials/navigation %>
+
+    <header>
+        <h2 class="sub-cat"> <%= items[0].category %></h2>
+    </header>
+    
+    <% items.forEach( (specificItems, idx) => { %>
+        <% if (idx < 8) { %>
+            <form class="sub-cat-form" action='/disposal-instructions' method='POST' class="items"> 
+                <input type="hidden" name="item" value="<%=specificItems.item_name%>">
+                <button  type="submit" value="<%=specificItems.item_name%>" >  <%=specificItems.item_name%>  </button>
+            </form> 
+
+        <% } %>
+  
+    <% }); %>
+</html>

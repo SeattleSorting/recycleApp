@@ -4,11 +4,12 @@
 let subCatBool = false;
 // global category variable
 var categoryStorage = []; //this needs to be reset/reassigned otherwise new searches don't work
-
+var allItems = [];
 // create global variable with correct categories
 const categories = ['PLASTIC', 'PAPER', 'GLASS', 'METAL', 'ELECTRONIC', 'FOOD'];
 
 //brings in modules
+
 const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
@@ -19,6 +20,24 @@ const bodyParser = require('body-parser');
 const methodoverride = require('method-override');
 const multer = require('multer');
 let upload = multer({dest: 'public/uploads/'});
+// const fuzzyset = require('fuzzyset')
+const fuzzy = require('fuzzy')
+
+// console.log(fuzzyset);
+console.log(fuzzy);
+
+
+
+
+var results = fuzzy.filter('pizza', ['pizza boxes'])
+// console.log('string searched', str.toLowerCase());
+var matches = results.map(function(el) {
+  return el;
+});
+console.log('matches', matches);
+
+
+
 
 require('dotenv').config();
 
@@ -57,12 +76,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 
-
 app.post('/search-item', getSearchItem);
-
-//sets the path for vision when the server hears the /vision it will call the getGoogleVision function
-
-//app.post('/vision', upload.single('img-file'), getGoogleVision);
 
 app.post('/vision', upload.single('img-file'), getGoogleVision);
 
@@ -72,9 +86,8 @@ app.get('/', helloWorld);
 //path for image upload
 app.post('/upload', uploadPage);
 
-
 // Get user location then render the material category page
-app.post('/location', getLocation);
+app.post('/show-categories', getCategorySearch);
 
 //Get item material then render subcategory page
 app.post('/item-categories', getCategory);
@@ -100,7 +113,7 @@ function subCategory(req, res){
       for( let i = 0; i< subResults.rows.length; i++){
         specificItems.push(subResults.rows[i]);
       }
-      res.render('./pages/subcat.ejs', {items: specificItems});
+      res.render('./pages/item-list.ejs', {items: specificItems});
     }).catch(console.error('error'));
 
 }
@@ -109,13 +122,13 @@ function subCategory(req, res){
 function getInstructions(req, res){
   let _getSQL = `
     SELECT * FROM recyclables
-    WHERE category = '${categoryStorage[0]}'
-    AND item_name = '${req.body.item}'`;
+    WHERE LOWER(item_name) = '${req.body.item}'`;
 
   console.log('this is our req.body from subcat', req.body);
 
   client.query(_getSQL)
     .then( results => {
+      console.log('results from getInstrcutions, ', results.body)
       let finalResult = results.rows[0];
       let resultsArr = [];
       let detailArr=[];
@@ -172,13 +185,13 @@ function getCategory(req, res){
       }
       else{
         const specificItems = items.rows;
-        res.render('./pages/subcat.ejs', {items:specificItems});
+        res.render('./pages/item-list.ejs', {items:specificItems});
       }
 
     }).catch(console.error('error'))
 }
 
-function getLocation(req, res){
+function getCategorySearch(req, res){
   res.render('./pages/categories.ejs');
 }
 
@@ -196,13 +209,23 @@ function checkDatabase(){
       if(result.rows < 1){
         seedDatabase();
       }
+      if(allItems.length <1){
+        fillAllItems();
+      }
     }).catch(console.error('error'));
+}
+
+function fillAllItems(){
+  let jsonItems = require('./public/js/new-items.json');
+  jsonItems.allItemObjects.forEach( item =>{
+    allItems.push(item.itemName.toLowerCase());
+  })
 }
 
 
 function seedDatabase() {
-  const plasticData = require('./public/js/new-items.json');
-  plasticData.allItemObjects.forEach( item => {
+  let jsonItems = require('./public/js/new-items.json');
+  jsonItems.allItemObjects.forEach( item => {
     let newItem = new Item(item);
     newItem.save();
   })
@@ -237,7 +260,7 @@ function Item(item) {
 
 function getGoogleVision(req, res) {
   console.log(req.file, req.file.path);
-//receives dom object from vision path
+  //receives dom object from vision path
   //let imagePath = req.body
   //path for image
   //let imgNum = 0;
@@ -282,11 +305,26 @@ function uploadPage(req, res) {
 
 
 function getSearchItem(req, res){
+
+  console.log('results, ', req.body.search);
+
   let SQL = '';
   if (req.body.search.length > 0) {
-    console.log('item searched: ', req.body);
-    SQL = `SELECT * FROM recyclables 
-                WHERE item_name='${req.body.search[0]}'`;
+    console.log('fuzzy search function: ', fuzzySearch(req.body.search));
+    let fuzzyMatch = fuzzySearch(req.body.search);
+    if(fuzzyMatch.length===1){
+      console.log('item searched: ', req.body);
+      SQL = `SELECT * FROM recyclables 
+                  WHERE LOWER(item_name)='${fuzzyMatch[0].string}'`;
+    }
+
+    else if(fuzzyMatch.length>1){
+      let fuzzyItemArr = fuzzyMatch.map(matches=>{
+        return {item_name: matches.string};
+      })
+      res.render('./pages/item-list.ejs', {items: fuzzyItemArr});
+    }
+ 
   }
   else{
     console.log('item searched: ', req.body);
@@ -297,23 +335,25 @@ function getSearchItem(req, res){
 
   return client.query(SQL)
     .then( results => {
+      // console.log('results, ', results.body);
       if(results.rows < 1){
         res.render('./pages/error');
       }
-      let finalResult = results.rows[0];
+      const match = results.rows[0];
+      console.log('match: ', match)
       let resultsArr = [];
       let detailArr=[];
-      let resultKeys = Object.keys(finalResult);
+      let resultKeys = Object.keys(match);
 
-      resultsArr.push(finalResult.item_name);
-      resultsArr.push(finalResult.category);
+      resultsArr.push(match.item_name);
+      resultsArr.push(match.category);
 
       resultKeys.forEach( (key, idx) => {
         if(idx>3){
-          if(finalResult[key]){
+          if(match[key]){
             resultsArr.push(resultKeys[idx]);
-            if(typeof(finalResult[key])==='string'){
-              detailArr.push(finalResult[key]);
+            if(typeof(match[key])==='string'){
+              detailArr.push(match[key]);
             }
           }
         }
@@ -323,6 +363,26 @@ function getSearchItem(req, res){
       res.render('./pages/result.ejs', {destination: resultsArr, details: detailArr});
     }).catch(console.error('error'));
 }
+
+
+function fuzzySearch(str){
+  //use array allItems
+  // var list = ['baconing', 'narwhal', 'a mighty bear canoe'];
+  // console.log(allItems);
+  var results = fuzzy.filter(str, allItems)
+  console.log('string searched', str.toLowerCase());
+  var matches = results.map(function(el) {
+    console.log('found: ', el)
+    return el;
+  });
+  console.log('matches', matches);
+
+  // console.log(matches[0], matches[0].string);
+  return matches;
+}
+
+
+
 
 
 function getThankYou(req, res){
