@@ -8,6 +8,9 @@ var allItems = [];
 // create global variable with correct categories
 const categories = ['PLASTIC', 'PAPER', 'GLASS', 'METAL', 'ELECTRONIC', 'FOOD'];
 
+const materials = ['plastic', 'paper', 'glass', 'metal', 'electronic', 'food'];
+
+
 //brings in modules
 const express = require('express');
 const fs = require('fs');
@@ -25,19 +28,6 @@ const fuzzy = require('fuzzy')
 // console.log(fuzzyset);
 console.log(fuzzy);
 
-
-
-
-var results = fuzzy.filter('pizza', ['pizza boxes'])
-// console.log('string searched', str.toLowerCase());
-var matches = results.map(function(el) {
-  return el;
-});
-console.log('matches', matches);
-
-
-
-
 require('dotenv').config();
 
 const vision = require('@google-cloud/vision');
@@ -50,9 +40,6 @@ const visionClient = new vision.ImageAnnotatorClient({
   projectId: 'seattle-sort',
   keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS
 })
-
-
-
 
 const PORT = process.env.PORT || 5000;
 const app = express();
@@ -153,14 +140,10 @@ function getInstructions(req, res){
       res.render('./pages/result.ejs', {destination: resultsArr, details: detailArr});
 
     }).catch(console.error('error'));
-
-  // TO DO: throw resultsArr into res.render below, populate via results data.
-
 }
 
 
 //if there is something in subcategories for item, render material-subcat page
-//else, go directly to subcat.ejs page
 function getCategory(req, res){
   let categoryName = req.body.category;
   categoryStorage.push(categoryName);
@@ -256,10 +239,16 @@ function Item(item) {
 }
 
 
+
+//run the fuzzySearch for the first 3 results
+//fuzzySearch will find the matcha in the itemArray
+//concat the array returned from fuzzySeach to gAllResults
+//render ejs page with all items in gAllResults arr
 function getGoogleVision(req, res) {
   console.log(req.file, req.file.path);
 
   let gAllResults = [];
+  let gMaterial =[];
 
   const img = req.file.path;
 
@@ -269,19 +258,44 @@ function getGoogleVision(req, res) {
       results[0].labelAnnotations.forEach(result => {
         visionDescriptions.push(result.description);
       });
+
       console.log('vision array: ', visionDescriptions );
 
-      if (visionDescriptions.length > 0){
+      if (visionDescriptions.length >0){
+        for(let i = 0; i<3; i++){
+          let fuzzyArr = fuzzySearch(visionDescriptions[i], materials);
+          if(fuzzyArr.length>0){
+            console.log('mat: ', JSON.stringify(fuzzyArr[0]['string']));
+            gMaterial.push(JSON.stringify(fuzzyArr[0]['string']).replace(/"/g, ''));
+          }
+          console.log('material ', gMaterial);
 
-        //run the fuzzySearch for the first 3 results
-        //fuzzySearch will find the match in the itemArray (get three matches)
-        //use the match returned from the search to query the database
-
-        for(let i = 0; i<1; i++){
-          //assign match array to gFuzzy Match
-          gAllResults = gAllResults.concat(fuzzySearch(visionDescriptions[i])); //array of all the matches from i
-          console.log('allResults: ', gAllResults) ;
+          //console.log('allResults: ', gAllResults) ;
         }
+
+        let SQL = `SELECT * FROM recyclables 
+        WHERE LOWER(category) = '${gMaterial[0]}'`;
+
+        client.query(SQL)
+          .then(results=>{
+            console.log(results.rows)
+            let resultItems = results.rows.map(item =>{
+              return item.item_name;
+            });
+
+            console.log('resultItems: ', resultItems, 'gResults ', gAllResults);
+            
+            for(let i = 0; i<3; i++){
+              fuzzySearch(visionDescriptions[i], resultItems).forEach(match => {
+                console.log('item match, ', match)
+                if(!gAllResults.includes(JSON.stringify(match['string']))){
+                  gAllResults.push(JSON.stringify(match['string']));
+                }
+              })
+            }
+            console.log('all the stuff ', gAllResults);
+
+          })
         res.render('./pages/verification.ejs', {file: img.slice(6, img.length), itemMatches: gAllResults})
       }
 
@@ -289,35 +303,7 @@ function getGoogleVision(req, res) {
         res.render('./pages/verification.ejs', {file: img.slice(6,img.length), itemMatches: 'No Match'});
       }
     });
-   
 }
-//   else if(fuzzyMatch.length>1){
-//     let gfuzzyItemArr = gfuzzyMatch.map(matches=>{
-//       return {item_name: matches.string};
-//     })
-//   }
-// let SQL = `SELECT * FROM recyclables`;
-
-
-// let SQL = `SELECT item_name FROM recyclables
-// WHERE LOWER(item_name)='${gFuzzyMatch[0].string}'`;
-
-
-//     client.query(SQL)
-//       .then(results=>{
-//         console.log(results.rows[0]);
-//         results.rows.forEach(item=>{
-//           if(visionDescriptions.includes(item.item_name.toLowerCase())){
-//             console.log('inside if vertiication');
-//             res.render('./pages/verification.ejs', {file: img.slice(6, img.length), itemMatches: item.item_name});
-//           }
-//         })
-//         console.log('inside of else verfication')
-//         res.render('./pages/verification.ejs', {file: img.slice(6,img.length), itemMatches: 'No Match'});
-//       })
-//   }
-// }).catch(err => {
-//   console.log(err)});
 
 
 function uploadPage(req, res) {
@@ -329,8 +315,8 @@ function getSearchItem(req, res){
   console.log('results, ', req.body.search);
   let SQL = '';
   if (req.body.search.length > 0) {
-    console.log('fuzzy search function: ', fuzzySearch(req.body.search));
-    let fuzzyMatch = fuzzySearch(req.body.search);
+    console.log('fuzzy search function: ', fuzzySearch(req.body.search, allItems));
+    let fuzzyMatch = fuzzySearch(req.body.search, allItems);
     if(fuzzyMatch.length===1){
       console.log('item searched: ', req.body);
       SQL = `SELECT * FROM recyclables 
@@ -354,7 +340,6 @@ function getSearchItem(req, res){
 
   return client.query(SQL)
     .then( results => {
-      // console.log('results, ', results.body);
       if(results.rows < 1){
         res.render('./pages/error');
       }
@@ -383,24 +368,19 @@ function getSearchItem(req, res){
     }).catch(console.error('error'));
 }
 
+//fuzzy search: takes in string, looks for items in given array that match string, returns results as an array
+function fuzzySearch(str, arr){
 
-function fuzzySearch(str){
-  //use array allItems
-  // var list = ['baconing', 'narwhal', 'a mighty bear canoe'];
-  // console.log(allItems);
-  var results = fuzzy.filter(str, allItems)
+  let results = fuzzy.filter(str, arr)
   console.log('string searched', str.toLowerCase());
-  var matches = results.map(function(el) {
+  let matches = results.map(function(el) {
     console.log('found: ', el)
     return el;
   });
   console.log('matches', matches);
 
-  // console.log(matches[0], matches[0].string);
   return matches;
 }
-
-
 
 function getThankYou(req, res){
   res.render('./pages/thanks.ejs');
