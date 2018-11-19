@@ -14,22 +14,22 @@
                 <img src="<%=file%>" >
             
                 <% if(itemMatches ==='No Match'){ %>
-                    <form action="/location" method="POST">                        
+                    <form action="/show-categories" method="POST">                        
                         <input type="hidden" name="search" value="<%=itemMatches%>">
                         <input type="submit" name="search" value="Item: <%=itemMatches%>">
                     </form>
                 <% } else{ %>
-                    <form action="/search-item" method="POST">                        
-                        <input type="hidden" name="search" value="<%=itemMatches%>">
-                        <input type="submit" name="search" value="Item: <%=itemMatches%>">
-                    </form>
 
+                <% itemMatches.forEach(match => { %>
+                    <form action="/disposal-instructions" method="POST">                        
+                        <input type="hidden" name="item" value="<%=match.string%>">
+                        <input type="submit" name="search-result" value="Item: <%=match.string%>">
+                    </form>
+                <% }) %>
+                  
                 <% } %>                 
 
-               
-
-
-                <form action="/location" method="POST">
+                <form action="/show-categories" method="POST">
                     <!-- <img src=""> -->
                     
                     <input type="hidden" name="fake-data" value="hit">
