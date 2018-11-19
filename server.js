@@ -9,7 +9,6 @@ var allItems = [];
 const categories = ['PLASTIC', 'PAPER', 'GLASS', 'METAL', 'ELECTRONIC', 'FOOD'];
 
 //brings in modules
-
 const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
@@ -232,7 +231,6 @@ function seedDatabase() {
 }
 
 
-
 Item.prototype.save = function(){
   let SQL = `
   INSERT INTO recyclables
@@ -260,16 +258,10 @@ function Item(item) {
 
 function getGoogleVision(req, res) {
   console.log(req.file, req.file.path);
-  //receives dom object from vision path
-  //let imagePath = req.body
-  //path for image
-  //let imgNum = 0;
-  const img = req.file.path
 
-  //const img = req.file.path.slice(7, req.file.path.length);
+  let gAllResults = [];
 
-  // const img = multerUpload.single('img-file');
-  // console.log('image: ' + img);
+  const img = req.file.path;
 
   let visionDescriptions = [];
   visionClient.labelDetection(img)
@@ -280,24 +272,53 @@ function getGoogleVision(req, res) {
       console.log('vision array: ', visionDescriptions );
 
       if (visionDescriptions.length > 0){
-        let SQL = `SELECT * FROM recyclables`;
 
-        client.query(SQL)
-          .then(results=>{
-            console.log(results.rows[0]);
-            results.rows.forEach(item=>{
-              if(visionDescriptions.includes(item.item_name.toLowerCase())){
-                console.log('inside if vertiication');
-                res.render('./pages/verification.ejs', {file: img.slice(6, img.length), itemMatches: item.item_name});
-              }
-            })
-            console.log('inside of else verfication')
-            res.render('./pages/verification.ejs', {file: img.slice(6,img.length), itemMatches: 'No Match'});
-          })
+        //run the fuzzySearch for the first 3 results
+        //fuzzySearch will find the match in the itemArray (get three matches)
+        //use the match returned from the search to query the database
+
+        for(let i = 0; i<1; i++){
+          //assign match array to gFuzzy Match
+          gAllResults = gAllResults.concat(fuzzySearch(visionDescriptions[i])); //array of all the matches from i
+          console.log('allResults: ', gAllResults) ;
+        }
+        res.render('./pages/verification.ejs', {file: img.slice(6, img.length), itemMatches: gAllResults})
       }
-    }).catch(err => {
-      console.log(err)});
+
+      else {
+        res.render('./pages/verification.ejs', {file: img.slice(6,img.length), itemMatches: 'No Match'});
+      }
+    });
+   
 }
+//   else if(fuzzyMatch.length>1){
+//     let gfuzzyItemArr = gfuzzyMatch.map(matches=>{
+//       return {item_name: matches.string};
+//     })
+//   }
+// let SQL = `SELECT * FROM recyclables`;
+
+
+// let SQL = `SELECT item_name FROM recyclables
+// WHERE LOWER(item_name)='${gFuzzyMatch[0].string}'`;
+
+
+//     client.query(SQL)
+//       .then(results=>{
+//         console.log(results.rows[0]);
+//         results.rows.forEach(item=>{
+//           if(visionDescriptions.includes(item.item_name.toLowerCase())){
+//             console.log('inside if vertiication');
+//             res.render('./pages/verification.ejs', {file: img.slice(6, img.length), itemMatches: item.item_name});
+//           }
+//         })
+//         console.log('inside of else verfication')
+//         res.render('./pages/verification.ejs', {file: img.slice(6,img.length), itemMatches: 'No Match'});
+//       })
+//   }
+// }).catch(err => {
+//   console.log(err)});
+
 
 function uploadPage(req, res) {
   res.render('./pages/upload.ejs');
@@ -305,9 +326,7 @@ function uploadPage(req, res) {
 
 
 function getSearchItem(req, res){
-
   console.log('results, ', req.body.search);
-
   let SQL = '';
   if (req.body.search.length > 0) {
     console.log('fuzzy search function: ', fuzzySearch(req.body.search));
@@ -324,7 +343,7 @@ function getSearchItem(req, res){
       })
       res.render('./pages/item-list.ejs', {items: fuzzyItemArr});
     }
- 
+
   }
   else{
     console.log('item searched: ', req.body);
@@ -380,8 +399,6 @@ function fuzzySearch(str){
   // console.log(matches[0], matches[0].string);
   return matches;
 }
-
-
 
 
 
