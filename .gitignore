@@ -230,5 +230,7 @@ $RECYCLE.BIN/
 #Google Vision API Key
 new-vision-api.json
 
+# Uploaded images from local testing
+public/uploads
 
 # End of https://www.gitignore.io/api/node,macos,linux,windows,webstorm,visualstudiocode
