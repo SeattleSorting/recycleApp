@@ -31,15 +31,25 @@ console.log(fuzzy);
 require('dotenv').config();
 
 const vision = require('@google-cloud/vision');
+let visionClient;
 
-fs.writeFileSync('new-vision-api.json', process.env.GOOGLE_CONFIG);
+if(process.env.GOOGLE_CONFIG) {
+  fs.writeFileSync('new-vision-api.json', process.env.GOOGLE_CONFIG);
 
-const visionClient = new vision.ImageAnnotatorClient({
+  visionClient = new vision.ImageAnnotatorClient({
 
-  //taken from the jason file
-  projectId: 'seattle-sort',
-  keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS
-})
+    //taken from the jason file
+    projectId: 'seattle-sort',
+    keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS
+  })
+} else {
+  visionClient = new vision.ImageAnnotatorClient({
+
+    //taken from the jason file
+    projectId: 'seattle-sort',
+    keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS
+  })
+}
 
 const PORT = process.env.PORT || 5000;
 const app = express();
@@ -284,7 +294,7 @@ function getGoogleVision(req, res) {
             });
 
             console.log('resultItems: ', resultItems, 'gResults ', gAllResults);
-            
+
             for(let i = 0; i<3; i++){
               fuzzySearch(visionDescriptions[i], resultItems).forEach(match => {
                 console.log('item match, ', match)
