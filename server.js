@@ -8,7 +8,7 @@ var allItems = [];
 // create global variable with correct categories
 const categories = ['PLASTIC', 'PAPER', 'GLASS', 'METAL', 'ELECTRONIC', 'FOOD'];
 
-const materials = ['plastic', 'paper', 'glass', 'metal', 'electronic', 'food'];
+const materials = ['plastic', 'paper', 'glass', 'metal', 'electronic', 'yard_compost'];
 
 
 //brings in modules
@@ -108,13 +108,13 @@ function subCategory(req, res){
 function getInstructions(req, res){
   let _getSQL = `
     SELECT * FROM recyclables
-    WHERE LOWER(item_name) = '${req.body.item}'`;
+    WHERE LOWER(item_name) = '${req.body.item.toLowerCase()}'`;
 
-  console.log('this is our req.body from subcat', req.body);
+  console.log('this is our req.body from subcat', req.body.item);
 
   client.query(_getSQL)
     .then( results => {
-      console.log('results from getInstrcutions, ', results.body)
+      console.log('results from getInstrcutions, ', results.rows)
       let finalResult = results.rows[0];
       let resultsArr = [];
       let detailArr=[];
@@ -288,15 +288,15 @@ function getGoogleVision(req, res) {
             for(let i = 0; i<3; i++){
               fuzzySearch(visionDescriptions[i], resultItems).forEach(match => {
                 console.log('item match, ', match)
-                if(!gAllResults.includes(JSON.stringify(match['string']))){
-                  gAllResults.push(JSON.stringify(match['string']));
+                if(!gAllResults.includes(JSON.stringify(match['string']).replace(/"/g, ''))){
+                  gAllResults.push(JSON.stringify(match['string']).replace(/"/g, ''));
                 }
               })
             }
             console.log('all the stuff ', gAllResults);
+            res.render('./pages/verification.ejs', {file: img.slice(6, img.length), itemMatches: gAllResults})
 
           })
-        res.render('./pages/verification.ejs', {file: img.slice(6, img.length), itemMatches: gAllResults})
       }
 
       else {
