@@ -70,7 +70,7 @@ nav img{
         margin-top: .5em;
         margin-bottom: 1em;
         text-align: center;
-        font-size: 1.2em;
+        font-size: 1em;
         max-width: 3em; 
     }
 
@@ -131,6 +131,9 @@ nav img{
         margin: 0em 0em 0em .2em;
     }
 
+    section.material-categories{
+        width: 80%;
+    }
 
 
     ul{
@@ -257,7 +260,6 @@ nav img{
         margin: auto;
         height: 100%;
         width: 100%;
-        margin-bottom: 20%;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -296,10 +298,11 @@ nav img{
   
 
     .result section>input{
-        height: 4em;
+        height: 2em;
         font-size: 1.5em; 
         color: rgb(219, 222, 216); 
         width: 12em;
+        /* padding: 10%; */
         margin-bottom: .4em;
         border-radius: 0px 0px 3px 3px;
     }
