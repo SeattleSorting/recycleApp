@@ -134,17 +134,6 @@ nav img{
         flex-wrap: wrap;
     }
 
-    /* img{
-        width: 100%;
-        border-radius: 0px 0px 3px 3px;
-        opacity: .9;
-    } */
-/* 
-    input[type="image"]{
-        height: 100%;
-        border-radius: 0px 0px 3px 3px;
-        opacity: .9;
-    } */
 
     li {
         display: flex;
@@ -213,7 +202,7 @@ nav img{
     .material-categories ul {
         width: 80%;
         /* height: 80%; */
-        margin: 5% auto 0px auto;
+        margin: 0% auto 0px auto;
     }
 
     li section{
