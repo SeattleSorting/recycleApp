@@ -1,9 +1,13 @@
 html, body{
-    height: 100%;
+    /* height: 100%; */
 }
 
 *{
     border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
 }
 
 /* index styling */
@@ -12,7 +16,7 @@ body{
     color: rgb(219, 222, 216);
     font-family: nunito;
     display: flex;
-    height: 100%;
+    /* height: 70%; */
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -21,6 +25,7 @@ body{
 
 nav img{
     position: fixed;
+    margin-top: 8%;
     width: 9%;
     left: 8px;
     top: 8px;
@@ -118,8 +123,10 @@ nav img{
 
     h2{
         font-size: .7em;
-        margin: .6em 0em 0em .2em;
+        margin: 10% 0em 0em .2em;
     }
+
+
 
     ul{
         display: flex;
@@ -127,16 +134,28 @@ nav img{
         flex-wrap: wrap;
     }
 
-    img{
+    /* img{
         width: 100%;
         border-radius: 0px 0px 3px 3px;
         opacity: .9;
-    }
+    } */
+/* 
+    input[type="image"]{
+        height: 100%;
+        border-radius: 0px 0px 3px 3px;
+        opacity: .9;
+    } */
 
     li {
         display: flex;
         flex-direction: row;
     }
+
+    form h4{
+        text-align: center;
+        font-size: 1.1em;
+    }
+
 
     /* verify image page */
     section.user-image{
@@ -170,11 +189,11 @@ nav img{
    
 
     .material-categories input{
-        height: 2em;
+        /* height: 2em; */
         text-align: center;
         background: rgb(219, 222, 216);
         color: rgb(38, 39, 38);
-        padding: .5em;
+        padding: 2%;
         width: 100%;
         border: none;
         border-radius: 3px 3px 0px 0px;
@@ -184,25 +203,25 @@ nav img{
         margin-bottom: -.16em;
     }
 
-    section.material-categories{
-        margin-left: 10%;
-    }
 
     .material-categories input{
         font-weight: bold;
     }
 
+
+
     .material-categories ul {
-        width: 90%;
-        height: 80%;
+        width: 80%;
+        /* height: 80%; */
+        margin: 5% auto 0px auto;
     }
 
     li section{
         width: 100%;
         justify-content: center;
         align-content: center;
-        font-size: 1.5em;
-        box-shadow: .15em .15em rgba(20, 49, 14, 0.9);
+        /* font-size: 1.5em; */
+        /* box-shadow: .15em .15em rgba(20, 49, 14, 0.9); */
         margin: 5%;
         border-radius: 3px;
     }
