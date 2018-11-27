@@ -25,10 +25,10 @@ body{
 
 nav img{
     position: fixed;
-    margin-top: 8%;
+    /* margin-top: 8%; */
     width: 9%;
-    left: 8px;
-    top: 8px;
+    left: 2px;
+    top: 2px;
 }
 
 @media screen and (max-width: 480px){
@@ -123,7 +123,7 @@ nav img{
 
     h2{
         font-size: .7em;
-        margin: 10% 0em 0em .2em;
+        margin: 0em 0em 0em .2em;
     }
 
 
