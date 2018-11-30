@@ -20,12 +20,12 @@
                     </form>
                 <% } else{ %>
 
-                <% itemMatches.forEach(match => { %>
-                    <form action="/disposal-instructions" method="POST">                        
-                        <input type="hidden" name="item" value="<%=match%>">
-                        <input type="submit" name="search-result" value="<%=match%>">
-                    </form>
-                <% }) %>
+                    <% for(let i = 0; i<=2; i++){ %>
+                        <form action="/disposal-instructions" method="POST">                        
+                            <input type="hidden" name="item" value="<%= itemMatches[i]%>">
+                            <input type="submit" name="search-result" value="<%= itemMatches[i]%>">
+                        </form>
+                    <% } %>
                   
                 <% } %>                 
 
