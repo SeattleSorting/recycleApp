@@ -272,29 +272,7 @@ function getGoogleVision(req, res) {
       console.log('vision array: ', visionInfo[0], visionInfo[1]);
 
       if (visionInfo.length >0){
-        // for(let i = 0; i<3; i++){
-        //   let fuzzyArr = fuzzySearch(visionDescriptions[i], materials);
-        //   if(fuzzyArr.length>0){
-        //     console.log('mat: ', JSON.stringify(fuzzyArr[0]['string']));
-        //     gMaterial.push(JSON.stringify(fuzzyArr[0]['string']).replace(/"/g, ''));
-        //   }
-        //   console.log('material ', gMaterial);
-
-        //   //console.log('allResults: ', gAllResults) ;
-        // }
-
-        // let SQL = `SELECT * FROM recyclables
-        // WHERE LOWER(category) = '${gMaterial[0]}'`;
-
-        // client.query(SQL)
-        //   .then(results=>{
-        //     console.log(results.rows)
-        // let resultItems = results.rows.map(item =>{
-        //   return item.item_name;
-        // });
-
-        // console.log('resultItems: ', resultItems, 'gResults ', gAllResults);
-
+   
         for(let i = 0; i<visionInfo.length; i++){
           console.log('g-score', visionInfo[i].score);
           if(visionInfo[i].score*100>=60){
@@ -309,12 +287,8 @@ function getGoogleVision(req, res) {
             })
           }
         }
-        // console.log('all the stuff ', gAllResults);
         res.render('./pages/verification.ejs', {file: img.slice(6, img.length), itemMatches: gAllResults})
-
-        // })
       }
-
       else {
         res.render('./pages/verification.ejs', {file: img.slice(6,img.length), itemMatches: 'No Match'});
       }
