@@ -258,55 +258,61 @@ function getGoogleVision(req, res) {
   console.log(req.file, req.file.path);
 
   let gAllResults = [];
-  let gMaterial =[];
+  // let gMaterial =[];
 
   const img = req.file.path;
 
-  let visionDescriptions = [];
+  let visionInfo = [];
   visionClient.labelDetection(img)
     .then(results => {
       results[0].labelAnnotations.forEach(result => {
-        visionDescriptions.push(result.description);
+        visionInfo.push(result);
       });
 
-      console.log('vision array: ', visionDescriptions );
+      console.log('vision array: ', visionInfo[0], visionInfo[1]);
 
-      if (visionDescriptions.length >0){
-        for(let i = 0; i<3; i++){
-          let fuzzyArr = fuzzySearch(visionDescriptions[i], materials);
-          if(fuzzyArr.length>0){
-            console.log('mat: ', JSON.stringify(fuzzyArr[0]['string']));
-            gMaterial.push(JSON.stringify(fuzzyArr[0]['string']).replace(/"/g, ''));
+      if (visionInfo.length >0){
+        // for(let i = 0; i<3; i++){
+        //   let fuzzyArr = fuzzySearch(visionDescriptions[i], materials);
+        //   if(fuzzyArr.length>0){
+        //     console.log('mat: ', JSON.stringify(fuzzyArr[0]['string']));
+        //     gMaterial.push(JSON.stringify(fuzzyArr[0]['string']).replace(/"/g, ''));
+        //   }
+        //   console.log('material ', gMaterial);
+
+        //   //console.log('allResults: ', gAllResults) ;
+        // }
+
+        // let SQL = `SELECT * FROM recyclables
+        // WHERE LOWER(category) = '${gMaterial[0]}'`;
+
+        // client.query(SQL)
+        //   .then(results=>{
+        //     console.log(results.rows)
+        // let resultItems = results.rows.map(item =>{
+        //   return item.item_name;
+        // });
+
+        // console.log('resultItems: ', resultItems, 'gResults ', gAllResults);
+
+        for(let i = 0; i<visionInfo.length; i++){
+          console.log('g-score', visionInfo[i].score);
+          if(visionInfo[i].score*100>=60){
+            console.log(visionInfo[i].description);
+            // console.log(fuzzySearch(visionInfo[i].description, allItems));
+            fuzzySearch(visionInfo[i].description, allItems).forEach(match => {
+              console.log('item match, ', match.score)
+              if((match.score>100)&&
+                (!gAllResults.includes(JSON.stringify(match['string']).replace(/"/g, '')))){
+                gAllResults.push(JSON.stringify(match['string']).replace(/"/g, ''));
+              }
+            })
           }
-          console.log('material ', gMaterial);
-
-          //console.log('allResults: ', gAllResults) ;
         }
+        // console.log('all the stuff ', gAllResults);
+        res.render('./pages/verification.ejs', {file: img.slice(6, img.length), itemMatches: gAllResults})
 
-        let SQL = `SELECT * FROM recyclables 
-        WHERE LOWER(category) = '${gMaterial[0]}'`;
-
-        client.query(SQL)
-          .then(results=>{
-            console.log(results.rows)
-            let resultItems = results.rows.map(item =>{
-              return item.item_name;
-            });
-
-            console.log('resultItems: ', resultItems, 'gResults ', gAllResults);
-
-            for(let i = 0; i<3; i++){
-              fuzzySearch(visionDescriptions[i], resultItems).forEach(match => {
-                console.log('item match, ', match)
-                if(!gAllResults.includes(JSON.stringify(match['string']).replace(/"/g, ''))){
-                  gAllResults.push(JSON.stringify(match['string']).replace(/"/g, ''));
-                }
-              })
-            }
-            console.log('all the stuff ', gAllResults);
-            res.render('./pages/verification.ejs', {file: img.slice(6, img.length), itemMatches: gAllResults})
-
-          })
+        // })
       }
 
       else {
@@ -380,14 +386,15 @@ function getSearchItem(req, res){
 
 //fuzzy search: takes in string, looks for items in given array that match string, returns results as an array
 function fuzzySearch(str, arr){
+  console.log('allItems is a thing', allItems[1]);
 
-  let results = fuzzy.filter(str, arr)
+  let results = fuzzy.filter(str, arr);
   console.log('string searched', str.toLowerCase());
   let matches = results.map(function(el) {
     console.log('found: ', el)
     return el;
   });
-  console.log('matches', matches);
+  console.log('matches', matches, results);
 
   return matches;
 }
